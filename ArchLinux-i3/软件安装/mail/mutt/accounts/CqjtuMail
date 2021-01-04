@@ -1,0 +1,6 @@
+set from = "shejialuo@mails.cqjtu.edu.cn"
+set sendmail = "/usr/bin/msmtp -a CqjtuMail"
+set spoolfile = "$HOME/Mail/CqjtuMail/inbox" #INBOX
+set mbox="$HOME/Mail/CqjtuMail/seen"  #Seen box
+set record="$HOME/Mail/CqjtuMail/sent"  #Sent box
+set postponed="$HOME/Mail/CqjtuMail/draft"  #Draft box

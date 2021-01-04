@@ -1,0 +1,398 @@
+/*
+ * This file is the configuration file
+ * To fit i3wm, I just use the alt modifier
+ * And the thinking is the alike to i3wm.
+ */
+
+ {
+    //! Do not edit this
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    //! To set the default profile to PowerShell7
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+
+    //! To define the profiles
+    "profiles": {
+        //! Settings to apply to all profiles
+        "defaults": {
+            "fontFace": "Fira Code",
+            "fontSize": 14, // 老年人了
+            "colorScheme": "Dracula",
+            "acrylicOpacity": 0.8,
+            "useAcrylic": true
+        },
+        //! Profile objects
+        "list": [
+            //! PowerShell 7
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "tabTitle": "PowerShell 7", 
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+              
+            },
+            //! Windows PowerShell 5.1
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            //! Don't need at this time
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            //! CMD
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "命令提示符",
+                "commandline": "cmd.exe",
+                "hidden": false,
+                "tabTitle": "cmd"
+            }
+
+
+        ]
+    },
+
+    //! To define the Dracula theme
+    "schemes": [{
+            "name": "Dracula",
+            "black": "#000000",
+            "red": "#ff5555",
+            "green": "#50fa7b",
+            "yellow": "#f1fa8c",
+            "blue": "#bd93f9",
+            "purple": "#ff79c6",
+            "cyan": "#8be9fd",
+            "white": "#bbbbbb",
+            "brightBlack": "#555555",
+            "brightRed": "#ff5555",
+            "brightGreen": "#50fa7b",
+            "brightYellow": "#f1fa8c",
+            "brightBlue": "#bd93f9",
+            "brightPurple": "#ff79c6",
+            "brightCyan": "#8be9fd",
+            "brightWhite": "#ffffff",
+            "background": "#1e1f29",
+            "foreground": "#f8f8f2"
+        }
+
+    ],
+
+    "keybindings": [{
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+
+        //! To open the search box
+        {
+            "command": "find",
+            "keys": "alt+f"
+        },
+
+        //! To exit the Windows Terminal
+        {
+            "command": "closeWindow",
+            "keys": "alt+shift+q"
+        },
+
+        //! To open the default tab
+        {
+            "command": "newTab",
+            "keys": "alt+enter"
+        },
+
+        //! To duplicate the current tab and open it
+        {
+            "command": "duplicateTab",
+            "keys": "alt+shift+d"
+        },
+
+        //* To open the tab by index
+        {
+            "command": {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "alt+shift+1"
+        },
+        {
+          "command": {
+            "action": "newTab",
+            "index": 1
+          },
+            "keys": "alt+shift+2"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 2
+            },
+            "keys": "alt+shift+3"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 3
+            },
+            "keys": "alt+shift+4"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 4
+            },
+            "keys": "alt+shift+5"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 5
+            },
+            "keys": "alt+shift+6"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 6
+            },
+            "keys": "alt+shift+7"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 7
+            },
+            "keys": "alt+shift+8"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "index": 8
+            },
+            "keys": "alt+shift+9"
+        },
+        //* End
+
+        //* To switch to a tab by index
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "alt+1"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 1
+            },
+            "keys": "alt+2"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 2
+            },
+            "keys": "alt+3"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 3
+            },
+            "keys": "alt+4"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 4
+            },
+            "keys": "alt+5"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 5
+            },
+            "keys": "alt+6"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 6
+            },
+            "keys": "alt+7"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "alt+8"
+        },
+        {
+            "command": {
+                "action": "switchToTab",
+                "index": 8
+            },
+            "keys": "alt+9"
+        },
+        //* End
+
+        //! To close the tab
+        {
+            "command": "closeTab",
+            "keys": "alt+q"
+        },
+
+        //! To close focused pane
+        {
+            "command": "closePane",
+            "keys": "alt+w"
+        },
+
+        //* To resize a pane
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "alt+shift+down"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+left"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "keys": "alt+shift+right"
+        },
+        {
+            "command": {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "alt+shift+up"
+        },
+        //* End
+
+        //* To split a pane within current profile
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal"
+            },
+            "keys": "alt+h"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical"
+            },
+            "keys": "alt+v"
+        },
+        //* End
+
+        //* To split a pane with another profile
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 0
+            },
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 1
+            },
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 2
+            },
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 3
+            },
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 4
+            },
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 5
+            },
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 6
+            },
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 7
+            },
+            "keys": "ctrl+alt+8"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "index": 8
+            },
+            "keys": "ctrl+alt+9"
+        },
+        //* End
+
+        //! To reset font size
+        {
+            "command": "resetFontSize",
+            "keys": "alt+r"
+        }
+    ]
+}

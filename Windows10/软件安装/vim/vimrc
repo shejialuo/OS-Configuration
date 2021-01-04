@@ -1,0 +1,48 @@
+" To set the encode format
+set fileencoding=utf-8
+set termencoding=utf-8
+set encoding=utf-8
+
+
+" To apply the vim's operation
+set nocompatible
+
+" To display the line number
+set number
+
+" To show nomral mode's commands
+set showcmd
+
+" To set the quick search
+set incsearch
+
+" To set the filetype check
+filetype indent on
+
+" To set the paired
+set showmatch
+
+" To set the indent same
+set autoindent
+
+" To set the tab number
+set tabstop=4
+
+" To display the airline
+set laststatus=2
+
+" To display the tabline
+set showtabline=2
+
+" To hide the default mode text
+set noshowmode
+
+" To set the default color scheme to be the desert
+colorscheme desert
+
+" To set no backup
+set nobackup
+
+" To set the tab and space display
+set listchars=tab:>-,trail:-
+set list

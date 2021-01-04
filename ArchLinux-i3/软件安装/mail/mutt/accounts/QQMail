@@ -1,0 +1,6 @@
+set from = "392499367@qq.com"
+set sendmail = "/usr/bin/msmtp -a QQMail"
+set spoolfile = "$HOME/Mail/QQMail/inbox" #INBOX
+set mbox="$HOME/Mail/QQMail/seen"  #Seen box
+set record="$HOME/Mail/QQMail/sent"  #Sent box
+set postponed="$HOME/Mail/QQMail/draft"  #Draft box
