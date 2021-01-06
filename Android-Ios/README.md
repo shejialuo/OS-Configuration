@@ -22,8 +22,6 @@ Android启动消息关联即可，Ios关闭消息通知。Ios系统能直接通�
 
 直接`Huawei Store`和`App Store`安装即可（目前Telegram无法代收微信消息，因为微信网页版的限制，fuck it）。
 
----
-
 ### 2. 媒体
 
 #### 2.1 Foobar2000
@@ -48,8 +46,6 @@ Android启动消息关联即可，Ios关闭消息通知。Ios系统能直接通�
 
 + Android: M.A.L.P. 直接`Google Play`安装即可。
 + iPhone: MPD Pilot. 直接`App Store`安装即可。
-
----
 
 ### 3. 文档
 
@@ -77,8 +73,6 @@ Ios自带的备忘录即可实现扫描。
 Android：Goldendict free. 与Windows和Linux一致，`Google Play`安装即可。
 iPhone: 目前不需要。
 
----
-
 ### 4. 网络
 
 #### 4.1 Clash for Android
@@ -88,8 +82,6 @@ iPhone: 目前不需要。
 #### 4.2 Shadowrocket
 
 美区`App Store`下载。
-
----
 
 ### 5. 娱乐
 
@@ -109,8 +101,6 @@ iPhone: 目前不需要。
 
 直接`Huawei Store`和`App Store`安装即可。
 
----
-
 ### 6. 网盘
 
 #### 6.1 OneDrive
@@ -124,8 +114,6 @@ iPhone: 目前不需要。
 #### 6.3 速盘
 
 官网Apk安装，Ios不安装（我想安装，没办法）。
-
----
 
 ### 7. 支付
 
@@ -142,8 +130,6 @@ iPhone: 目前不需要。
 + 京东金融
 + U净
 
----
-
 ### 8. 浏览器
 
 #### 8.1 Edge
@@ -151,8 +137,6 @@ iPhone: 目前不需要。
 为了四个设备的同步，使用Edge。
 
 直接`Google Play`和`App Store`下载即可。
-
----
 
 ### 9. 其他
 
@@ -165,4 +149,6 @@ iPhone: 目前不需要。
 + Andorid: zArchiver
 + iPhone: 暂时不使用
 
+#### 9.3 编程工具
 
++ iPhone: Scriptable (JavaScript编程实现个性化功能，cool)

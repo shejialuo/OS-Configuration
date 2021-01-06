@@ -149,9 +149,9 @@ sudo pacman -S visual-studio-code-bin
 
 现在`VsCode`自带同步功能，双系统很方便，直接同步。
 
-### 2.4 图床
+### 2.4 代码段上传
 
-采用Gist上传图床（GitHub服务）。
+采用Gist上传小段代码段（GitHub服务）。
 
 ```shell
 sudo pacman -S gist
