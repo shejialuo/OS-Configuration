@@ -2,7 +2,7 @@
 
 ## 1 输入法安装
 
-### 1.1 Flexible Input Method Framework 5 安装
+### 1.1 Flexible Input Method Framework 5安装
 
 ```shell
 sudo pacman -S fcitx5
@@ -10,7 +10,7 @@ sudo pacman -S fcitx5-qt
 sudo pacman -S fcitx5-gtk
 ```
 
-### 1.2 Fcitx 配置工具安装
+### 1.2 Fcitx配置工具安装
 
 ```shell
 sudo pacman -S fcitx5-configtool
@@ -61,7 +61,7 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ## 2 编辑器安装
 
-### 2.1 Typora 安装
+### 2.1 Typora安装
 
 安装MarkDown编辑器：
 
@@ -69,7 +69,7 @@ sudo pacman -S fcitx5-pinyin-moegirl
 sudo pacman -S typora
 ```
 
-### 2.2 Gvim 安装
+### 2.2 Gvim安装
 
 `vim`并不能使用系统的剪贴板，安装`gvim`。
 
@@ -79,7 +79,7 @@ sudo pacman -S gvim
 
 配置文件见`.vimrc`。通过`pacman`安装会自动安装到`/usr/share/vim/vimfiles/plugin`。所有的插件均采用`pacman`安装方式，尽可能只是用`pacman`方式安装。
 
-#### 2.2.1 airline 插件安装
+#### 2.2.1 airline插件安装
 
 用于进行状态栏的显示。
 
@@ -87,7 +87,7 @@ sudo pacman -S gvim
 sudo pacman -S vim-airline
 ```
 
-#### 2.2.2 nerdtree 插件安装
+#### 2.2.2 nerdtree插件安装
 
 用于目录的显示。
 
@@ -95,7 +95,7 @@ sudo pacman -S vim-airline
 sudo pacman -S vim-nerdtree
 ```
 
-#### 2.2.3 ale 插件安装
+#### 2.2.3 ale插件安装
 
 异步检查代码。
 
@@ -105,7 +105,7 @@ sudo pacman -S vim-ale
 
 需要自己安装相应的linter。此处请参照开发环境配置。
 
-#### 2.2.4 ctrlp 插件安装
+#### 2.2.4 ctrlp插件安装
 
 使用模糊搜索。
 
@@ -113,7 +113,7 @@ sudo pacman -S vim-ale
 sudo pacman -S vim-ctrlp
 ```
 
-#### 2.2.5 nerdcommenter 插件安装
+#### 2.2.5 nerdcommenter插件安装
 
 快速注释功能:
 
@@ -121,7 +121,7 @@ sudo pacman -S vim-ctrlp
 sudo pacman -S vim-nerdcommenter
 ```
 
-#### 2.2.6 surround 插件安装
+#### 2.2.6 surround插件安装
 
 高效操作与括号、引号或html、xml标签相关的配对符号：
 
@@ -129,19 +129,19 @@ sudo pacman -S vim-nerdcommenter
 sudo pacman -S vim-surround
 ```
 
-#### 2.2.7 tagbar 插件安装
+#### 2.2.7 tagbar插件安装
 
 ```shell
 sudo pacman -S vim-tagbar
 ```
 
-#### 2.2.8 wiki 插件安装
+#### 2.2.8 wiki插件安装
 
 ```shell
 yay -S vim-vimwiki
 ```
 
-### 2.3 VsCode 安装
+### 2.3 VsCode安装
 
 ```shell
 sudo pacman -S visual-studio-code-bin
@@ -149,7 +149,15 @@ sudo pacman -S visual-studio-code-bin
 
 现在`VsCode`自带同步功能，双系统很方便，直接同步。
 
-## 3 Zsh 安装
+### 2.4 图床
+
+采用Gist上传图床（GitHub服务）。
+
+```shell
+sudo pacman -S gist
+```
+
+## 3 Zsh安装
 
 直接通过pacman包管理器安装：
 
@@ -172,7 +180,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### 3.2 安装 Powerline 字体
+### 3.2 安装 Powerline字体
 
 ```shell
 sudo pacman -S powerline-fonts
@@ -451,6 +459,14 @@ sudo pacman -S mediainfo
 
 在`rc.conf`中设置图片预览为`true`即可。
 
+### 8.3 回收站
+
+```shell
+sudo pacman -S trash-cli
+```
+
+回收站位于`~/.local/share/Trash`。
+
 ## 9 文档查看器安装
 
 ### 9.1 Zathura 安装
@@ -484,17 +500,33 @@ man zathura
 sudo pacman -S viewnior
 ```
 
-### 9.3 Wps 安装
+### 9.3 Wps安装
 
 ```shell
 sudo pacman -S wps-office
 sudo pacman -S ttf-wps-fonts
 ```
 
-### 9.4 Calibre 安装
+### 9.4 Calibre安装
 
 ```shell
 sudo pacman -S calibre
+```
+
+### 9.5 Zeal安装
+
+开发文档查看器：
+
+```shell
+sudo pacman -S zeal
+```
+
+### 9.6 Pandoc安装
+
+安装文档转换工具：
+
+```shell
+sudo pacman -S pandoc
 ```
 
 ## 10 即时通讯软件安装
@@ -526,7 +558,7 @@ sudo pacman -S qq
 yay -S wechat-uos
 ```
 
-## 11 云盘工具
+## 11 云盘和存储工具
 
 ### 11.1 Onedrive 安装
 
@@ -566,6 +598,12 @@ drive init
 ```
 
 使用比Onedrive人性化，和Git命令类似。使用时`man`即可。
+
+### 11.3 FTP服务器安装
+
+```shell
+sudo pacman -S vsftpd
+```
 
 ## 12 其他工具安装
 
@@ -628,6 +666,7 @@ sudo pacman -S aria2
 ```
 
 [配置参考](https://github.com/P3TERX/aria2.conf)
+
 ### 12.8 录屏软件安装
 
 ```shell
