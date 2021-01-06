@@ -86,12 +86,23 @@ sudo pacman -S nodejs
 sudo pacman -S eslint
 ```
 
+### 5.3 Angular
+
+```shell
+npm install -g @angular/cli
+```
+
+### 5.4 NestJs
+
+```shell
+npm install -g @nestjs/cli
+```
+
 ## 6 Docker
 
 ```shell
 sudo pacman -S docker
 ```
-
 
 ## 7 LaTex
 
@@ -132,4 +143,10 @@ sudo pacman -S texlive-langchinese
 ],
 ```
 
-## 8 
+## 8 gnuplot
+
+安装命令行绘图工具：
+
+```shell
+sudo pacman -S gnuplot
+```
