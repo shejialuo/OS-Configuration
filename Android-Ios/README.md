@@ -149,6 +149,3 @@ iPhone: 目前不需要。
 + Andorid: zArchiver
 + iPhone: 暂时不使用
 
-#### 9.3 编程工具
-
-+ iPhone: Scriptable (JavaScript编程实现个性化功能，cool)
