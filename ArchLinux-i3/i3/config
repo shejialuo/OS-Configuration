@@ -77,7 +77,7 @@ exec --no-startup-id fcitx
 bindsym $mod+F1 exec --no-startup-id code
 
 # To launch google chrome
-bindsym $mod+F2 exec --no-startup-id google-chrome-stable
+bindsym $mod+F2 exec --no-startup-id microsoft-edge-dev
 
 # To launch file manager pcmanfm
 bindsym $mod+F3 exec --no-startup-id pcmanfm

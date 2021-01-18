@@ -413,10 +413,46 @@ sudo pacman -S google-chrome
 
 ### 7.2 Microsoft edge 安装
 
-目前只有dev版本（不支持登录），通过`yay`安装：
+目前只有dev版本（不支持登录），通过`yay`安装，主用edge。：
 
 ```shell
 yay -S microsoft-edge-dev 
+```
+
+### 7.3 插件安装
+
+#### 7.3.1 代理
+
+直接安装`SwitchyOmega`使用即可，已采用备份。
+
+#### 7.3.2 全键盘操作
+
+安装`Vimium`插件。用法与vim的逻辑十分相似。自定义搜索引擎如下：
+
+```txt
+w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
+
+# More examples.
+#
+# (Vimium supports search completion Wikipedia, as
+# above, and for these.)
+#
+g: https://www.google.com/search?q=%s Google
+G: https://www.google.com/search?q=%s Google
+zh: https://www.zhihu.com/search?type=content&q=%s 知乎
+ZH: https://www.zhihu.com/search?type=content&q=%s 知乎
+tb: https://s.taobao.com/search?q=%s 淘宝
+TB: https://s.taobao.com/search?q=%s 淘宝
+jd: https://search.jd.com/Search?keyword=%s 京东
+JD: https://search.jd.com/Search?keyword=%s 京东
+bd: https://www.baidu.com/s?wd=%s 百度
+BD: https://www.baidu.com/s?wd=%s 百度
+bz https://search.bilibili.com/all?keyword=%s b站
+BZ https://search.bilibili.com/all?keyword=%s b站
+b: https://www.bing.com/search?setmkt=en-GB&q=%s 必应
+B: https://www.bing.com/search?setmkt=en-GB&q=%s 必应
+y: https://www.youtube.com/results?search_query=%s Youtube
+Y: https://www.youtube.com/results?search_query=%s Youtube
 ```
 
 ## 8 文件管理安装
