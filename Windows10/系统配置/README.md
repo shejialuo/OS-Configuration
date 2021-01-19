@@ -61,8 +61,35 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 # 4. VsCode
 
+直接下载安装即可，有同步功能，详细插件见Linux部分。
 
-# 5. Vs2020
+# 5. Vs2019
 
+下载安装即可。
 
+# 6. Win10常用快捷键
 
+记录一些自己不知道且有价值的快捷键。
+
+## 6.1 虚拟桌面控制
+
++ `Windows + Ctrl + F4`: Close the virtual desktop.
+
+## 6.2 常用操作
+
++ `Windows + L`: Lock
++ `F2`: mv
++ `F3`: 在文件资源管理器中搜索文件或文件夹
++ `F4`: 在文件资源管理器中显示地址栏列表
++ `F6`: 在窗口中或桌面上循环浏览屏幕元素
++ `Ctrl + D`: Delete
++ `Ctrl + R`: Reload
+
+## 6.3 Windows 徽标键键盘快捷方式
+
++ `Windows + B`: 将焦点设置到通知区域
++ `Windows + I`: 打开“设置”
++ `Windows + M`: 最小化所有窗口
++ `Windows + ,`: 临时快速查看桌面
++ `Windows + +(-)`: 加号 (+) 或减号 (-) 使用“放大镜”放大或缩小
++ `Windows + Esc`: 退出“放大镜”

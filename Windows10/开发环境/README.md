@@ -24,3 +24,11 @@ npm i -g @nestjs/cli
 
 官网安装即可，默认安装位置：`C:\Program Files\Git`
 
+# 3. Java安装
+
+下载JDK包，配置环境变量即可，默认安装位置
+
+# 4. Python安装
+
+同上，默认安装位置。
+

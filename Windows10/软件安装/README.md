@@ -93,9 +93,17 @@
 
 其实我内心是拒绝的。
 
-## 4.2 SpeedPan 下载
+## 4.2 SpeedPan下载
 
 直接下载绿色版压缩包。
+
+## 4.3 OneDrive下载
+
+微软自带。
+
+## 4.4 Google Drive下载
+
+是用网页版。
 
 # 5. 代理工具安装
 
@@ -113,33 +121,57 @@ GitHub下载即可。配置文件位于`User/.config/clash`。注意`clash for w
 
 直接官网下载即可。
 
-# 7. 其他工具安装
+## 6.2 压缩软件下载
 
-## 7.1 Aria2 安装
+下载7zip，使用命令行处理（与Linux同步）。注意添加至环境变量。
 
-[官网](https://github.com/aria2/aria2)下载，并配置环境变量。
+# 7. 浏览器安装
 
-## 7.2 Rufus 安装
+## 7.1 Edge dev 下载
 
-直接官网下载，便捷式安装即可。
+与Linux保持一致，下载`dev`版，直接官网下载，安装与Linux相同的两个插件。
 
-## 7.3 Adb 安装
+# 8. 文档查看器安装
 
-直接GitHub下载，并配置环境变量。
+## 8.1 PDF处理工具
 
-## 7.4 Goldendict 安装
+下载Adobe Acrobat DC
+
+## 8.2 Calibre安装
+
+官网下载，直接安装即可。
+
+## 8.3 Zeal安装
+
+官网下载，直接安装即可。
+
+## 8.4 Pandoc安装
+
+GitHub下载即可，添加环境变量。
+
+## 8.5 Goldendict 安装
 
 直接官网下载安装。
 
-## 7.5 KMSpico
+# 9. 其他工具安装
+
+## 9.1 Aria2 安装
+
+[官网](https://github.com/aria2/aria2)下载，并配置环境变量。
+
+## 9.2 Rufus 安装
+
+直接官网下载，便捷式安装即可。
+
+## 9.3 Adb 安装
+
+直接GitHub下载，并配置环境变量。
+
+## 9.4 KMSpico
 
 激活软件。
 
-## 7.6 Calibre
-
-直接官网下载即可。
-
-## 7.7 Gnuplot
+## 9.5 Gnuplot
 
 直接官网下载即可，添加到环境变量即可。
 
