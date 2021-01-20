@@ -11,8 +11,7 @@ This is my all OS configuration:
 
 各个平台所使用的软件说明：
 
-+ ArchLinux: 
++ ArchLinux:
 + Windows10: 自带的日历软件
 + iPhone: 自带的日历软件以及Outlook
 + Android: Outlook
-

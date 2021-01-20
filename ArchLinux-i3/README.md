@@ -12,6 +12,7 @@
 ---
 
 采用AUR安装的软件，注意依赖关系：
+
 + electron-ssr
 + fetchmail
 + microsoft-edge-dev

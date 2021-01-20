@@ -164,6 +164,7 @@ sudo pacman -S gist
 ```shell
 sudo pacman -S zsh
 ```
+
 ### 3.1 安装 Oh-My-Zsh
 
 以下过程参考Oh-My-Zsh的GitHub项目主页。
@@ -207,14 +208,19 @@ echo $SHELL
 #### 3.4.1 相关插件下载
 
 + zsh-syntax-highlighting
+
   ```shell
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
+
 + zsh-autosuggestions
+  
   ```shell
   git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
+
 + autojump
+  
   ```shell
   sudo pacman -S autojump
   ```
@@ -265,6 +271,7 @@ sudo pacman -S clash
 ```
 
 #### 5.2.1 后台运行方式不能自动更新订阅
+
 clash正在运行，可以访问`http://clash.razord.top`。
 
 启动clash，可以直接后台运行，但是不能自动更新配置文件：
@@ -274,6 +281,7 @@ nohup clash > dev/null 2>&1 &
 ```
 
 #### 5.2.2 服务运行方式自动更新订阅
+
 由于后台运行的方式无法实现订阅的自动更新，将clash封装成服务，每次启动时进行一次更新。新建文件`/usr/lib/systemd/system/clash.service`:
 
 ```shell
@@ -307,6 +315,7 @@ sudo pacman -S spotify
 ### 6.2 本地音乐播放器安装
 
 #### 6.2.1 Mpd 安装
+
 安装music player daemon:
 
 ```shell
@@ -314,7 +323,6 @@ sudo pacman -S mpd
 ```
 
 在`~/.config/mpd/mpd.conf`中配置。
-
 
 ##### 6.2.1.1 相关依赖安装
 
@@ -392,7 +400,6 @@ sudo pacman -S msmtp
 
 用于发送邮件的软件，其配置文件位于`~/.mstmtprc`。
 
-
 ### 6.4 视频播放器安装
 
 安装mplayer视频播放器：
@@ -401,7 +408,7 @@ sudo pacman -S msmtp
 sudo pacman -S mplayer
 ```
 
-## 7 浏览器安装 
+## 7 浏览器安装
 
 ### 7.1 Google chrome 安装
 
@@ -506,6 +513,7 @@ sudo pacman -S trash-cli
 ## 9 文档查看器安装
 
 ### 9.1 Zathura 安装
+
 ```shell
 sudo pacman -S zathura
 ```
@@ -572,6 +580,7 @@ sudo pacman -S pandoc
 ```shell
 sudo pacman -S telegram
 ```
+
 #### 10.1.1 解决无法输入中文问题
 
 找到`/usr/share/applications/telegramdesktop.desktop`文件，在`Exec`行中加入：
@@ -644,6 +653,7 @@ sudo pacman -S vsftpd
 ## 12 其他工具安装
 
 ### 12.1 Nitrogen 安装
+
 处理壁纸，直接安装即可，在i3配置文件自动启动加上`--restore`：
 
 ```shell

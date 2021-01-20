@@ -8,6 +8,7 @@
 sudo pacman -S lightdm
 sudo systemctl enable lightdm
 ```
+
 ### 1.1 安装greeter
 
 为了好看的登录界面，安装`lightdm-webkit2-greeter`。
@@ -34,6 +35,7 @@ yay -S lightdm-webkit-theme-material-git
 [User]
 Icon=/var/lib/AccountsService/icons/shejialuo/luo.jpg
 ```
+
 #### 1.2.3 lightDM 设置
 
 编辑文件`/etc/lightdm/lightdm.conf`,设置`greeter-session=lightdm-webkit2-greeter`。
@@ -80,6 +82,7 @@ yay -S pa-applet-git
 ```shell
 sudo pacman -S lxappearance
 ```
+
 ### 4.1 GTK主题选择
 
 选择`material`主题：
@@ -208,6 +211,7 @@ sudo pacman -S xorg-xbacklight
 ```shell
 sudo pacman -S ntfs-3g
 ```
+
 自动挂载两个机械盘，修改`/etc/fstab`文件如下：
 
 ```shell
