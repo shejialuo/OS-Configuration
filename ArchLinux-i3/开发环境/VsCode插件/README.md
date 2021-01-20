@@ -42,6 +42,7 @@
 
 ## 6. Python
 
++ Python
 + Python Intellisense
 
 ## 7. Latex
