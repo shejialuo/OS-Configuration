@@ -63,13 +63,13 @@ for (const reminder of reminders) {
 }
 
 // ! To achieve deleting.
-for (const event of events) {
+for (let event of events) {
   const eventNote = event.notes;
   const [reminder] = reminders.filter(r => r.identifier != null && (eventNote.indexOf(r.identifier) != -1));
   if (reminder) {
     continue;
   } else {
-    console.warn(`删除日历${reminder.title}`);
+    console.warn(`删除日历${event.title}`);
     event.remove();
   }
 
