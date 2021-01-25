@@ -67,8 +67,6 @@ ValidationData1=V8EHCkXlvl|JYXzO
 ValidationData2=1
 ```
 
-
-
 ## 2. 编辑器
 
 ### 2.1 Vim 安装
