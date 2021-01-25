@@ -52,6 +52,23 @@
 
 下载一个在线播放器，直接使用安装包安装即可。
 
+### 1.5 录屏软件
+
+官网下载`Camtasia studio 2019`。
+
+`C:\ProgramData\TechSmith\Camtasia Studio 19\`修改文件信息，改为只读:
+
+```txt
+[RegistrationInfo]
+ValidationData3=0
+RegistrationKey=DCCMD-8HC7C-M84UU-S4CAV-2253D
+RegisteredTo=User
+ValidationData1=V8EHCkXlvl|JYXzO
+ValidationData2=1
+```
+
+
+
 ## 2. 编辑器
 
 ### 2.1 Vim 安装
