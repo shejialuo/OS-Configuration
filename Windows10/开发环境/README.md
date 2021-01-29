@@ -136,3 +136,7 @@ alias p-off='unset all_proxy http_proxy https_proxy'
 ### 5.7 VsCode插件
 
 + Remote-WSL
+
+## 6. vmware 16 安装
+
+安装16进而兼容`hyper-v`。
