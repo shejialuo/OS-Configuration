@@ -1,4 +1,6 @@
-# 1. 约定
+# 系统配置
+
+## 1. 约定
 
 + 软件安装包的位置：`F:\Software`。
 + 软件缓存的位置：`F:\Cache`。
@@ -7,23 +9,24 @@
 
 注意，软件缓存的位置只能随缘，看软件支不支持。
 
-# 2. UWP
+## 2. UWP
 
 为了确保独立性，UWP应用均保存在`G`盘。
 
-+ Windows Terminal 
++ Windows Terminal
 + 哔哩哔哩动画
 + Microsoft TODO
 + TranslucentTB （必须安装在C盘）
 + NVDIA Control Panel （必须安装在C盘）
++ Files
 
-# 3. Windows Terminal配置
+## 3. Windows Terminal配置
 
-## 3.1 安装 PowerShell7
+### 3.1 安装 PowerShell7
 
 GitHub下载。
 
-## 3.2 美化 PowerShell
+### 3.2 美化 PowerShell
 
 使用类似的 Posh-Git 和 Oh-My-Posh:
 
@@ -46,7 +49,7 @@ Import-Module oh-my-posh
 Set-Theme Agnoster
 ```
 
-## 3.3 PSReadLine 的使用
+### 3.3 PSReadLine 的使用
 
 仍是在PowerShell的配置文件中输入，即可实现在Menu补全:
 
@@ -54,28 +57,28 @@ Set-Theme Agnoster
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 ```
 
-## 3.4 配置文件
+### 3.4 配置文件
 
 见`settings.json`。
 
 
-# 4. VsCode
+## 4. VsCode
 
 直接下载安装即可，有同步功能，详细插件见Linux部分。
 
-# 5. Vs2019
+## 5. Vs2019
 
 下载安装即可。
 
-# 6. Win10常用快捷键
+## 6. Win10常用快捷键
 
 记录一些自己不知道且有价值的快捷键。
 
-## 6.1 虚拟桌面控制
+### 6.1 虚拟桌面控制
 
 + `Windows + Ctrl + F4`: Close the virtual desktop.
 
-## 6.2 常用操作
+### 6.2 常用操作
 
 + `Windows + L`: Lock
 + `F2`: mv
@@ -85,7 +88,7 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 + `Ctrl + D`: Delete
 + `Ctrl + R`: Reload
 
-## 6.3 Windows 徽标键键盘快捷方式
+### 6.3 Windows 徽标键键盘快捷方式
 
 + `Windows + B`: 将焦点设置到通知区域
 + `Windows + I`: 打开“设置”

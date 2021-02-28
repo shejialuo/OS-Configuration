@@ -105,9 +105,9 @@ ValidationData2=1
 
 其实我内心是拒绝的。
 
-### 4.2 SpeedPan下载
+### 4.2 KinhDown下载
 
-直接下载绿色版压缩包。
+速盘已倒，转战另一家。
 
 ### 4.3 OneDrive下载
 
