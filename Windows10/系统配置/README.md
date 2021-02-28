@@ -61,7 +61,6 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 见`settings.json`。
 
-
 ## 4. VsCode
 
 直接下载安装即可，有同步功能，详细插件见Linux部分。
