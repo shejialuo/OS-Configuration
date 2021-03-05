@@ -13,6 +13,7 @@ sudo systemctl enable NetworkManager
 sudo pacman -S network-manager-applet
 
 #* To install sound management
+sudo pacman -S alsa-utils
 sudo pacman -S pulseaudio
 sudo pacman -S pavucontrol
 sudo pacman -S pamixer
@@ -40,6 +41,16 @@ sudo pacman -S noto-fonts-cjk
 sudo pacman -S noto-fonts-emoji
 sudo pacman -S ttf-font-icons
 
+#** To copy the configuration
+directoryPath=~/.config/fontconfig
+if [ -d "$directoryPath" ]
+then
+    cp ../font/fonts.conf "$directoryPath"
+else
+    mkdir "$directoryPath"
+    cp ../font/fonts.conf "$directoryPath"
+fi
+
 #* To install notification management
 sudo pacman -S dunst
 #* To configure dunst
@@ -59,4 +70,4 @@ sudo pacman -S ntfs-3g
 sudo pacman -S mtpfs
 yay -S jmtpfs
 #* To install iphone mount support
-yay -S iphone
+yay -S ifuse-git

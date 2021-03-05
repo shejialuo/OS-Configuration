@@ -36,7 +36,7 @@ yay -S lightdm-webkit-theme-material-git
 Icon=/var/lib/AccountsService/icons/shejialuo/luo.jpg
 ```
 
-#### 1.2.3 lightDM 设置
+#### 1.2.3 lightDM设置
 
 编辑文件`/etc/lightdm/lightdm.conf`,设置`greeter-session=lightdm-webkit2-greeter`。
 
@@ -57,7 +57,13 @@ sudo pacman -S network-manager-applet
 
 ## 3 音频管理
 
-### 3.1 管理
+### 3.1 ALSA安装
+
+```shell
+sudo pacman -S alsa-utils
+```
+
+### 3.2 管理
 
 ```shell
 sudo pacman -S pulseaudio
@@ -67,7 +73,7 @@ sudo pacman -S pamixer
 
 在i3配置文件中，可利用`pamixer`快捷键音量调节。
 
-### 3.2 托盘安装
+### 3.3 托盘安装
 
 ```shell
 yay -S pa-applet-git

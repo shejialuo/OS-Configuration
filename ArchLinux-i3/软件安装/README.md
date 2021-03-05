@@ -77,7 +77,7 @@ sudo pacman -S typora
 sudo pacman -S gvim
 ```
 
-配置文件见`.vimrc`。通过`pacman`安装会自动安装到`/usr/share/vim/vimfiles/plugin`。所有的插件均采用`pacman`安装方式，尽可能只是用`pacman`方式安装。
+配置文件见`.vimrc`。通过`pacman`安装会自动安装到`/usr/share/vim/vimfiles/plugin`。所有的插件均采用`pacman`安装方式，尽可能只采用`pacman`方式安装。
 
 #### 2.2.1 airline插件安装
 
@@ -412,6 +412,8 @@ sudo pacman -S mplayer
 
 ### 7.1 Google chrome 安装
 
+现在已转Edge。
+
 ```shell
 sudo pacman -S google-chrome
 ```
@@ -420,7 +422,7 @@ sudo pacman -S google-chrome
 
 ### 7.2 Microsoft edge 安装
 
-目前只有dev版本（不支持登录），通过`yay`安装，主用edge。：
+目前只有dev版本，通过`yay`安装，主用edge：
 
 ```shell
 yay -S microsoft-edge-dev 
@@ -547,7 +549,7 @@ sudo pacman -S viewnior
 ### 9.3 Wps安装
 
 ```shell
-sudo pacman -S wps-office
+yay -S wps-office
 sudo pacman -S ttf-wps-fonts
 ```
 
@@ -573,12 +575,20 @@ sudo pacman -S zeal
 sudo pacman -S pandoc
 ```
 
+### 9.7 Zotero安装
+
+安装文献管理工具：
+
+```shell
+sudo pacman -S zotero
+```
+
 ## 10 即时通讯软件安装
 
 ### 10.1 Telegram 安装
 
 ```shell
-sudo pacman -S telegram
+sudo pacman -S telegram-desktop
 ```
 
 #### 10.1.1 解决无法输入中文问题
@@ -592,7 +602,7 @@ env QT_IM_MODULE=fcitx
 ### 10.2 QQ 安装
 
 ```shell
-sudo pacman -S qq
+sudo pacman -S linuxqq
 ```
 
 ### 10.3 Wechat 安装

@@ -4,7 +4,7 @@
 ###########################################################
 
 #* To install kitty
-sudo pacman -S sakura
+sudo pacman -S kitty
 
 #* To copy the configuration file
 

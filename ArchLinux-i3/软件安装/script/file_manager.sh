@@ -28,6 +28,8 @@ sudo pacman -S w3m
 #* To install mediainfo for ranger
 sudo pacman -S mediainfo
 
+cp -r ../ranger ~/.config/
+
 ###########################################################
 ####                        End                        ####
 ###########################################################
