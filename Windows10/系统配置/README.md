@@ -18,7 +18,7 @@
 + Microsoft TODO
 + TranslucentTB （必须安装在C盘）
 + NVDIA Control Panel （必须安装在C盘）
-+ Files
++ Spotify (换区下载)
 
 ## 3. Windows Terminal配置
 
