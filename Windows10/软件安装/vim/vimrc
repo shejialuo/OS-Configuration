@@ -46,3 +46,5 @@ set nobackup
 " To set the tab and space display
 set listchars=tab:>-,trail:-
 set list
+
+set backspace=indent,eol,start

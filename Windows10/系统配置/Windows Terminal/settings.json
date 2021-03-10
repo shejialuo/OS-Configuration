@@ -15,7 +15,7 @@
     "profiles": {
         //! Settings to apply to all profiles
         "defaults": {
-            "fontFace": "Fira Code",
+            "fontFace": "MesloLGS NF",
             "fontSize": 14, // 老年人了
             "colorScheme": "Dracula",
             "acrylicOpacity": 0.8,

@@ -2,22 +2,16 @@
 
 ## 1. 约定
 
-+ 软件安装包的位置：`F:\Software`。
-+ 软件缓存的位置：`F:\Cache`。
-+ 游戏位于的盘：`E:\`。
-+ OneDrive文件夹：`G:\onedrive`
++ 软件安装包的位置：默认位置。
++ 软件缓存的位置：`C:\Cache`。
 
 注意，软件缓存的位置只能随缘，看软件支不支持。
 
 ## 2. UWP
 
-为了确保独立性，UWP应用均保存在`G`盘。
-
 + Windows Terminal
-+ 哔哩哔哩动画
 + Microsoft TODO
-+ TranslucentTB （必须安装在C盘）
-+ NVDIA Control Panel （必须安装在C盘）
++ TranslucentTB
 + Spotify (换区下载)
 
 ## 3. Windows Terminal配置
@@ -49,6 +43,13 @@ Import-Module oh-my-posh
 Set-Theme Agnoster
 ```
 
+此处需要注意，如果使用的是oh-my-posh版本3，需要更改最后一句命令：
+
+```shell
+# Set-Theme Agnoster
+Set-PoshPrompt -Theme agnoster 
+```
+
 ### 3.3 PSReadLine 的使用
 
 仍是在PowerShell的配置文件中输入，即可实现在Menu补全:
@@ -59,7 +60,9 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 ### 3.4 配置文件
 
-见`settings.json`。
+由于oh-my-posh的更新，使得Fira Code字体使用体验下降（图标原因），故换为官方推荐的字体，见`settings.json`。
+
+同时需要更改VsCode Terminal的字体配置进而正常显示。
 
 ## 4. VsCode
 
