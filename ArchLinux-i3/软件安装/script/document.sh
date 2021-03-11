@@ -19,7 +19,8 @@ else
     mkdir "$directoryPath"
     touch "$directoryPath/zathurarc"
     echo "set selection-clipboard clipboard" >> "$directoryPath/zathurarc"
-    
+fi
+
 ###########################################################
 ####                        End                        ####
 ###########################################################
@@ -40,7 +41,7 @@ sudo pacman -S viewnior
 ###########################################################
 
 #* To install wps-office
-sudo pacman -S wps-office
+yay -S wps-office
 sudo pacman -S ttf-wps-fonts
 
 ###########################################################

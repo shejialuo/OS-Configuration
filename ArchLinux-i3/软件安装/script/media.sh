@@ -51,8 +51,7 @@ then
 else
     mkdir ~/.config/ncmpcpp
     cp ../music/config "$directoryPath/config"
-
-
+fi
 ###########################################################
 ####                        End                        ####
 ###########################################################
@@ -87,8 +86,8 @@ sudo pacman -S easytag
 sudo pacman -S mutt
 
 #* To configure mutt
-cp -r ../mail/mutt ~/.config/mutt
-chmod 600 .config/mutt/muttrc
+cp -r ../mail/mutt ~/.config
+chmod 600 ~/.config/mutt/muttrc
 
 #* To install fetchmail
 yay -S fetchmail

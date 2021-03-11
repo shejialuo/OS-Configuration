@@ -25,15 +25,15 @@ yay -S lightdm-webkit-theme-material-git
 
 #### 1.2.1 背景图片
 
-登录的背景图片位于目录`/var/lib/AccountsService/wallpapers`。注意在命令行使用`lightdm-webkit2-greeter`，进入`Setting`，选择`background engine`为`image`。(见`lightdm-webkit2-greeter.conf`文件)。
+登录的背景图片位于目录`/var/lib/AccountsService/wallpapers`。注意在命令行使用`lightdm-webkit2-greeter`，进入`Setting`，选择`background engine`为`image`。(见`lightdm-webkit2-greeter.conf`文件)。注意文件的权限。
 
 #### 1.2.2 登录头像
 
-用户头像的目录位于`var/lib/AccountsService/icons/$USER`。注意在`/var/lib/AccountsService/users`新建文件`$USER`，输入以下内容：
+用户头像的目录位于`var/lib/AccountsService/icons`。注意在`/var/lib/AccountsService/users`新建文件`$USER`，输入以下内容：
 
 ```shell
 [User]
-Icon=/var/lib/AccountsService/icons/shejialuo/luo.jpg
+Icon=/var/lib/AccountsService/icons/shejialuo.jpg
 ```
 
 #### 1.2.3 lightDM设置
@@ -218,12 +218,11 @@ sudo pacman -S xorg-xbacklight
 sudo pacman -S ntfs-3g
 ```
 
-自动挂载两个机械盘，修改`/etc/fstab`文件如下：
+自动挂载与Windows To Go的公共机械盘，修改`/etc/fstab`文件如下：
 
 ```shell
-/dev/sda2  /mnt/game  ntfs   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
-
-/dev/sda4  /mnt/life  ntfs   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
+# /dev/sda3
+UUID=6A56CF5056CF1BA7 /mnt ntfs   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
 ```
 
 ### 10.2 andorid挂载

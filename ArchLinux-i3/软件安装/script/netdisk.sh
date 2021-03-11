@@ -8,9 +8,6 @@ sudo pacman -S onedrive
 
 #* To configure onedrive
 mkdir -p ~/Sync/OneDrive
-cp ../netdisk/onedrive/config "$_/config"
-
-onedrive --synchronize
 
 ###########################################################
 ####                        End                        ####

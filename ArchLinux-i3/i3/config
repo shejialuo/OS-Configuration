@@ -61,7 +61,7 @@ exec --no-startup-id nitrogen --restore; sleep 1;
 exec --no-startup-id compton -b
 
 # To autostart input method
-exec --no-startup-id fcitx
+exec --no-startup-id fcitx5
 
 ###########################################################
 ####                      End                          ####

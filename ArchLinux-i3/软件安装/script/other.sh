@@ -12,7 +12,7 @@ sudo pacman -S gpick
 #* To install rofi
 sudo pacman -S rofi
 #** To configure rofi
-cp -r ../rofi ~/.config/rofi
+cp -r ../rofi ~/.config/
 
 #* To install goldendict
 sudo pacman -S goldendict
@@ -39,3 +39,6 @@ sudo pacman -S keepassxc
 
 #* To install youtube-dl
 sudo pacman -S youtube-dl
+
+#* To install qbittorrent
+sudo pacman -S qbittorrent

@@ -6,10 +6,6 @@ LOGFILE=/tmp/procmaillog
 Mail/QQMail/inbox
 
 :0
-* ^TOshejialuo@mails.cqjtu.edu.cn
-Mail/CqjtuMail/inbox
-
-:0
 * ^TOshejialuo@126.com
 Mail/126Mail/inbox
 

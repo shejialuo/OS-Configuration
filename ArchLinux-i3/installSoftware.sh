@@ -4,7 +4,7 @@
 #! However you need to install a proxy software because of GFW
 
 #* To configure i3
-cp -r ./i3 ~/.config/i3
+cp -r ./i3 ~/.config
 
 #* To install the system software
 sh ./系统配置/install.sh

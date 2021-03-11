@@ -50,7 +50,7 @@ sudo pacman -S python-gobject
 ####                        NodeJs                     ####
 ###########################################################
 
-sudo pacman -S NodeJs
+sudo pacman -S nodejs
 sudo pacman -S eslint
 npm install -g @angular/cli
 npm install -g @nestjs/cli

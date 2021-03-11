@@ -7,7 +7,7 @@ mpd_port = "6600"
 
 mpd_connection_timeout = 5
 
-mpd_music_dir = /mnt/life/Music
+mpd_music_dir = /mnt/Music
 
 visualizer_fifo_path = /tmp/mpd.fifo
 

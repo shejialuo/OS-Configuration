@@ -256,7 +256,7 @@ GLFW_IM_MODULE DEFAULT=ibus
 
 ### 5.1 Electron-ssr 安装
 
-通过`yay`安装：
+通过`yay`安装（目前暂时不使用）：
 
 ```shell
 yay -S electron-ssr
@@ -264,7 +264,7 @@ yay -S electron-ssr
 
 ### 5.2 Clash for linux 安装
 
-安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认HTTP端口为7890,默认socks端口为7891。
+安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认HTTP端口为7890,默认socks端口为7891。必须同步时钟，才能使用（别问我为什么知道，fuck it）。
 
 ```shell
 sudo pacman -S clash
@@ -301,6 +301,23 @@ WantedBy=multi.user.target
 ```
 
 `start-clash.sh`和`stop-clash.sh`见文件，注意权限。
+
+### 5.3 Polipo
+
+为了实现全局代理使用：
+
+```shell
+yay -S polipo
+sudo cp /etc/polipo/config.sample /etc/polipo/config
+sudo vim /etc/polipo/config
+```
+
+修改端口即可：
+
+```shell
+socksParentProxy = "127.0.0.1:1080"
+socksProxyType = socks5
+```
 
 ## 6 媒体安装
 
@@ -756,3 +773,11 @@ sudo pacman -S keepassxc
 ```shell
 sudo pacman -S youtube-dl
 ```
+
+### 12.13 qbittorrent安装
+
+```shell
+sudo pacman -S qbittorrent
+```
+
+添加tracer即可。
