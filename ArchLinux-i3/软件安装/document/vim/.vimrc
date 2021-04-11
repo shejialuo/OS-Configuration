@@ -66,8 +66,8 @@ map <F3> :NERDTreeToggle<CR>
 "" i: horizontal split
 "" s: vertical split
 
-"" o: open in current window 
-"" o: open in current window 
+"" o: open in current window
+"" o: open in current window
 " To set the code check
 "" To custmoize the error and wanring icon
 let g:ale_sign_error = '✗'
@@ -90,9 +90,9 @@ nmap sn <Plug>(ale_next_wrap)
 " To set the automatic comment
 "" To leave a space automatically
 let g:NERDSpaceDelims=1
-"" /cc: add comment
-"" /cu: undo comment
-"" /c<space>: intelligent add/undo comment 
+"" \cc: add comment
+"" \cu: undo comment
+"" \c<space>: intelligent add/undo comment
 "" It's in the normal mode, so you can use the count
 
 " To use vim-surround to operate ()、""、XML and HTML tags

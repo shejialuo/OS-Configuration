@@ -150,3 +150,9 @@ sudo pacman -S texlive-langchinese
 ```shell
 sudo pacman -S gnuplot
 ```
+
+## 9 Hexo
+
+```shell
+npm install hexo-cli -g
+```

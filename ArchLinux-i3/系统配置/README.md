@@ -222,7 +222,7 @@ sudo pacman -S ntfs-3g
 
 ```shell
 # /dev/sda3
-UUID=6A56CF5056CF1BA7 /mnt ntfs   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
+UUID=6A56CF5056CF1BA7 /mnt ntfs-3g   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
 ```
 
 ### 10.2 andorid挂载
