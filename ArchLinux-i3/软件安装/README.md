@@ -618,6 +618,7 @@ sudo pacman -S nitrogen
 ```shell
 sudo pacman -S spotify
 sudo pacman -S spotify-tui
+yay -S spotify-tray-git
 ```
 
 #### 5.2.2 Mpd安装

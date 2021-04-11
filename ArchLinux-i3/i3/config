@@ -401,14 +401,8 @@ gaps outer 6
 ####     Start applications on specific workspaces     ####
 ###########################################################
 
-# to move spotify to workspace 6
-for_window [class="^Spotify$"] move to workspace $ws6
-
 # to move vscode to workspace 3
 assign [class="^Code$"] $ws3
-
-# to move zathura to workspace 4
-assign [class="^Zathura$"] $ws4
 
 ###########################################################
 ####                      End                          ####
