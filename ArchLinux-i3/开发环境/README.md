@@ -10,6 +10,10 @@ sudo pacman -S gdb
 sudo pacman -S gcc
 ```
 
+```shell
+sudo pacman -S valgrind
+```
+
 ## 2. Go
 
 ### 2.1 安装
@@ -95,7 +99,13 @@ npm install -g @angular/cli
 ### 5.4 NestJs
 
 ```shell
-npm install -g @nestjs/cli
+sudo npm install -g @nestjs/cli
+```
+
+### 5.5 Hexo
+
+```shell
+sudo npm install -g hexo-cli 
 ```
 
 ## 6 Docker
@@ -149,10 +159,4 @@ sudo pacman -S texlive-langchinese
 
 ```shell
 sudo pacman -S gnuplot
-```
-
-## 9 Hexo
-
-```shell
-npm install hexo-cli -g
 ```

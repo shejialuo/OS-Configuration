@@ -15,9 +15,9 @@
 # To define varibales for workspace
 # Worksapces oepration
 # i3 operations
-# i3bar configuration 
+# i3bar configuration
 # Container decorations
-# Borders and gaps 
+# Borders and gaps
 # Start applications on specific workspaces
 
 ###########################################################
@@ -57,8 +57,8 @@ exec --no-startup-id ~/.screenlayout/high.sh
 # To autostart wallpaper manager
 exec --no-startup-id nitrogen --restore; sleep 1;
 
-# To autostart compton to achieve traspanrency
-exec --no-startup-id compton -b
+# To autostart picom to achieve traspanrency
+exec --no-startup-id picom -b
 
 # To autostart input method
 exec --no-startup-id fcitx5
@@ -83,10 +83,10 @@ bindsym $mod+F2 exec --no-startup-id microsoft-edge-dev
 bindsym $mod+F3 exec --no-startup-id pcmanfm
 
 # To launch spotify
-bindsym $mod+F4 exec --no-startup-id spotify --force-device-scale-factor=1.25
+bindsym $mod+F4 exec --no-startup-id spotify --force-device-scale-factor=1.5
 
-# To launch kitty terminal simulator
-bindsym $mod+Return exec --no-startup-id kitty
+# To launch alacritty terminal simulator
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # To launch deepin-screenshot
 bindsym $mod+p exec --no-startup-id flameshot gui
@@ -188,27 +188,27 @@ bindsym $mod+a scratchpad show
 # resize window
 bindsym $mod+r mode "resize"
 mode "resize" {
-	# Pressing left will shrink the window’s width.
-	# Pressing right will grow the window’s width.
-	# Pressing up will shrink the window’s height.
-	# Pressing down will grow the window’s height.
-	bindsym j resize shrink width 10 px or 10 ppt
-	bindsym k resize grow height 10 px or 10 ppt
-	bindsym l resize shrink height 10 px or 10 ppt
-	bindsym semicolon resize grow width 10 px or 10 ppt
-	
-	# same bindings, but for the arrow keys
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
 
-	# back to normal: Enter or Escape or $mod+r
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
- 
+
 ###########################################################
 ####                    End                            ####
 ###########################################################
@@ -224,7 +224,7 @@ mode "resize" {
 # play/stop
 bindsym $mod+Ctrl+Up exec --no-startup-id  "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 
-# previous 
+# previous
 bindsym $mod+Ctrl+Left  exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 
 # next
@@ -233,7 +233,7 @@ bindsym $mod+Ctrl+Right exec --no-startup-id "dbus-send --print-reply --dest=org
 ###########################################################
 ####                    End                            ####
 ###########################################################
- 
+
 
 
 
@@ -242,7 +242,7 @@ bindsym $mod+Ctrl+Right exec --no-startup-id "dbus-send --print-reply --dest=org
 ###########################################################
 
 set $ws1 ""
-set $ws2 "" 
+set $ws2 ""
 set $ws3 ""
 set $ws4 ""
 set $ws5 ""
@@ -318,43 +318,43 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ###########################################################
 
 bar {
-	# execute i3bar and --transparency means transparent
-	# --transparency needs to cooperate with compton
-	i3bar_command i3bar --transparency
+    # execute i3bar and --transparency means transparent
+    # --transparency needs to cooperate with compton
+    i3bar_command i3bar --transparency
 
-	# configure height
-	height 28
-	
-	# font and its size	
-	font pango:sarase 11
-	
-	# to configure i3bar mode
-	mode dock
+    # configure height
+    height 28
 
-	# to define the modifier
-	modifier $mod	
+    # font and its size
+    font pango:sarase 11
+
+    # to configure i3bar mode
+    mode dock
+
+    # to define the modifier
+    modifier $mod
 
     # execute corresponding satus script
-	# use conky
-	status_command exec ~/.config/i3/jconky.sh
+    # use conky
+    status_command exec ~/.config/i3/jconky.sh
 
-	# the i3bar is on the top
-	position top
+    # the i3bar is on the top
+    position top
 
-	# configure separater "space"
-	separator_symbol ""
-	
-	# theme color
-	colors {
-		background #10101000
-		statusline #FFFFFF
-		separator  #3399FF
-		focused_workspace  #3297FD #11111100 #FFFFFF
-		active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
-		inactive_workspace #111111 #11111100 #FFFFFF
-		urgent_workspace   #990000 #11111100 #FFFFFF
-		binding_mode       #990000 #99000000 #FFFFFF
-	}
+    # configure separater "space"
+    separator_symbol ""
+
+    # theme color
+    colors {
+        background #10101000
+        statusline #FFFFFF
+        separator  #3399FF
+        focused_workspace  #3297FD #11111100 #FFFFFF
+        active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
+        inactive_workspace #111111 #11111100 #FFFFFF
+        urgent_workspace   #990000 #11111100 #FFFFFF
+        binding_mode       #990000 #99000000 #FFFFFF
+    }
 }
 
 # to make i3bar invisible or visible

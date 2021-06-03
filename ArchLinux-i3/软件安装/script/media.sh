@@ -97,11 +97,14 @@ chmod 600 ~/.msmtprc
 ####                        Vedio                      ####
 ###########################################################
 
-#* To install mplayer
-sudo pacman -S mplayer
+#* To install mpv
+sudo pacman -S mpv
 
 #* To install screenrecorder
 sudo pacman -S simplescreenrecorder
+
+#* To install shotcut
+sudo pacman -S shotcut
 
 ###########################################################
 ####                        End                        ####

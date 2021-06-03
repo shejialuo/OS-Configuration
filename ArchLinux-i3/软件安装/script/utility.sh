@@ -39,26 +39,21 @@ echo 'alias p-off="unset http_proxy https_proxy"' >> ~/.zshrc
 ####                    Termianl                       ####
 ###########################################################
 
-#* To install sakura
-sudo pacman -S sakura
 
-#* To install kitty
-sudo pacman -S kitty
+sudo pacman -S alacritty
 
 #* To copy the configuration file
 
 #? When using ~, you shouldn't use quote
 #? Because it prevents interpreting ~
-directoryPath=~/.config/kitty
+directoryPath=~/.config/alacritty
 if [ -d "$directoryPath" ]
 then
-    cp ../utility/terminal/kitty.conf "$directoryPath/kitty.conf"
+    cp ../utility/terminal/alacritty.yml "$directoryPath/alacritty.yml"
 else
     mkdir "$directoryPath"
-    cp ../utility/terminal/kitty.conf "$directoryPath/kitty.conf"
+    cp ../utility/terminal/alacritty.yml "$directoryPath/alacritty.yml"
 fi
-
-echo "GLFW_IM_MODULE DEFAULT=ibus" >> ~/.pam_environment
 
 ###########################################################
 ####                       End                         ####

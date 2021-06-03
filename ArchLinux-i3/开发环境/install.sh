@@ -6,6 +6,7 @@
 
 sudo pacman -S gdb
 sudo pacman -S gcc
+sudo pacman -S valgrind
 
 ###########################################################
 ####                        End                        ####
@@ -52,8 +53,9 @@ sudo pacman -S python-gobject
 
 sudo pacman -S nodejs
 sudo pacman -S eslint
-npm install -g @angular/cli
-npm install -g @nestjs/cli
+sudo npm install -g @angular/cli
+sudo npm install -g @nestjs/cli
+sudo npm install -g hexo-cli
 
 ###########################################################
 ####                        End                        ####

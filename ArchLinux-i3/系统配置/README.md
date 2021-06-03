@@ -129,11 +129,10 @@ export QT_QPA_PLATFORMTHEME=gtk2
 
 ## 5 混成器安装
 
-利用`compton`实现透明化，并下载可视化配置工具`compton-conf`：
+利用`picom`实现透明化及毛玻璃等特效。
 
 ```shell
-sudo pacman -S compton
-sudo pacman -S compton-conf
+sudo pacman -S picom
 ```
 
 此部分见配置文件`compton.conf`，并在i3配置文件中设置自启。

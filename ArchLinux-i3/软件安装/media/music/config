@@ -9,13 +9,11 @@ mpd_connection_timeout = 5
 
 mpd_music_dir = /mnt/Music
 
-visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_data_source = /tmp/mpd.fifo
 
 visualizer_output_name = Visualizer feed
 
 visualizer_in_stereo = yes
-
-visualizer_sync_interval = 30
 
 visualizer_type = wave
 

@@ -86,26 +86,8 @@ alias p-off="unset http_proxy https_proxy"
 
 ### 1.2 终端安装
 
-#### 1.2.1 Sakura安装
-
-备用终端。
-
 ```shell
-sudo pacman -S sakura
-```
-
-#### 1.2.2 Kitty 安装
-
-想让终端支持Fira Code，故从Sakura转变为Kitty。
-
-```shell
-sudo pacman -S kitty
-```
-
-为了使得kitty支持fcitx5，在`~/.pam_environment`中添加：
-
-```shell
-GLFW_IM_MODULE DEFAULT=ibus
+sudo pacman -S alacritty
 ```
 
 ### 1.3 文件管理
@@ -618,7 +600,6 @@ sudo pacman -S nitrogen
 ```shell
 sudo pacman -S spotify
 sudo pacman -S spotify-tui
-yay -S spotify-tray-git
 ```
 
 #### 5.2.2 Mpd安装
@@ -709,10 +690,10 @@ sudo pacman -S msmtp
 
 #### 5.4.1 播放器
 
-安装mplayer视频播放器：
+安装mpv视频播放器：
 
 ```shell
-sudo pacman -S mplayer
+sudo pacman -S mpv
 ```
 
 #### 5.4.2 录屏软件安装
@@ -721,46 +702,21 @@ sudo pacman -S mplayer
 sudo pacman -S simplescreenrecorder
 ```
 
+#### 5.4.3 视频剪辑工具
+
+```shell
+sudo pacman -S shotcut
+```
+
 ## 6 云盘
 
-### 6.1 Onedrive 安装
+避免折腾，直接使用统一的多协议客户端：
 
 ```shell
-sudo pacman -S onedrive
+sudo pacman -S rclone
 ```
 
-有必要总结一下用法，Onedrive总共有两种模式：
-
-+ `--synchronize`：手动同步。
-+ `--monitor`：自动同步。
-
-尽可能不使用`--monitor`，同步的事情需要谨慎。
-
-在这两种模式下，不加其他命令行参数直接与文件夹整个同步，不推荐直接使用。两种模式拥有额外的命令行参数：
-
-+ `--upload-only`：仅仅上传本地文件。
-  + `--remove-source-files`：上传成功后，删除源文件。
-  + `--no-remote-delete`: 不删除Onedrive上的文件。
-+ `--download-only`：仅仅下载Onedrive上的文件。
-
-其他还有如下的命令行参数：
-
-`--remove-directory`：删除Onedrive上的文件，不同步。
-`--create-directory`：在Onedrive上创建文件，不同步。
-
-### 6.2 Googledrive 安装
-
-```shell
-yay -S drive-bin
-```
-
-新建文件夹`~/Sync/GoogleDrive`，并输入以下信息：
-
-```shell
-drive init
-```
-
-使用比Onedrive人性化，和Git命令类似。使用时`man`即可。
+使用的方法参考官网教程。
 
 ## 7 其他工具安装
 
@@ -770,4 +726,12 @@ drive init
 
 ```shell
 sudo pacman -S rofi
+```
+
+### 7.2 Drawio 安装
+
+安装矢量图绘制工具：
+
+```shell
+sudo pacman -S drawio-desktop-bin
 ```
