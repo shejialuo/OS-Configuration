@@ -144,6 +144,30 @@ sudo pacman -S trash-cli
 sudo pacman -S p7zip
 ```
 
+#### 1.3.5 设置为默认文件浏览器
+
+[参考资料](https://www.reddit.com/r/ranger/comments/f6b6u7/how_to_open_containing_folder_with_ranger/)
+
+由于原始的`ranger.desktop`文件中存在`Terminal=true`，所以修改为由终端模拟器执行`ranger`:
+
+```shell
+cp /usr/share/applications/ranger.desktop ~/.local/share/applications/ranger.desktop
+vim ~/.local/share/applications/ranger.desktop
+```
+
+改变为以下的值：
+
+```shell
+Terminal=false
+Exec=Exec=alacritty -e ranger
+```
+
+在`mimeapps.list`添加`ranger.desktop`，并更新数据库：
+
+```shell
+update-desktop-database ~/.local/share/applications
+```
+
 ### 1.4 磁盘管理
 
 #### 1.4.1 磁盘清理工具

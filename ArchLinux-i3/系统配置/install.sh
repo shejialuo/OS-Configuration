@@ -71,3 +71,6 @@ sudo pacman -S mtpfs
 yay -S jmtpfs
 #* To install iphone mount support
 yay -S ifuse-git
+
+#* To configure the default applications
+cp ./mimeapps.list ~/.config/

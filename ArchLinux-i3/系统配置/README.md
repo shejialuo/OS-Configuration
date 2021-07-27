@@ -273,3 +273,9 @@ ifuse --documents org.vediolan.vlc-ios mountpoint
 ```shell
 sudo echo "blacklist pcspkr" | tee /etc/modprobe.d/nobeep.conf
 ```
+
+### 11.2 默认程序设置
+
+参照[ArchWiki](https://wiki.archlinux.org/title/XDG_MIME_Applications)
+
+使用`mimeapps.list`管理默认程序。
