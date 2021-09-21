@@ -38,19 +38,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 ```
 
-### 3.2 ghc
+### 3.2 安装包
 
 ```shell
-ghcup install ghc
+ghcup tui
 ```
-
-### 3.3 cabal
-
-```shell
-ghcup install cabal
-```
-
-使用说明详见[官方文档](https://cabal.readthedocs.io)
 
 ## 4. python
 
@@ -108,6 +100,12 @@ sudo npm install -g @nestjs/cli
 sudo npm install -g hexo-cli 
 ```
 
+### 5.6 Pigco
+
+```shell
+sudo npm install picgo -g
+```
+
 ## 6 Docker
 
 ```shell
@@ -119,7 +117,7 @@ sudo pacman -S docker
 ### 7.1 TexLive安装
 
 ```shell
-sudo pacman -S  texlive-core
+sudo pacman -S texlive-core
 ```
 
 ### 7.2 语言包安装

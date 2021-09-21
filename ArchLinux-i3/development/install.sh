@@ -28,8 +28,6 @@ sudo pacman -S go
 
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 echo 'export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"' >> ~/.profile
-ghcup install ghc
-ghcup install cabal
 
 ###########################################################
 ####                        End                        ####
@@ -56,6 +54,7 @@ sudo pacman -S eslint
 sudo npm install -g @angular/cli
 sudo npm install -g @nestjs/cli
 sudo npm install -g hexo-cli
+sudo npm install picgo -g
 
 ###########################################################
 ####                        End                        ####
@@ -87,16 +86,6 @@ sudo pacman -S texlive-langchinese
 ###########################################################
 
 sudo pacman -S gnuplot
-
-###########################################################
-####                        End                        ####
-###########################################################
-
-###########################################################
-####                       Gnuplot                     ####
-###########################################################
-
-npm install hexo-cli -g
 
 ###########################################################
 ####                        End                        ####
