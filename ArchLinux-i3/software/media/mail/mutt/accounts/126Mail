@@ -1,7 +1,0 @@
-from = "shejialuo@126.com"
-set sendmail = "/usr/bin/msmtp -a 126Mail"
-set spoolfile = "$HOME/Mail/126Mail/inbox" #INBOX
-set mbox="$HOME/Mail/126Mail/seen"  #Seen box
-set record="$HOME/Mail/126Mail/sent"  #Sent box
-set postponed="$HOME/Mail/126Mail/draft"  #Draft box
-color status cyan default

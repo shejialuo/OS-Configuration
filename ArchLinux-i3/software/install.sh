@@ -89,6 +89,8 @@ sudo pacman -S fcitx5-pinyin-moegirl
 #* To install typora
 sudo pacman -S typora
 
+# TODO: need to change vim
+
 #* To install gvim
 sudo pacman -S gvim
 ##* To install vim-airline
@@ -140,8 +142,6 @@ sudo pacman -S goldendict
 
 
 
-
-
 ###########################################################
 ####                      network                      ####
 ###########################################################
@@ -187,7 +187,6 @@ sudo pacman -S flameshot
 sudo pacman -S nitrogen
 
 sudo pacman -S spotify
-sudo pacman -S spotify-tui
 
 sudo pacman -S mpd
 sudo pacman -S timidity++
@@ -199,8 +198,6 @@ sudo pacman -S easytag
 
 #* To install mutt
 sudo pacman -S mutt
-
-#* To configure mutt
 
 #* To install fetchmail
 yay -S fetchmail
@@ -228,6 +225,27 @@ sudo pacman -S shotcut
 #* To install rclone
 
 sudo pacman -S rclone
+
+###########################################################
+####                        End                        ####
+###########################################################
+
+
+###########################################################
+####                        Other                      ####
+###########################################################
+
+#* To install rofi
+sudo pacman -S rofi
+
+#* To install drawio
+sudo pacman -S drawio-desktop-bin
+
+#* To install chezmoi
+sudo pacman -S chezmoi
+
+sudo pacman -S gnome-kerying
+sudo pacman -S seahorse
 
 ###########################################################
 ####                        End                        ####

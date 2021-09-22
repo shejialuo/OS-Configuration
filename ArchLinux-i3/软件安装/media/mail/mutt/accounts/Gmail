@@ -1,6 +1,0 @@
-set from = "shejialuo@gmail.com"
-set sendmail = "/usr/bin/msmtp -a Gmail"
-set spoolfile = "$HOME/Mail/Gmail/inbox" #INBOX
-set mbox="$HOME/Mail/Gmail/seen"  #Seen box 
-set record="$HOME/Mail/Gmail/sent"  #Sent box
-set postponed="$HOME/Mail/Gmail/draft"  #Draft box  

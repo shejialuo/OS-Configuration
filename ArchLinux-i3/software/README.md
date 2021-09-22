@@ -264,7 +264,11 @@ sudo pacman -S fcitx5-pinyin-moegirl
 sudo pacman -S typora
 ```
 
+使用`picgo`自动上传图床。配置很简单。
+
 ### 3.2 gvim
+
+<!-- TODO: 定义插件不采用pacman的方式，用vim8自带的插件管理 -->
 
 `vim`并不能使用系统的剪贴板，安装`gvim`。
 
@@ -547,7 +551,7 @@ env QT_IM_MODULE=fcitx
 
 ### 4.4 下载软件
 
-#### 4.4.1 Aria2 安装
+#### 4.4.1 Aria2安装
 
 下载工具安装：
 
@@ -627,7 +631,6 @@ sudo pacman -S nitrogen
 
 ```shell
 sudo pacman -S spotify
-sudo pacman -S spotify-tui
 ```
 
 #### 5.2.2 mpd
@@ -658,8 +661,6 @@ sudo pacman -S ncmpcpp
 sudo pacman -S mpc
 ```
 
-在文件`~/.config/ncmpcpp/config`配置。
-
 #### 5.2.5 easytag
 
 安装标签编辑工具，虽然ncmpcpp自带编辑tag功能，主要为了添加封面：
@@ -670,7 +671,7 @@ sudo pacman -S easytag
 
 ### 5.3 邮件
 
-#### 5.3.1 Mutt 安装
+#### 5.3.1 mutt
 
 ```shell
 sudo pacman -S mutt
@@ -682,7 +683,7 @@ Mutt仅仅只是一个收发邮件的中转站，UNIX哲学。其配置文件位
 chmod 600 ~/.config/mutt/muttrc
 ```
 
-#### 5.3.2 Fetchmail 安装
+#### 5.3.2 fetchmail
 
 ```shell
 yay -S fetchmail
@@ -694,7 +695,7 @@ yay -S fetchmail
 chmod 600 ~/.fetchmailrc
 ```
 
-#### 5.3.3 Procmail 安装
+#### 5.3.3 procmail
 
 ```shell
 sudo pacman -S procmail
@@ -706,7 +707,7 @@ sudo pacman -S procmail
 chmod 600 ~/.procmailrc
 ```
 
-#### 5.3.4 Msmtp 安装
+#### 5.3.4 msmtp
 
 ```shell
 sudo pacman -S msmtp
@@ -750,7 +751,7 @@ sudo pacman -S rclone
 
 ### 7.1 rofi
 
-使用`rofi`作为`dmenu`的替代品。
+使用`rofi`作为`dmenu`的替代品，使用[Dracula主题](https://draculatheme.com/rofi)。
 
 ```shell
 sudo pacman -S rofi
@@ -770,4 +771,18 @@ sudo pacman -S drawio-desktop-bin
 
 ```shell
 sudo pacman -S chezmoi
+```
+
+对于不需要加密的文件直接Add即可，对于需要加密的文件采取`gnome-kerying`的方式保存。
+
+### 7.4 密码管理
+
+```shell
+sudo pacman -S gnome-kerying
+```
+
+下载GUI管理器：
+
+```shell
+sudo pacman -S seahorse
 ```
