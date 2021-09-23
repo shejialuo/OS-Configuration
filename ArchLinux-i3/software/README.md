@@ -268,75 +268,16 @@ sudo pacman -S typora
 
 ### 3.2 gvim
 
-<!-- TODO: 定义插件不采用pacman的方式，用vim8自带的插件管理 -->
-
 `vim`并不能使用系统的剪贴板，安装`gvim`。
 
 ```shell
 sudo pacman -S gvim
 ```
 
-#### 3.2.1 airline插件安装
+使用`vim`自带的插件管理器进行管理：
 
-用于进行状态栏的显示。
-
-```shell
-sudo pacman -S vim-airline
-```
-
-#### 3.2.2 nerdtree插件安装
-
-用于目录的显示。
-
-```shell
-sudo pacman -S vim-nerdtree
-```
-
-#### 3.2.3 ale插件安装
-
-异步检查代码。
-
-```shell
-sudo pacman -S vim-ale
-```
-
-需要自己安装相应的linter。此处请参照开发环境配置。
-
-#### 3.2.4 ctrlp插件安装
-
-使用模糊搜索。
-
-```shell
-sudo pacman -S vim-ctrlp
-```
-
-#### 3.2.5 nerdcommenter插件安装
-
-快速注释功能:
-
-```shell
-sudo pacman -S vim-nerdcommenter
-```
-
-#### 3.2.6 surround插件安装
-
-高效操作与括号、引号或html、xml标签相关的配对符号：
-
-```shell
-sudo pacman -S vim-surround
-```
-
-#### 3.2.7 tagbar插件安装
-
-```shell
-sudo pacman -S vim-tagbar
-```
-
-#### 3.2.8 wiki插件安装
-
-```shell
-yay -S vim-vimwiki
-```
++ `~/.install_vim_plugin.sh`
++ `~/.update_vim_plguin.sh`
 
 ### 3.3 VsCode
 
@@ -785,4 +726,12 @@ sudo pacman -S gnome-kerying
 
 ```shell
 sudo pacman -S seahorse
+```
+
+### 7.5 腾讯会议
+
+开会需要，没有任何办法，为什么不用`zoom`(~~腾讯居然出了Native版本~~)。
+
+```shell
+yay -S wemeet-bin
 ```

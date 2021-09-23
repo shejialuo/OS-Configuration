@@ -7,9 +7,9 @@
 主要分为4个部分：
 
 + i3
-+ 开发环境
-+ 系统配置
-+ 软件安装
++ development
++ system_config
++ software
 
 ---
 
@@ -22,8 +22,7 @@
 + pa-applet-git
 + qt5-styleplugins
 + jmtpfs
-+ vim-vimwiki
-+ wechat-uos
++ wemeet-bin
 
 ## 安装
 

@@ -247,6 +247,8 @@ sudo pacman -S chezmoi
 sudo pacman -S gnome-kerying
 sudo pacman -S seahorse
 
+yay -S wemeet-bin
+
 ###########################################################
 ####                        End                        ####
 ###########################################################

@@ -1,0 +1,3 @@
+[submodule "ArchLinux-i3/dotfiles"]
+	path = ArchLinux-i3/dotfiles
+	url = https://github.com/shejialuo/dotfiles

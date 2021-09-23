@@ -7,6 +7,7 @@
 sudo pacman -S gdb
 sudo pacman -S gcc
 sudo pacman -S valgrind
+sudo pacman -S clangd
 
 ###########################################################
 ####                        End                        ####
@@ -55,13 +56,14 @@ sudo npm install -g @angular/cli
 sudo npm install -g @nestjs/cli
 sudo npm install -g hexo-cli
 sudo npm install picgo -g
+sudo npm install -g sql-language-server
 
 ###########################################################
 ####                        End                        ####
 ###########################################################
 
 ###########################################################
-####                        NodeJs                     ####
+####                        Docker                     ####
 ###########################################################
 
 sudo pacman -S docker

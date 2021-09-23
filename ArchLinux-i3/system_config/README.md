@@ -325,4 +325,8 @@ sudo echo "blacklist pcspkr" | tee /etc/modprobe.d/nobeep.conf
 
 参照[ArchWiki](https://wiki.archlinux.org/title/XDG_MIME_Applications)
 
+```shell
+ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
+```
+
 使用`mimeapps.list`管理默认程序。

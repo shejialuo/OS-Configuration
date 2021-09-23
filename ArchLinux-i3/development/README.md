@@ -14,6 +14,10 @@ sudo pacman -S gcc
 sudo pacman -S valgrind
 ```
 
+```shell
+sudo pacman -S clang
+```
+
 ## 2. go
 
 ### 2.1 安装
@@ -104,6 +108,12 @@ sudo npm install -g hexo-cli
 
 ```shell
 sudo npm install picgo -g
+```
+
+### 5.7 LanguageServer
+
+```shell
+sudo npm install -g sql-language-server
 ```
 
 ## 6 Docker
