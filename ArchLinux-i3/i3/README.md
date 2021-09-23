@@ -14,8 +14,8 @@
 + Move focused window
 + Container layout operation
 + Spotify control
-+ To define varibales for workspace
-+ Worksapces oepration
++ To define variables for workspace
++ Workspaces operation
 + i3 operations
 + i3bar configuration
 + Container decorations
