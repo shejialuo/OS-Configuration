@@ -53,7 +53,7 @@
 
 ### 1.5 录屏软件
 
-官网下载`Camtasia studio 2019`。（目前不需要）
+官网下载`Camtasia studio 2019`。
 
 `C:\ProgramData\TechSmith\Camtasia Studio 19\`修改文件信息，改为只读:
 
@@ -68,15 +68,11 @@ ValidationData2=1
 
 ## 2. 编辑器
 
-### 2.1 Vim安装
-
-官网下载安装包。配置参考ArchLinux-i3。不安装任何插件。
-
-### 2.2 Typora安装
+### 2.1 Typora安装
 
 官网下载安装包即可。
 
-### 2.3 VsCode安装
+### 2.2 VsCode安装
 
 官网下载即可，有GitHub同步功能。
 

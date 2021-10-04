@@ -11,10 +11,4 @@ attributes disk clear readonly
 online disk
 ```
 
-主要记录在Windows配置中的一系列配置过程，并对配置文件进行备份。
-
-主要分为三个部分：
-
-+ 开发环境
-+ 系统配置
-+ 软件安装
+主要通过WSL的Arch Linux部署开发环境。
