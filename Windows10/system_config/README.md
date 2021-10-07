@@ -14,11 +14,11 @@
 + TranslucentTB
 + Spotify (换区下载)
 
-## 3. Windows Terminal配置
+## 3. Windows Terminal 配置
 
 ### 3.1 安装 PowerShell7
 
-GitHub下载。
+GitHub 下载。
 
 ### 3.2 美化 PowerShell
 
@@ -43,7 +43,7 @@ Import-Module oh-my-posh
 Set-Theme Agnoster
 ```
 
-此处需要注意，如果使用的是oh-my-posh版本3，需要更改最后一句命令：
+此处需要注意，如果使用的是 oh-my-posh 版本 3，需要更改最后一句命令：
 
 ```shell
 # Set-Theme Agnoster
@@ -52,7 +52,7 @@ Set-PoshPrompt -Theme agnoster
 
 ### 3.3 PSReadLine 的使用
 
-仍是在PowerShell的配置文件中输入，即可实现在Menu补全:
+仍是在 PowerShell 的配置文件中输入，即可实现在 Menu 补全:
 
 ```shell
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
@@ -60,19 +60,19 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 ### 3.4 配置文件
 
-由于oh-my-posh的更新，使得Fira Code字体使用体验下降（图标原因），故换为官方推荐的字体，见`settings.json`。
+由于 oh-my-posh 的更新，使得 Fira Code 字体使用体验下降（图标原因），故换为官方推荐的字体，见`settings.json`。
 
-同时需要更改VsCode Terminal的字体配置进而正常显示。
+同时需要更改 VsCode Terminal 的字体配置进而正常显示。
 
 ## 4. VsCode
 
-直接下载安装即可，有同步功能，详细插件见Linux部分。
+直接下载安装即可，有同步功能，详细插件见 Linux 部分。
 
 ## 5. Vs2019
 
 下载安装即可。
 
-## 6. Win10常用快捷键
+## 6. Win10 常用快捷键
 
 记录一些自己不知道且有价值的快捷键。
 

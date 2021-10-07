@@ -28,7 +28,7 @@ sudo pacman -S go
 
 ## 3. haskell
 
-不采用ArchLinux的包管理器，ArchLinux完全采用动态链接，配置起来并不麻烦，但是错误频繁出现。实在受不了，根据建议，采用`ghcup`进行管理。
+不采用 ArchLinux 的包管理器，ArchLinux 完全采用动态链接，配置起来并不麻烦，但是错误频繁出现。实在受不了，根据建议，采用`ghcup`进行管理。
 
 ### 3.1 ghcup
 
@@ -36,7 +36,7 @@ sudo pacman -S go
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
-只需要安装ghcup安装即可，在`.profile`中添加：
+只需要安装 ghcup 安装即可，在`.profile`中添加：
 
 ```shell
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
@@ -50,7 +50,7 @@ ghcup tui
 
 ## 4. python
 
-自带python2、python3。需要安装以下软件：
+自带 python2、python3。需要安装以下软件：
 
 ### 4.1 包管理器
 
@@ -124,7 +124,7 @@ sudo pacman -S docker
 
 ## 7 LaTex
 
-### 7.1 TexLive安装
+### 7.1 TexLive 安装
 
 ```shell
 sudo pacman -S texlive-core
@@ -138,13 +138,13 @@ sudo pacman -S texlive-core
 sudo pacman -S texlive-langchinese
 ```
 
-### 7.3 结合VsCode编写
+### 7.3 结合 VsCode 编写
 
-插件的使用参见[官方wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki)
+插件的使用参见[官方 wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki)
 
-#### 7.3.1 外置PDF阅读
+#### 7.3.1 外置 PDF 阅读
 
-结合Zathura：
+结合 Zathura：
 
 ```json
 "latex-workshop.view.pdf.viewer": "external",

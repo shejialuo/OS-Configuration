@@ -187,6 +187,7 @@ sudo pacman -S flameshot
 sudo pacman -S nitrogen
 
 sudo pacman -S spotify
+yay -S spotify-tray-git
 
 sudo pacman -S mpd
 sudo pacman -S timidity++

@@ -1,15 +1,15 @@
 # 系统配置
 
-## 1 系统DM
+## 1 系统 DM
 
-用lightDM作为系统的display manager。
+用 lightDM 作为系统的 display manager。
 
 ```shell
 sudo pacman -S lightdm
 sudo systemctl enable lightdm
 ```
 
-### 1.1 安装greeter
+### 1.1 安装 greeter
 
 为了好看的登录界面，安装`lightdm-webkit2-greeter`。
 
@@ -36,7 +36,7 @@ yay -S lightdm-webkit-theme-material-git
 Icon=/var/lib/AccountsService/icons/shejialuo.jpg
 ```
 
-#### 1.2.3 lightDM设置
+#### 1.2.3 lightDM 设置
 
 编辑文件`/etc/lightdm/lightdm.conf`,设置`greeter-session=lightdm-webkit2-greeter`。
 
@@ -83,11 +83,11 @@ sudo systemctl enable NetworkManager
 sudo pacman -S network-manager-applet
 ```
 
-并在i3的配置文件中，自动启动`nm-applet`。
+并在 i3 的配置文件中，自动启动`nm-applet`。
 
 ## 3 音频管理
 
-### 3.1 ALSA安装
+### 3.1 ALSA 安装
 
 ```shell
 sudo pacman -S alsa-utils
@@ -102,7 +102,7 @@ sudo pacman -S pamixer
 sudo pacman -S pulseaudio-bluetooth
 ```
 
-在i3配置文件中，可利用`pamixer`快捷键音量调节。
+在 i3 配置文件中，可利用`pamixer`快捷键音量调节。
 
 ### 3.3 托盘安装
 
@@ -110,17 +110,17 @@ sudo pacman -S pulseaudio-bluetooth
 yay -S pa-applet-git
 ```
 
-并在i3的配置文件中，自动启动`pa-applet`。
+并在 i3 的配置文件中，自动启动`pa-applet`。
 
 ## 4 系统主题设置
 
-安装GTK2、GTK3主题管理器：`lxappearance`。
+安装 GTK2、GTK3 主题管理器：`lxappearance`。
 
 ```shell
 sudo pacman -S lxappearance
 ```
 
-### 4.1 GTK主题选择
+### 4.1 GTK 主题选择
 
 选择`material`主题：
 
@@ -128,7 +128,7 @@ sudo pacman -S lxappearance
 sudo pacman -S materia-gtk-theme
 ```
 
-### 4.2 Icon主题选择
+### 4.2 Icon 主题选择
 
 选择`papirus-icon-theme`：
 
@@ -136,9 +136,9 @@ sudo pacman -S materia-gtk-theme
 sudo pacman -S papirus-icon-theme
 ```
 
-### 4.3 QT主题
+### 4.3 QT 主题
 
-QT主题与GTK主题相统一。首先安装QT主题管理器：
+QT 主题与 GTK 主题相统一。首先安装 QT 主题管理器：
 
 ```shell
 sudo pacman -S qt5ct
@@ -156,7 +156,7 @@ yay -S qt5-styleplugins
 export QT_QPA_PLATFORMTHEME=gtk2
 ```
 
-打开`qt5ct`，将QT主题设置为gtk2。
+打开`qt5ct`，将 QT 主题设置为 gtk2。
 
 ## 5 混成器安装
 
@@ -166,7 +166,7 @@ export QT_QPA_PLATFORMTHEME=gtk2
 sudo pacman -S picom
 ```
 
-此部分见配置文件`picom.conf`，并在i3配置文件中设置自启。
+此部分见配置文件`picom.conf`，并在 i3 配置文件中设置自启。
 
 ## 6 字体设置
 
@@ -200,13 +200,13 @@ sudo pacman -S dunst
 man dunst
 ```
 
-### 7.2 dunst配置
+### 7.2 dunst 配置
 
 配置文件位于`~/.config/dunst/dunstrc`。
 
-### 7.3 dunstctl使用
+### 7.3 dunstctl 使用
 
-在i3中配置`dunstctl action`用来跳转通知（即时通讯软件）。
+在 i3 中配置`dunstctl action`用来跳转通知（即时通讯软件）。
 
 ## 8 蓝牙管理
 
@@ -226,7 +226,7 @@ sudo pacman -S bluez-utils
 
 ### 8.3 托盘安装
 
-GUI管理工具：
+GUI 管理工具：
 
 ```shell
 sudo pacman -S blueman
@@ -238,11 +238,11 @@ sudo pacman -S blueman
 
 > Basically, when you pair your device, your Bluetooth service generates a unique set of pairing keys. First, your computer stores the Bluetooth device's MAC address and pairing key. Second, your Bluetooth device stores your computer's MAC address and the matching key. This usually works fine, but the MAC address for your Bluetooth port will be the same on both Linux and Windows (it is set on the hardware level). Thus, when you re-pair the device in Windows or Linux and it generates a new key, that key overwrites the previously stored key on the Bluetooth device. Windows overwrites the Linux key and vice versa.
 
-[ArchWiki解决方案](https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing)
+[ArchWiki 解决方案](https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing)
 
-### 8.4 k380罗技蓝牙键盘存在的问题
+### 8.4 k380 罗技蓝牙键盘存在的问题
 
-入了一个k380罗技的蓝牙键盘，安装`k380-function-keys-conf`让k380默认开启Fn。
+入了一个 k380 罗技的蓝牙键盘，安装`k380-function-keys-conf`让 k380 默认开启 Fn。
 
 ```shell
 yay -S k380-function-keys-conf
@@ -264,14 +264,14 @@ sudo pacman -S xorg-xbacklight
 sudo pacman -S ntfs-3g
 ```
 
-自动挂载与Windows To Go的公共机械盘，修改`/etc/fstab`文件如下：
+自动挂载与 Windows To Go 的公共机械盘，修改`/etc/fstab`文件如下：
 
 ```shell
 # /dev/sda3
 UUID=6A56CF5056CF1BA7 /mnt ntfs-3g   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
 ```
 
-### 10.2 andorid挂载
+### 10.2 andorid 挂载
 
 ```shell
 sudo pacman -S mtpfs
@@ -282,11 +282,11 @@ yay -S jmtpfs
 
 利用`fusermount`umount：`fusermount -u /mnt/android`。
 
-### 10.3 iphone挂载
+### 10.3 iphone 挂载
 
-[ArchWiki参考](https://wiki.archlinux.org/index.php/IOS)
+[ArchWiki 参考](https://wiki.archlinux.org/index.php/IOS)
 
-由于IOS的市场更新，为了确保软件的使用，采用`git`版本。注意每次ArchLinux更新视情况是否重新编译.
+由于 IOS 的市场更新，为了确保软件的使用，采用`git`版本。注意每次 ArchLinux 更新视情况是否重新编译.
 
 ```shell
 yay -S ifuse-git
@@ -313,7 +313,7 @@ ifuse --documents org.vediolan.vlc-ios mountpoint
 
 ## 11 其他
 
-### 11.1 关闭终端Beep
+### 11.1 关闭终端 Beep
 
 参照[ArchWiki](https://wiki.archlinux.org/index.php/PC_speaker)
 

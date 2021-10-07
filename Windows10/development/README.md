@@ -1,36 +1,36 @@
 # 开发环境配置
 
-## 1. Git安装
+## 1. Git 安装
 
 官网安装即可，默认安装位置：`C:\Program Files\Git`
 
-## 2. Python安装
+## 2. Python 安装
 
 同上，默认安装位置。
 
-## 3. WSL2安装
+## 3. WSL2 安装
 
 教程参考[官方文档](https://docs.microsoft.com/zh-cn/windows/wsl/)。
 
 ### 3.1 管理工具
 
-使用[LxRunOffline](https://github.com/DDoSolitary/LxRunOffline)管理WSL。
+使用[LxRunOffline](https://github.com/DDoSolitary/LxRunOffline)管理 WSL。
 
 下载后，加入环境变量即可（位于`D`盘）。
 
-### 3.2 下载ArchLinux
+### 3.2 下载 ArchLinux
 
 [清华镜像](https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/)下载`.tar.gz`文件。
 
-### 3.3 安装ArchLinux
+### 3.3 安装 ArchLinux
 
 ```shell
 LxRunOffline i -n <自定义名称> -f <Arch镜像位置> -d <安装系统的位置> -r root.x86_64
 ```
 
-### 3.4 配置ArchLinux
+### 3.4 配置 ArchLinux
 
-#### 3.4.1 设置为WSL2
+#### 3.4.1 设置为 WSL2
 
 ```shell
 wsl --set-version ArchLinux 2
@@ -38,7 +38,7 @@ wsl --set-version ArchLinux 2
 
 由于端口号冲突，需要解决问题，[参考资料](https://zhuanlan.zhihu.com/p/151392411)
 
-#### 3.4.2 进入ArchLinux
+#### 3.4.2 进入 ArchLinux
 
 ```shell
 wsl -d ArchLinux
@@ -73,7 +73,7 @@ vim /etc/sudoers
 id - u shejialuo # 获取 <账户id> 
 ```
 
-然后退出`ArchLinux`，设置普通用户登录ArchLinux。
+然后退出`ArchLinux`，设置普通用户登录 ArchLinux。
 
 ```shell
 lxrunoffline su -n ArchLinux -v <账户id>
@@ -85,11 +85,11 @@ lxrunoffline su -n ArchLinux -v <账户id>
 
 ### 3.6 代理设置
 
-`WSL2`的通信机制在于通过本地的windows网关与外部进行通信。很显然需要通过脚本获取DNS网关。
+`WSL2`的通信机制在于通过本地的 windows 网关与外部进行通信。很显然需要通过脚本获取 DNS 网关。
 
 采用`proxychains-ng`进行代理：
 
-#### 3.6.1 设置Win10的防火墙
+#### 3.6.1 设置 Win10 的防火墙
 
 高级设置，允许`WSL.exe`入站。
 
@@ -107,10 +107,10 @@ alias p-on='export all_proxy='${my_proxy}' http_proxy='${my_proxy}' https_proxy=
 alias p-off='unset all_proxy http_proxy https_proxy'
 ```
 
-### 3.7 VsCode插件
+### 3.7 VsCode 插件
 
 + Remote-WSL
 
 ## 4. 开发环境
 
-开发环境均在`WSL`中，参考ArchLinux的开发环境。
+开发环境均在`WSL`中，参考 ArchLinux 的开发环境。

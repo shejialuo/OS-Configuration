@@ -1,4 +1,4 @@
-# VsCode插件
+# VsCode 插件
 
 ## 1. 基本工具
 
@@ -34,7 +34,7 @@
 
 + GraphQL
 
-## 5. Haskell (Linux独有)
+## 5. Haskell (Linux 独有)
 
 + Haskell Syntax Highlighting
 + Haskell

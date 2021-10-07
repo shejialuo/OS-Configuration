@@ -4,7 +4,7 @@
 
 ### 1.1 zsh
 
-直接通过pacman包管理器安装：
+直接通过 pacman 包管理器安装：
 
 ```shell
 sudo pacman -S zsh
@@ -12,7 +12,7 @@ sudo pacman -S zsh
 
 #### 1.1.1 Oh-My-Zsh
 
-以下过程参考Oh-My-Zsh的GitHub项目主页。
+以下过程参考 Oh-My-Zsh 的 GitHub 项目主页。
 
 通过`curl`：
 
@@ -26,7 +26,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-#### 1.1.2 安装powerline字体
+#### 1.1.2 安装 powerline 字体
 
 ```shell
 sudo pacman -S powerline-fonts
@@ -46,9 +46,9 @@ chsh -s /bin/zsh
 echo $SHELL
 ```
 
-#### 1.1.4 Oh-My-Zsh的配置
+#### 1.1.4 Oh-My-Zsh 的配置
 
-本部分主要参考其GitHub项目的Wiki。
+本部分主要参考其 GitHub 项目的 Wiki。
 
 ##### 1.1.4.1 相关插件下载
 
@@ -95,7 +95,7 @@ sudo pacman -S alacritty
 
 #### 1.3.1 pcmanfm
 
-安装GUI文件管理器（备用）：
+安装 GUI 文件管理器（备用）：
 
 ```shell
 sudo pacman -S pcmanfm
@@ -115,13 +115,13 @@ sudo pacman -S ranger
 sudo pacman -S highlight
 ```
 
-##### 1.3.2.2 HTML预览
+##### 1.3.2.2 HTML 预览
 
 ```shell
 sudo pacman -S w3m
 ```
 
-##### 1.3.2.3 Media预览
+##### 1.3.2.3 Media 预览
 
 ```shell
 sudo pacman -S mediainfo
@@ -236,7 +236,7 @@ QT_IM_MODULE  DEFAULT=fcitx
 XMODIFIERS    DEFAULT=\@im=fcitx
 ```
 
-后面进行GUI设置。
+后面进行 GUI 设置。
 
 + Trigger Input Method: Left Shift. No enumerate when press trigger key repeatedly
 + Temporally Input Method between first and current Input Method: Control+Space
@@ -289,7 +289,7 @@ sudo pacman -S visual-studio-code-bin
 
 ### 3.4 office
 
-安装wps office：
+安装 wps office：
 
 ```shell
 yay -S wps-office
@@ -298,7 +298,7 @@ sudo pacman -S ttf-wps-fonts
 
 ### 3.5 pandoc
 
-安装pandoc：
+安装 pandoc：
 
 ```shell
 sudo pacman -S pandoc
@@ -306,7 +306,7 @@ sudo pacman -S pandoc
 
 ### 3.6 zotero
 
-安装zotero：
+安装 zotero：
 
 ```shell
 sudo pacman -S zotero
@@ -364,7 +364,7 @@ sudo pacman -S goldendict
 
 ### 4.1 代理安装
 
-安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认HTTP端口为7890,默认socks端口为7891。必须同步时钟，才能使用（别问我为什么知道，fuck it）。
+安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认 HTTP 端口为 7890,默认 socks 端口为 7891。必须同步时钟，才能使用（别问我为什么知道，fuck it）。
 
 ```shell
 sudo pacman -S clash
@@ -372,9 +372,9 @@ sudo pacman -S clash
 
 #### 4.2.1 后台运行方式不能自动更新订阅
 
-clash正在运行，可以访问`https://clash.razord.top`。
+clash 正在运行，可以访问`https://clash.razord.top`。
 
-启动clash，可以直接后台运行，但是不能自动更新配置文件：
+启动 clash，可以直接后台运行，但是不能自动更新配置文件：
 
 ```shell
 nohup clash > dev/null 2>&1 &
@@ -382,7 +382,7 @@ nohup clash > dev/null 2>&1 &
 
 #### 4.2.2 服务运行方式自动更新订阅
 
-由于后台运行的方式无法实现订阅的自动更新，将clash封装成服务，每次启动时进行一次更新。新建文件`/usr/lib/systemd/system/clash.service`:
+由于后台运行的方式无法实现订阅的自动更新，将 clash 封装成服务，每次启动时进行一次更新。新建文件`/usr/lib/systemd/system/clash.service`:
 
 ```shell
 [Unit]
@@ -408,7 +408,7 @@ WantedBy=multi.user.target
 
 #### 4.2.1 Microsoft Edge
 
-Microsoft Edge目前只有dev版本，通过`yay`安装。目前Edge已支持全平台同步：
+Microsoft Edge 目前只有 dev 版本，通过`yay`安装。目前 Edge 已支持全平台同步：
 
 ```shell
 yay -S microsoft-edge-dev 
@@ -420,16 +420,16 @@ yay -S microsoft-edge-dev
 
 直接安装`SwitchyOmega`使用即可，已采用备份。
 
-Microsoft Edge dev for Linux存在不联网就会直接crash的[bug](https://techcommunity.microsoft.com/t5/discussions/edge-dev-crashing-at-start-up-in-linux/m-p/2629267)，校园网可以采取ipv6进行免流，但是如果不让Microsoft Edge走代理，会直接crash，故通过编辑本地`.desktop`文件，添加代理的环境变量即可。
+Microsoft Edge dev for Linux 存在不联网就会直接 crash 的[bug](https://techcommunity.microsoft.com/t5/discussions/edge-dev-crashing-at-start-up-in-linux/m-p/2629267)，校园网可以采取 ipv6 进行免流，但是如果不让 Microsoft Edge 走代理，会直接 crash，故通过编辑本地`.desktop`文件，添加代理的环境变量即可。
 
-+ `mod + F2`： 启动Edge，不添加环境变量。
-+ `rofi`： 启动Edge，添加环境变量。
++ `mod + F2`： 启动 Edge，不添加环境变量。
++ `rofi`： 启动 Edge，添加环境变量。
 
 ~~Fuck it~~
 
 ##### 全键盘操作
 
-安装`Vimium`插件。用法与vim的逻辑十分相似。自定义搜索引擎如下：
+安装`Vimium`插件。用法与 vim 的逻辑十分相似。自定义搜索引擎如下：
 
 ```txt
 w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
@@ -479,20 +479,16 @@ sudo pacman -S telegram-desktop
 在`~/.local/share/applications`添加文件`telegramdesktop.desktop`:
 
 ```shell
-
-```
-
-```shell
 env QT_IM_MODULE=fcitx
 ```
 
-##### telegram代收QQ和微信消息
+##### telegram 代收 QQ 和微信消息
 
-参考efb-qq-slave和efb-wechat-slave
+参考 efb-qq-slave 和 efb-wechat-slave
 
 ### 4.4 下载软件
 
-#### 4.4.1 Aria2安装
+#### 4.4.1 Aria2 安装
 
 下载工具安装：
 
@@ -502,25 +498,25 @@ sudo pacman -S aria2
 
 [配置参考](https://github.com/P3TERX/aria2.conf)
 
-#### 4.4.2 Youtube-dl安装
+#### 4.4.2 Youtube-dl 安装
 
 ```shell
 sudo pacman -S youtube-dl
 ```
 
-#### 4.4.3 qbittorrent安装
+#### 4.4.3 qbittorrent 安装
 
 ```shell
 sudo pacman -S qbittorrent
 ```
 
-添加tracer即可。
+添加 tracer 即可。
 
 ## 5 媒体
 
 ### 5.1 图片
 
-#### 5.1.1 GUI查看器
+#### 5.1.1 GUI 查看器
 
 ```shell
 sudo pacman -S viewnior
@@ -560,7 +556,7 @@ sudo pacman -S flameshot
 
 #### 5.1.7 壁纸工具
 
-处理壁纸，直接安装即可，在i3配置自动启动加上`--restore`：
+处理壁纸，直接安装即可，在 i3 配置自动启动加上`--restore`：
 
 ```shell
 sudo pacman -S nitrogen
@@ -572,7 +568,10 @@ sudo pacman -S nitrogen
 
 ```shell
 sudo pacman -S spotify
+yay -S spotify-tray-git
 ```
+
+使用`spotify-tray`来启动`spotify`。并在 i3 中配置 toggle。
 
 #### 5.2.2 mpd
 
@@ -604,7 +603,7 @@ sudo pacman -S mpc
 
 #### 5.2.5 easytag
 
-安装标签编辑工具，虽然ncmpcpp自带编辑tag功能，主要为了添加封面：
+安装标签编辑工具，虽然 ncmpcpp 自带编辑 tag 功能，主要为了添加封面：
 
 ```shell
 sudo pacman -S easytag
@@ -618,7 +617,7 @@ sudo pacman -S easytag
 sudo pacman -S mutt
 ```
 
-Mutt仅仅只是一个收发邮件的中转站，UNIX哲学。其配置文件位于`~/.config/mutt/muttrc`：
+Mutt 仅仅只是一个收发邮件的中转站，UNIX 哲学。其配置文件位于`~/.config/mutt/muttrc`：
 
 ```shell
 chmod 600 ~/.config/mutt/muttrc
@@ -660,7 +659,7 @@ sudo pacman -S msmtp
 
 #### 5.4.1 播放器
 
-安装mpv视频播放器：
+安装 mpv 视频播放器：
 
 ```shell
 sudo pacman -S mpv
@@ -692,7 +691,7 @@ sudo pacman -S rclone
 
 ### 7.1 rofi
 
-使用`rofi`作为`dmenu`的替代品，使用[Dracula主题](https://draculatheme.com/rofi)。
+使用`rofi`作为`dmenu`的替代品，使用[Dracula 主题](https://draculatheme.com/rofi)。
 
 ```shell
 sudo pacman -S rofi
@@ -708,13 +707,13 @@ sudo pacman -S drawio-desktop-bin
 
 ### 7.3 chezmoi 安装
 
-安装dotfiles管理工具：
+安装 dotfiles 管理工具：
 
 ```shell
 sudo pacman -S chezmoi
 ```
 
-对于不需要加密的文件直接Add即可，对于需要加密的文件采取`gnome-kerying`的方式保存。
+对于不需要加密的文件直接 Add 即可，对于需要加密的文件采取`gnome-kerying`的方式保存。
 
 ### 7.4 密码管理
 
@@ -722,7 +721,7 @@ sudo pacman -S chezmoi
 sudo pacman -S gnome-kerying
 ```
 
-下载GUI管理器：
+下载 GUI 管理器：
 
 ```shell
 sudo pacman -S seahorse
@@ -730,7 +729,7 @@ sudo pacman -S seahorse
 
 ### 7.5 腾讯会议
 
-开会需要，没有任何办法，为什么不用`zoom`(~~腾讯居然出了Native版本~~)。
+开会需要，没有任何办法，为什么不用`zoom`(~~腾讯居然出了 Native 版本~~)。
 
 ```shell
 yay -S wemeet-bin
