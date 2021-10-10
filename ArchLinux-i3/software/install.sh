@@ -19,7 +19,7 @@ chsh -s /bin/zsh
 #* To install plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-sudo pacman -S autojump
+yay -S autojump
 
 
 #* To install terminal
@@ -111,7 +111,7 @@ sudo pacman -S vim-tagbar
 yay -S vim-vimwiki
 
 #* To install vscode
-sudo pacman -S visual-studio-code-bin
+yay -S visual-studio-code-bin
 
 #* To install wps-office
 yay -S wps-office

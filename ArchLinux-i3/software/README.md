@@ -67,7 +67,7 @@ echo $SHELL
 + autojump
   
   ```shell
-  sudo pacman -S autojump
+  yay -S autojump
   ```
 
 ##### 1.1.4.2 配置
@@ -281,8 +281,10 @@ sudo pacman -S gvim
 
 ### 3.3 VsCode
 
+`archlinuxcn`不再提供`visual-studio-code-bin`的二进制包，详见[issue](https://github.com/archlinuxcn/repo/issues/2460)。只能手动编译了。
+
 ```shell
-sudo pacman -S visual-studio-code-bin
+yay -S visual-studio-code-bin
 ```
 
 现在`VsCode`自带同步功能，双系统很方便，直接同步。
