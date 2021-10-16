@@ -64,6 +64,12 @@ echo $SHELL
   git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
++ dracula-highlighting
+
+  ```shell
+  git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
+  ```
+
 + autojump
   
   ```shell
@@ -754,10 +760,4 @@ sudo pacman -S seahorse
 
 ```shell
 yay -S wemeet-bin
-```
-
-### 7.6 日历
-
-```shell
-sudo pacman -S khal
 ```
