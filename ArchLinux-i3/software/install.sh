@@ -89,26 +89,9 @@ sudo pacman -S fcitx5-pinyin-moegirl
 #* To install typora
 sudo pacman -S typora
 
-# TODO: need to change vim
-
 #* To install gvim
 sudo pacman -S gvim
-##* To install vim-airline
-sudo pacman -S vim-airline
-##* To install vim-nerdtree
-sudo pacman -S vim-nerdtree
-##* To install vim-ale
-sudo pacman -S vim-ale
-##* To install vim-ctrlp
-sudo pacman -S vim-ctrlp
-##* To install vim-nerdcommenter
-sudo pacman -S vim-nerdcommenter
-##* To install vim-surround
-sudo pacman -S vim-surround
-##* To install vim-tagbar
-sudo pacman -S vim-tagbar
-##* To install vim-vimwiki
-yay -S vim-vimwiki
+bash ~/.install_vim_plugin.sh
 
 #* To install vscode
 yay -S visual-studio-code-bin
@@ -153,8 +136,11 @@ sudo pacman -S clash
 yay -S microsoft-edge-dev
 
 #* To install terminal browser
-sudo pacman -S links
 sudo pacman -S w3m
+
+#* To install tor
+
+sudo pacman -S tor tor-browser
 
 #* To install telegram desktop
 sudo pacman -S telegram-desktop
@@ -167,6 +153,12 @@ sudo pacman -S youtube-dl
 
 #* To install qbittorrent
 sudo pacman -S qbittorrent
+
+#* To install nitroshare
+sudo pacman -S nitroshare
+
+#* To install newsboat
+sudo pacman -S newsboat
 
 ###########################################################
 ####                       End                         ####
@@ -201,7 +193,7 @@ sudo pacman -S easytag
 sudo pacman -S mutt
 
 #* To install fetchmail
-yay -S fetchmail
+sudo pacman -S fetchmail
 
 #* To install procmail
 sudo pacman -S procmail
@@ -249,6 +241,8 @@ sudo pacman -S gnome-kerying
 sudo pacman -S seahorse
 
 yay -S wemeet-bin
+
+sudo pacman -S khal
 
 ###########################################################
 ####                        End                        ####

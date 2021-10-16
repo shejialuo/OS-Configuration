@@ -462,8 +462,13 @@ Y: https://www.youtube.com/results?search_query=%s Youtube
 #### 4.2.2 终端浏览器下载
 
 ```shell
-sudo pacman -S links
 sudo pacman -S w3m
+```
+
+#### 4.2.3 匿名浏览器下载
+
+```shell
+sudo pacman -S tor tor-browser
 ```
 
 ### 4.3 即使通讯软件
@@ -513,6 +518,20 @@ sudo pacman -S qbittorrent
 ```
 
 添加 tracer 即可。
+
+#### 4.4.4 局域网文件分享
+
+```shell
+sudo pacman -S nitroshare
+```
+
+### 4.5 RSS 和 Blog
+
+#### 4.5.1 newsboat 安装
+
+```shell
+sudo pacman -S newsboat
+```
 
 ## 5 媒体
 
@@ -628,7 +647,7 @@ chmod 600 ~/.config/mutt/muttrc
 #### 5.3.2 fetchmail
 
 ```shell
-yay -S fetchmail
+sudo pacman -S fetchmail
 ```
 
 用于收取邮件的软件，其配置文件位于`~/.fetchmailrc`：
@@ -735,4 +754,10 @@ sudo pacman -S seahorse
 
 ```shell
 yay -S wemeet-bin
+```
+
+### 7.6 日历
+
+```shell
+sudo pacman -S khal
 ```
