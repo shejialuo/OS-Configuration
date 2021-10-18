@@ -41,9 +41,9 @@
 + 语言设置：
   + `vim /etc/locale.gen`
   + `locale-gen`
-  + `vim /etc/locale.conf`写入`LANG=en_US.UTF-8
+  + `vim /etc/locale.conf`写入`LANG=en_US.UTF-8`
 + 写入 hostname: `vim /etc/hostname`
-+ 修改 hosts:
++ 修改 hosts: `vim /etc/hosts`
 
   ```txt
   127.0.0.1 localhost
@@ -54,7 +54,7 @@
 + `passwd`
 + 基本软件：`pacman -S grub efibootmgr networkmanager wireless_tools wpa_supplicant base-devel reflector git sudo linux-headers`
 + grub 配置：
-  + `grub-install -target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch`
+  + `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch`
   + `grub-mkconfig -o /boot/grub/grub.cfg`
 
 ### 系统
