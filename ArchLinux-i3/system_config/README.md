@@ -337,9 +337,3 @@ ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
 ```
 
 使用`mimeapps.list`管理默认程序。
-
-### 11.3 电池电源查看
-
-```shell
-sudo pacman -S cbatticon
-```

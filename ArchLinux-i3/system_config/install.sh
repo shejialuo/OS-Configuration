@@ -58,5 +58,3 @@ sudo pacman -S mtpfs
 yay -S jmtpfs
 #* To install iphone mount support
 yay -S ifuse-git
-
-sudo pacman -S cbatticon
