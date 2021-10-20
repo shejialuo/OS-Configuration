@@ -85,6 +85,12 @@ sudo pacman -S network-manager-applet
 
 并在 i3 的配置文件中，自动启动`nm-applet`。
 
+安装`dhclinet`作为DHCP client。参考[ArchWiki](https://wiki.archlinux.org/title/NetworkManager#DHCP_client)
+
+```shell
+sudo pacman -S dhclient
+```
+
 ## 3 音频管理
 
 ### 3.1 ALSA 安装
@@ -95,11 +101,12 @@ sudo pacman -S alsa-utils
 
 ### 3.2 管理
 
+使用ArchWiki推荐的`pipewire`管理。
+
 ```shell
-sudo pacman -S pulseaudio
+sudo pacman -S pipewire-pulse
 sudo pacman -S pavucontrol
 sudo pacman -S pamixer
-sudo pacman -S pulseaudio-bluetooth
 ```
 
 在 i3 配置文件中，可利用`pamixer`快捷键音量调节。
@@ -330,3 +337,9 @@ ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
 ```
 
 使用`mimeapps.list`管理默认程序。
+
+### 11.3 电池电源查看
+
+```shell
+sudo pacman -S cbatticon
+```

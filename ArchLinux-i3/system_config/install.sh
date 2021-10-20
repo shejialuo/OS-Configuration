@@ -9,6 +9,7 @@ yay -S lightdm-webkit-theme-material-git
 #* To install network management
 sudo systemctl enable NetworkManager
 sudo pacman -S network-manager-applet
+sudo pacman -S dhclient
 
 #* To install sound management
 sudo pacman -S alsa-utils
@@ -57,3 +58,5 @@ sudo pacman -S mtpfs
 yay -S jmtpfs
 #* To install iphone mount support
 yay -S ifuse-git
+
+sudo pacman -S cbatticon
