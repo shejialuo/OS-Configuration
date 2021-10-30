@@ -531,12 +531,16 @@ sudo pacman -S qbittorrent
 sudo pacman -S nitroshare
 ```
 
-### 4.5 RSS 和 Blog
-
-#### 4.5.1 newsboat 安装
+### 4.5 RSS
 
 ```shell
 sudo pacman -S newsboat
+```
+
+### 4.6 终端代理工具
+
+```shell
+sudo pacman -S proxychains-ng
 ```
 
 ## 5 媒体
@@ -754,10 +758,8 @@ sudo pacman -S gnome-kerying
 sudo pacman -S seahorse
 ```
 
-### 7.5 腾讯会议
-
-开会需要，没有任何办法，为什么不用`zoom`(~~腾讯居然出了 Native 版本~~)。
+### 7.5 多显示器管理
 
 ```shell
-yay -S wemeet-bin
+sudo pacman -S arandr
 ```

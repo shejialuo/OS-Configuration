@@ -161,6 +161,9 @@ sudo pacman -S nitroshare
 #* To install newsboat
 sudo pacman -S newsboat
 
+#* To install proxychains4
+sudo pacman -S proxychains-ng
+
 ###########################################################
 ####                       End                         ####
 ###########################################################
@@ -241,7 +244,7 @@ sudo pacman -S chezmoi
 sudo pacman -S gnome-kerying
 sudo pacman -S seahorse
 
-yay -S wemeet-bin
+sudo pacman -S arandr
 
 ###########################################################
 ####                        End                        ####
