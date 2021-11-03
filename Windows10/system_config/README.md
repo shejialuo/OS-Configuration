@@ -52,10 +52,12 @@ Set-PoshPrompt -Theme agnoster
 
 ### 3.3 PSReadLine 的使用
 
-仍是在 PowerShell 的配置文件中输入，即可实现在 Menu 补全:
+[参考资料](https://docs.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline)
 
 ```shell
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -Colors @{ InlinePrediction = '#808080'}
 ```
 
 ### 3.4 配置文件
@@ -63,6 +65,13 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 由于 oh-my-posh 的更新，使得 Fira Code 字体使用体验下降（图标原因），故换为官方推荐的字体，见`settings.json`。
 
 同时需要更改 VsCode Terminal 的字体配置进而正常显示。
+
+### 3.5 走代理
+
+```shell
+function p-on {$env:HTTP_PROXY="http://127.0.0.1:7890";$env:HTTPS_PROXY="http://127.0.0.1:7890"}
+function p-off {del env:HTTP_PROXY; del env:HTTPS_PROXY}
+```
 
 ## 4. VsCode
 
