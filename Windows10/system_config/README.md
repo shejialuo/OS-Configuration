@@ -73,6 +73,20 @@ function p-on {$env:HTTP_PROXY="http://127.0.0.1:7890";$env:HTTPS_PROXY="http://
 function p-off {del env:HTTP_PROXY; del env:HTTPS_PROXY}
 ```
 
+### 3.6 缩减空间的脚本
+
+```diskpart
+select vdisk file="C:\ArchLinux\ext4.vhdx"
+attach vdisk readonly
+compact vdisk
+detach vdisk
+select vdisk file="C:\Ubuntu\ext4.vhdx"
+attach vdisk readonly
+compact vdisk
+detach vdisk
+exit
+```
+
 ## 4. VsCode
 
 直接下载安装即可，有同步功能，详细插件见 Linux 部分。
