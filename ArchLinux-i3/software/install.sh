@@ -59,6 +59,9 @@ sudo pacman -S conky
 #* To install neofetch
 sudo pacman -S neofetch
 
+#* To install polybar
+sudo pacman -S polybar
+
 ###########################################################
 ####                        End                        ####
 ###########################################################

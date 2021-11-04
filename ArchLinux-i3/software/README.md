@@ -203,6 +203,14 @@ sudo pacman -S conky
 sudo pacman -S neofetch
 ```
 
+### 1.6 任务栏安装
+
+使用polybar
+
+```shell
+sudo pacman _S polybar
+```
+
 ## 2 输入法
 
 ### 2.1 Flexible Input Method Framework 5
