@@ -17,6 +17,7 @@
 + Material Icon Theme
 + Visual Studio IntelliCode
 + Path Intellisense
++ Dash
 
 ## 2. HTML
 
@@ -34,7 +35,7 @@
 
 + GraphQL
 
-## 5. Haskell (Linux 独有)
+## 5. Haskell
 
 + Haskell Syntax Highlighting
 + Haskell

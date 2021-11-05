@@ -66,12 +66,6 @@ sudo pacman -S python-pip
 sudo pacman -S python-pylint
 ```
 
-### 4.3 PythonGObject
-
-```shell
-sudo pacman -S python-gobject
-```
-
 ## 5 NodeJs
 
 ### 5.1 安装

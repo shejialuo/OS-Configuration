@@ -186,7 +186,8 @@ sudo pacman -S ttf-font-awesome
 sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-cjk
 sudo pacman -S noto-fonts-emoji
-sudo pacman -S ttf-font-icons
+yay -S ttf-font-icons
+yay -S ttf-material-design-iconic-font
 ```
 
 ### 6.2 字体配置
@@ -195,7 +196,7 @@ sudo pacman -S ttf-font-icons
 
 ## 7 通知管理
 
-安装`dunst`，作为通知管理的守护进程，其初始配置文件位于`/usr/share/dunst/dunstrc`。
+安装`dunst`，作为通知管理的守护进程。
 
 ```shell
 sudo pacman -S dunst

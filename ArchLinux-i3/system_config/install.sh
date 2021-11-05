@@ -36,7 +36,8 @@ sudo pacman -S ttf-font-awesome
 sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-cjk
 sudo pacman -S noto-fonts-emoji
-sudo pacman -S ttf-font-icons
+yay -S ttf-font-icons
+yay -S ttf-material-design-iconic-font
 
 #* To install notification management
 sudo pacman -S dunst
