@@ -18,6 +18,12 @@
 + Visual Studio IntelliCode
 + Path Intellisense
 + Dash
++ GitHub Pull Request
++ Remote - SSH
++ Remote - SSH: Editing Configuration file
++ Remote - WSL
++ Vs Cide Coubrer
++ WakaTime
 
 ## 2. HTML
 
@@ -31,11 +37,7 @@
 
 + C/C++
 
-## 4. GraphQL
-
-+ GraphQL
-
-## 5. Haskell
+## 4. Haskell
 
 + Haskell Syntax Highlighting
 + Haskell
@@ -45,6 +47,7 @@
 
 + Python
 + Python Intellisense
++ Pylance
 
 ## 7. Latex
 
