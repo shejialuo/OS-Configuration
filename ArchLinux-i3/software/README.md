@@ -211,6 +211,14 @@ sudo pacman -S neofetch
 sudo pacman _S polybar
 ```
 
+### 1.7 任务管理
+
+使用Microsoft TODO
+
+```shell
+sudo pacman -S ao
+```
+
 ## 2 输入法
 
 ### 2.1 Flexible Input Method Framework 5

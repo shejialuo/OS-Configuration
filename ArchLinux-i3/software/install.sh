@@ -62,6 +62,9 @@ sudo pacman -S neofetch
 #* To install polybar
 sudo pacman -S polybar
 
+#* To install ao
+sudo pacman -S ao
+
 ###########################################################
 ####                        End                        ####
 ###########################################################
