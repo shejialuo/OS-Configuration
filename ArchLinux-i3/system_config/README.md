@@ -29,7 +29,7 @@ yay -S lightdm-webkit-theme-material-git
 
 #### 1.2.2 登录头像
 
-用户头像的目录位于`var/lib/AccountsService/icons`。注意在`/var/lib/AccountsService/users`新建文件`$USER`，输入以下内容：
+用户头像的目录位于`/var/lib/AccountsService/icons`。注意在`/var/lib/AccountsService/users`新建文件`$USER`，输入以下内容：
 
 ```shell
 [User]
