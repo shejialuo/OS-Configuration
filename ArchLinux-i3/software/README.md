@@ -208,7 +208,8 @@ sudo pacman -S neofetch
 使用polybar
 
 ```shell
-sudo pacman _S polybar
+sudo pacman -S polybar
+yay -S ttf-material-design-iconic-font
 ```
 
 ### 1.7 任务管理
@@ -317,7 +318,7 @@ yay -S visual-studio-code-bin
 
 ```shell
 yay -S wps-office
-sudo pacman -S ttf-wps-fonts
+yay -S ttf-wps-fonts
 ```
 
 ### 3.5 pandoc
@@ -435,7 +436,7 @@ WantedBy=multi.user.target
 Microsoft Edge 目前只有 dev 版本，通过`yay`安装。目前 Edge 已支持全平台同步：
 
 ```shell
-yay -S microsoft-edge-dev 
+yay -S microsoft-edge-dev-bin
 ```
 
 安装后登陆微软帐号直接全平台同步，会自动安装插件`SwitchyOmega`，若不能走代理命令行加上参数`--proxy-server="socks5://127.0.0.1:port`。

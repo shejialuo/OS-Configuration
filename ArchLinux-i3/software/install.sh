@@ -61,6 +61,7 @@ sudo pacman -S neofetch
 
 #* To install polybar
 sudo pacman -S polybar
+ttf-material-design-iconic-font
 
 #* To install ao
 sudo pacman -S ao
@@ -105,7 +106,7 @@ yay -S visual-studio-code-bin
 
 #* To install wps-office
 yay -S wps-office
-sudo pacman -S ttf-wps-fonts
+yay -S ttf-wps-fonts
 
 #* To install pandoc
 sudo pacman -S pandoc

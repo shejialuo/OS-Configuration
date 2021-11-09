@@ -15,12 +15,18 @@
 
 采用 AUR 安装的软件，注意依赖关系：
 
-+ microsoft-edge-dev
++ microsoft-edge-dev-bin
 + lightdm-webkit-theme-material-git
 + pa-applet-git
 + qt5-styleplugins
 + jmtpfs
-+ wemeet-bin
++ autojump
++ visual-studio-code-bin
++ wps-office
++ ttf-wps-fonts
++ spotify-tray-git
++ ifuse-git
++ ttf-material-design-iconic-font
 
 ## 安装
 

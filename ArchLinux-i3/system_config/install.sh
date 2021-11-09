@@ -41,8 +41,6 @@ yay -S ttf-material-design-iconic-font
 
 #* To install notification management
 sudo pacman -S dunst
-#* To configure dunst
-cp -r ./dunst ~/.config/
 
 #* To install bluetooth management
 sudo pacman -S bluez
