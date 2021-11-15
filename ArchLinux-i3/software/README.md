@@ -780,3 +780,9 @@ sudo pacman -S seahorse
 ```shell
 sudo pacman -S arandr
 ```
+
+### 7.6 Github Cli
+
+```shell
+sudo pacman -S github-cli
+```

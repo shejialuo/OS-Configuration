@@ -168,10 +168,11 @@ sudo pacman -S rclone
 
 sudo pacman -S rofi               \
                drawio-desktop-bin \
-               chezmoi \
-               gnome-keyring \
-               seahorse \
-               arandr
+               chezmoi            \
+               gnome-keyring      \
+               seahorse           \
+               arandr             \
+               github-cli
 
 ###########################################################
 ####                        End                        ####
