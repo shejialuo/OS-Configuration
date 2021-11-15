@@ -95,7 +95,7 @@ sudo npm install -g @nestjs/cli
 ### 5.5 Hexo
 
 ```shell
-sudo npm install -g hexo-cli 
+sudo npm install -g hexo-cli
 ```
 
 ### 5.6 Pigco
@@ -132,33 +132,16 @@ sudo pacman -S texlive-core
 sudo pacman -S texlive-langchinese
 ```
 
-### 7.3 结合 VsCode 编写
-
-插件的使用参见[官方 wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki)
-
-#### 7.3.1 外置 PDF 阅读
-
-结合 Zathura：
-
-```json
-"latex-workshop.view.pdf.viewer": "external",
-"latex-workshop.view.pdf.external.viewer.command": "zathura",
-"latex-workshop.view.pdf.external.viewer.args": [
-    "--synctex-editor-command",
-    "code --reuse-window -g \"%{input}:%{line}\"",
-    "%PDF%"
-],
-"latex-workshop.view.pdf.external.synctex.command": "zathura",
-"latex-workshop.view.pdf.external.synctex.args": [
-    "--synctex-forward=%LINE%:0:%TEX%",
-    "%PDF%"
-],
-```
-
 ## 8 gnuplot
 
 安装命令行绘图工具：
 
 ```shell
 sudo pacman -S gnuplot
+```
+
+## 9 java scala
+
+```shell
+sudo pacman -S jkd11-openjdk scala
 ```
