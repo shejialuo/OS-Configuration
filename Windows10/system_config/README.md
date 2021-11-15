@@ -38,8 +38,8 @@ notepad $PROFILE
 添加以下内容:
 
 ```shell
-Import-Module posh-git 
-Import-Module oh-my-posh 
+Import-Module posh-git
+Import-Module oh-my-posh
 Set-Theme Agnoster
 ```
 
@@ -47,7 +47,7 @@ Set-Theme Agnoster
 
 ```shell
 # Set-Theme Agnoster
-Set-PoshPrompt -Theme agnoster 
+Set-PoshPrompt -Theme agnoster
 ```
 
 ### 3.3 PSReadLine 的使用

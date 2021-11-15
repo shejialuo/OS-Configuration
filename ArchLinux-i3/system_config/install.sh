@@ -1,51 +1,49 @@
 #!/bin/bash
 
 #* To install DM
-sudo pacman -S lightdm
+sudo pacman -S lightdm \
+               lightdm-webkit2-greeter
 sudo systemctl enable lightdm
-sudo pacman -S lightdm-webkit2-greeter
 yay -S lightdm-webkit-theme-material-git
 
 #* To install network management
 sudo systemctl enable NetworkManager
-sudo pacman -S network-manager-applet
-sudo pacman -S dhclient
+sudo pacman -S network-manager-applet dhclient
 
 #* To install sound management
-sudo pacman -S alsa-utils
-sudo pacman -S pulseaudio
-sudo pacman -S pavucontrol
-sudo pacman -S pamixer
-sudo pacman -S pulseaudio-bluetooth
+sudo pacman -S alsa-utils \
+               pipewire-pulse \
+               pavucontrol \
+               pamixer
 yay -S pa-applet-git
 
 #* To install system themes management
-sudo pacman -S lxappearance
-sudo pacman -S materia-gtk-theme
-sudo pacman -S papirus-icon-theme
-sudo pacman -S qt5ct
+sudo pacman -S lxappearance \
+               materia-gtk-theme \
+               papirus-icon-theme \
+               qt5ct
 yay -S qt5-styleplugins
 
 #* To install compositor
 sudo pacman -S picom
 
 #* To install font management
-sudo pacman -S ttf-sarasa-gothic
-sudo pacman -S ttf-fira-code
-sudo pacman -S ttf-font-awesome
-sudo pacman -S noto-fonts
-sudo pacman -S noto-fonts-cjk
-sudo pacman -S noto-fonts-emoji
-yay -S ttf-font-icons
-yay -S ttf-material-design-iconic-font
+sudo pacman -S ttf-sarasa-gothic \
+               ttf-fira-code \
+               ttf-font-awesome \
+               noto-fonts \
+               noto-fonts-cjk \
+               noto-fonts-emoji
+yay -S ttf-font-icons \
+       ttf-material-design-iconic-font
 
 #* To install notification management
 sudo pacman -S dunst
 
 #* To install bluetooth management
-sudo pacman -S bluez
-sudo pacman -S bluez-utils
-sudo pacman -S blueman
+sudo pacman -S bluez \
+               bluez-utils \
+               blueman
 
 #* To install brightness management
 sudo pacman -S xorg-xbacklight

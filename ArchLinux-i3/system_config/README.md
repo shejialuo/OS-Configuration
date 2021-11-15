@@ -45,7 +45,7 @@ Icon=/var/lib/AccountsService/icons/shejialuo.jpg
 可能存在双显示问题，自写脚本解决。在`/etc/lightdm.conf`，设置`display-setup-script=/usr/bin/lightDMScript.sh`。
 
 ```shell
-#!bin/bash              
+#!bin/bash
 xrandr | grep "HDMI-1 disconnected"
 result=$?
 if [ $result -gt 0 ]

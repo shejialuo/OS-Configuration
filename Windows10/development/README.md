@@ -70,7 +70,7 @@ passwd
 useradd -m -G shejialuo -s /bin/bash shejialuo
 passwd shejialuo
 vim /etc/sudoers
-id - u shejialuo # 获取 <账户id> 
+id - u shejialuo # 获取 <账户id>
 ```
 
 然后退出`ArchLinux`，设置普通用户登录 ArchLinux。

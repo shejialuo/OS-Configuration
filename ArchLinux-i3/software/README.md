@@ -59,7 +59,7 @@ echo $SHELL
   ```
 
 + zsh-autosuggestions
-  
+
   ```shell
   git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
@@ -71,7 +71,7 @@ echo $SHELL
   ```
 
 + autojump
-  
+
   ```shell
   yay -S autojump
   ```
@@ -245,7 +245,7 @@ sudo pacman -S fcitx5-chinese-addons
 ### 2.4 日语
 
 ```shell
-sudo pacman -S fcitx5-mozc 
+sudo pacman -S fcitx5-mozc
 ```
 
 ### 2.5 配置
@@ -766,7 +766,7 @@ sudo pacman -S chezmoi
 ### 7.4 密码管理
 
 ```shell
-sudo pacman -S gnome-kerying
+sudo pacman -S gnome-keyring
 ```
 
 下载 GUI 管理器：
