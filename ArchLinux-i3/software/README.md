@@ -560,6 +560,21 @@ sudo pacman -S newsboat
 sudo pacman -S proxychains-ng
 ```
 
+### 4.7 热点
+
+```shell
+sudo pacman -S create_ap
+```
+
+配置`/etc/create_ap.conf`:
+
+```sh
+WIFI_IFACE=wlp1
+INTERNET_IFACE=wlp1s0
+SSID=AP_Ali
+PASSPHRASE=yourpasswordhere
+```
+
 ## 5 媒体
 
 ### 5.1 图片

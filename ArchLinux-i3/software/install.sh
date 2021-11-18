@@ -108,7 +108,8 @@ sudo pacman -S clash            \
                qbittorrent      \
                nitroshare       \
                newsboat         \
-               proxychains-ng
+               proxychains-ng   \
+               create_ap
 
 #* To install Microsoft Edge
 yay -S microsoft-edge-dev
