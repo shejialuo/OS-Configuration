@@ -107,6 +107,7 @@ sudo pacman -S alsa-utils
 sudo pacman -S pipewire-pulse
 sudo pacman -S pavucontrol
 sudo pacman -S pamixer
+yay -S scream
 ```
 
 在 i3 配置文件中，可利用`pamixer`快捷键音量调节。
