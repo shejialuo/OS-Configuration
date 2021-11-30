@@ -15,8 +15,6 @@ sudo pacman -S alsa-utils \
                pipewire-pulse \
                pavucontrol \
                pamixer
-yay -S scream
-
 yay -S pa-applet-git
 
 #* To install system themes management
