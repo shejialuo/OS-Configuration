@@ -173,7 +173,8 @@ sudo pacman -S rofi               \
                gnome-keyring      \
                seahorse           \
                arandr             \
-               github-cli
+               github-cli         \
+               kdeconnect
 
 ###########################################################
 ####                        End                        ####

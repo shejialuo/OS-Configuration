@@ -801,3 +801,12 @@ sudo pacman -S arandr
 ```shell
 sudo pacman -S github-cli
 ```
+
+### 7.7 Kdeconnect
+
+Ios终于支持kdeconnect了。
+
+```shell
+sudo pacman -S kdeconnect
+```
+
