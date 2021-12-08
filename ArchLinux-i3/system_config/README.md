@@ -180,7 +180,6 @@ sudo pacman -S picom
 ### 6.1 安装常见字体
 
 ```shell
-sudo pacman -S ttf-sarasa-gothic
 sudo pacman -S ttf-fira-code
 sudo pacman -S ttf-font-awesome
 sudo pacman -S noto-fonts

@@ -28,8 +28,7 @@ yay -S qt5-styleplugins
 sudo pacman -S picom
 
 #* To install font management
-sudo pacman -S ttf-sarasa-gothic \
-               ttf-fira-code \
+sudo pacman -S ttf-fira-code \
                ttf-font-awesome \
                noto-fonts \
                noto-fonts-cjk \
