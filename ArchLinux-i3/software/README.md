@@ -94,7 +94,7 @@ alias p-off="unset http_proxy https_proxy"
 ### 1.2 终端安装
 
 ```shell
-sudo pacman -S kitty
+sudo pacman -S alacritty
 ```
 
 ### 1.3 文件管理
