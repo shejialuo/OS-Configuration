@@ -175,6 +175,7 @@ sudo pacman -S rofi               \
                arandr             \
                github-cli         \
                kdeconnect
+yay -S stretchly-bin
 
 ###########################################################
 ####                        End                        ####

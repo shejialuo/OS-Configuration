@@ -810,3 +810,11 @@ Ios终于支持kdeconnect了。
 sudo pacman -S kdeconnect
 ```
 
+### 7.8 stretchly
+
+安装一个定时软件，不能久坐，养身。
+
+```shell
+yay -S stretchly-bin
+```
+
