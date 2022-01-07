@@ -1,5 +1,7 @@
 # 开发环境
 
+在该文件安装中的环境，除了`Haskell`以外全部安装在`/`。其余的开发环境应该尽可能地安装在`~/.local/bin`中，保持鲁棒性。
+
 ## 1. c and c++
 
 ```shell
@@ -48,6 +50,10 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 ghcup tui
 ```
 
++ `Stack`
++ `cabal`
++ `HLS`
+
 ## 4. python
 
 自带 python2、python3。需要安装以下软件：
@@ -66,12 +72,12 @@ sudo pacman -S python-pip
 sudo pacman -S python-pylint
 ```
 
-## 5 NodeJs
+## 5. NodeJs
 
 ### 5.1 安装
 
 ```shell
-sudo pacman -S nodejs
+sudo pacman -S nodejs npm
 ```
 
 ### 5.2 代码检测工具
@@ -110,13 +116,13 @@ sudo npm install picgo -g
 sudo npm install -g sql-language-server
 ```
 
-## 6 Docker
+## 6. Docker
 
 ```shell
 sudo pacman -S docker
 ```
 
-## 7 LaTex
+## 7. LaTex
 
 ### 7.1 TexLive 安装
 
@@ -132,7 +138,7 @@ sudo pacman -S texlive-core
 sudo pacman -S texlive-langchinese
 ```
 
-## 8 gnuplot
+## 8. gnuplot
 
 安装命令行绘图工具：
 
@@ -140,8 +146,17 @@ sudo pacman -S texlive-langchinese
 sudo pacman -S gnuplot
 ```
 
-## 9 java scala
+## 9. java scala
 
 ```shell
-sudo pacman -S jkd11-openjdk scala
+sudo pacman -S jkd11-openjdk scala kotlin
+```
+
+## 10. 工具
+
+```shell
+sudo pacman -S mysql
+sudo pacman -S redis
+sudo pacman -S wireshark-cli
+yay -S mongodb-bin
 ```

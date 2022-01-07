@@ -56,7 +56,7 @@ sudo pacman -S python-pip
 ####                        NodeJs                     ####
 ###########################################################
 
-sudo pacman -S nodejs eslint
+sudo pacman -S nodejs npm
 sudo npm install -g @angular/cli
 sudo npm install -g @nestjs/cli
 sudo npm install -g hexo-cli
@@ -109,7 +109,20 @@ sudo pacman -S gnuplot
 ####                       Java                        ####
 ###########################################################
 
-sudo pacman -S jkd11-openjdk scala
+sudo pacman -S jkd11-openjdk scala kotlin
+
+###########################################################
+####                        End                        ####
+###########################################################
+
+###########################################################
+####                       Java                        ####
+###########################################################
+
+sudo pacman -S mysql         \
+               redis         \
+               wireshark-cli
+yay -S mongodb-bin
 
 ###########################################################
 ####                        End                        ####
