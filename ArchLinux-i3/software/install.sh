@@ -144,7 +144,8 @@ yay -S spotify-tray-git
 sudo pacman -S mutt      \
                fetchmail \
                procmail  \
-               msmtp
+               msmtp     \
+               mailnag
 
 sudo pacman -S mpv                  \
                simplescreenrecorder \
