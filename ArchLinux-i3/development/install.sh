@@ -7,7 +7,7 @@
 sudo pacman -S gdb      \
                gcc      \
                valgrind \
-               clangd   \
+               clang
 
 ###########################################################
 ####                        End                        ####
