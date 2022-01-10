@@ -12,3 +12,5 @@ online disk
 ```
 
 主要通过 WSL 的 Arch Linux 部署开发环境。
+
+首次在Win10采用了平铺式的[窗口管理器](https://github.com/fuhsjr00/bug.n).
