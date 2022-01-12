@@ -65,8 +65,8 @@ sudo pacman -S fcitx5                \
 ####                 document_editor                   ####
 ###########################################################
 
-#* To install typora
-sudo pacman -S typora
+#* To install marktext
+sudo pacman -S marktext-git
 
 #* To install gvim
 sudo pacman -S gvim

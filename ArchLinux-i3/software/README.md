@@ -281,10 +281,12 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ## 3 文档与编辑
 
-### 3.1 typora
+### 3.1 marktext
+
+typora收费了，尊重开发者的选择。更换为开源的`marktext`。
 
 ```shell
-sudo pacman -S typora
+sudo pacman -S marktext-git
 ```
 
 使用`picgo`自动上传图床。配置很简单。
