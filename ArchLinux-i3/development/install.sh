@@ -7,7 +7,8 @@
 sudo pacman -S gdb      \
                gcc      \
                valgrind \
-               clang
+               clang    \
+               libdwarf
 
 ###########################################################
 ####                        End                        ####

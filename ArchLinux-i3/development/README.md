@@ -20,6 +20,10 @@ sudo pacman -S valgrind
 sudo pacman -S clang
 ```
 
+```shell
+sudo pacman -S libdwarf
+```
+
 ## 2. go
 
 ### 2.1 安装
