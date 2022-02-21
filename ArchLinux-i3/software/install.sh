@@ -34,8 +34,7 @@ sudo pacman -S alacritty \
                htop      \
                conky     \
                neofetch  \
-               polybar   \
-               ao
+               polybar
 
 ###########################################################
 ####                        End                        ####

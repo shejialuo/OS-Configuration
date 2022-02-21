@@ -4,7 +4,9 @@
 sudo pacman -S lightdm \
                lightdm-webkit2-greeter
 sudo systemctl enable lightdm
-yay -S lightdm-webkit-theme-material-git
+cd /usr/share/lightdm-webkit/themes/
+sudo git clone https://github.com/artur9010/lightdm-webkit-material.git material
+cd ~
 
 #* To install network management
 sudo systemctl enable NetworkManager

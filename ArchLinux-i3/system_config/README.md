@@ -19,8 +19,11 @@ sudo pacman -S lightdm-webkit2-greeter
 
 ### 1.2 安装主题及相关配置
 
+`lightdm-webkit-theme-material-git`近期已经移除了`aur`，故采用`git`安装。
+
 ```shell
-yay -S lightdm-webkit-theme-material-git
+cd /usr/share/lightdm-webkit/themes/
+sudo git clone https://github.com/artur9010/lightdm-webkit-material.git material
 ```
 
 #### 1.2.1 背景图片
