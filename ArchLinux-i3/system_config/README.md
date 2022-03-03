@@ -55,7 +55,7 @@ if [ $result -gt 0 ]
 then
     xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 2560x1440     --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
 else
-    xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate no    rmal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off
+    xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off
 fi
 ```
 
@@ -86,9 +86,7 @@ sudo systemctl enable NetworkManager
 sudo pacman -S network-manager-applet
 ```
 
-并在 i3 的配置文件中，自动启动`nm-applet`。
-
-安装`dhclinet`作为DHCP client。参考[ArchWiki](https://wiki.archlinux.org/title/NetworkManager#DHCP_client)
+安装`dhclinet`作为 DHCP client。参考[ArchWiki](https://wiki.archlinux.org/title/NetworkManager#DHCP_client)
 
 ```shell
 sudo pacman -S dhclient
@@ -104,7 +102,7 @@ sudo pacman -S alsa-utils
 
 ### 3.2 管理
 
-使用ArchWiki推荐的`pipewire`管理。
+使用 ArchWiki 推荐的`pipewire`管理。
 
 ```shell
 sudo pacman -S pipewire-pulse

@@ -73,7 +73,7 @@ echo $SHELL
 + autojump
 
   ```shell
-  yay -S autojump
+  sudo pacman -S autojump
   ```
 
 ##### 1.1.4.2 配置
@@ -205,7 +205,7 @@ sudo pacman -S neofetch
 
 ### 1.6 任务栏安装
 
-使用polybar
+使用 polybar
 
 ```shell
 sudo pacman -S polybar
@@ -255,7 +255,7 @@ XMODIFIERS    DEFAULT=\@im=fcitx
 
 + Trigger Input Method: Left Shift. No enumerate when press trigger key repeatedly
 + Temporally Input Method between first and current Input Method: Control+Space
-+ Enumerate Input Method Forward: Control + Left Shitf
++ Enumerate Input Method Forward: Control + Left Shift
 
 ### 2.6 皮肤
 
@@ -273,17 +273,7 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ## 3 文档与编辑
 
-### 3.1 marktext
-
-typora收费了，尊重开发者的选择。更换为开源的`marktext`。
-
-```shell
-sudo pacman -S marktext-git
-```
-
-使用`picgo`自动上传图床。配置很简单。
-
-### 3.2 gvim
+### 3.1 gvim
 
 `vim`并不能使用系统的剪贴板，安装`gvim`。
 
@@ -296,7 +286,7 @@ sudo pacman -S gvim
 + `~/.install_vim_plugin.sh`
 + `~/.update_vim_plguin.sh`
 
-### 3.3 VsCode
+### 3.2 VsCode
 
 `archlinuxcn`不再提供`visual-studio-code-bin`的二进制包，详见[issue](https://github.com/archlinuxcn/repo/issues/2460)。只能手动编译了。
 
@@ -306,7 +296,7 @@ yay -S visual-studio-code-bin
 
 现在`VsCode`自带同步功能，双系统很方便，直接同步。
 
-### 3.4 office
+### 3.3 office
 
 安装 wps office：
 
@@ -315,7 +305,7 @@ yay -S wps-office
 yay -S ttf-wps-fonts
 ```
 
-### 3.5 pandoc
+### 3.4 pandoc
 
 安装 pandoc：
 
@@ -323,7 +313,7 @@ yay -S ttf-wps-fonts
 sudo pacman -S pandoc
 ```
 
-### 3.6 zotero
+### 3.5 zotero
 
 安装 zotero：
 
@@ -331,7 +321,7 @@ sudo pacman -S pandoc
 sudo pacman -S zotero
 ```
 
-### 3.7 zathura
+### 3.6 zathura
 
 ```shell
 sudo pacman -S zathura
@@ -343,25 +333,19 @@ sudo pacman -S zathura
 set selection-clipboard clipboard
 ```
 
-#### 3.7.1 安装相关依赖
+#### 安装相关依赖
 
 ```shell
 sudo pacman -S zathura-pdf-mupdf
 ```
 
-#### 3.7.2 使用说明
-
-```shell
-man zathura
-```
-
-### 3.8 calibre
+### 3.7 calibre
 
 ```shell
 sudo pacman -S calibre
 ```
 
-### 3.9 zeal
+### 3.8 zeal
 
 开发文档查看器：
 
@@ -369,7 +353,7 @@ sudo pacman -S calibre
 sudo pacman -S zeal
 ```
 
-### 3.10 goldendict
+### 3.9 goldendict
 
 安装字典：
 
@@ -806,7 +790,7 @@ sudo pacman -S github-cli
 
 ### 7.7 Kdeconnect
 
-Ios终于支持kdeconnect了。
+Ios 终于支持 kdeconnect 了。
 
 ```shell
 sudo pacman -S kdeconnect
@@ -819,4 +803,3 @@ sudo pacman -S kdeconnect
 ```shell
 yay -S stretchly-bin
 ```
-
