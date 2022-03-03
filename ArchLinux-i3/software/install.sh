@@ -165,7 +165,11 @@ sudo pacman -S rclone
 ###########################################################
 
 sudo pacman -S rofi               \
-               drawio-desktop-bin \
+               rofi-greenclip
+yay -S rofi-bluetooth-git
+yay -S networkmanager-dmenu-git
+
+sudo pacman -S drawio-desktop-bin \
                chezmoi            \
                gnome-keyring      \
                seahorse           \

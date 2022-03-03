@@ -746,6 +746,14 @@ sudo pacman -S rclone
 sudo pacman -S rofi
 ```
 
+#### 相关 rofi 工具安装
+
+```sh
+sudo pacman -S rofi-greenclip
+yay -S rofi-bluetooth-git
+yay -S networkmanager-dmenu-git
+```
+
 ### 7.2 drawio
 
 安装矢量图绘制工具：
