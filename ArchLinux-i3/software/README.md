@@ -400,7 +400,7 @@ Environment="HOME=/home/shejialuo"
 Environment="CLASH_URL=your subscribe address"
 
 [Install]
-WantedBy=multi.user.target
+WantedBy=multi-user.target
 ```
 
 `start-clash.sh`和`stop-clash.sh`见文件，注意权限。
