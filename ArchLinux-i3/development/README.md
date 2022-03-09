@@ -153,7 +153,7 @@ sudo pacman -S gnuplot
 ## 9. java scala
 
 ```shell
-sudo pacman -S jkd11-openjdk scala kotlin
+sudo pacman -S jdk11-openjdk scala kotlin
 ```
 
 ## 10. 工具

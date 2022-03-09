@@ -110,7 +110,7 @@ sudo pacman -S gnuplot
 ####                       Java                        ####
 ###########################################################
 
-sudo pacman -S jkd11-openjdk scala kotlin
+sudo pacman -S jdk11-openjdk scala kotlin
 
 ###########################################################
 ####                        End                        ####
