@@ -87,6 +87,12 @@ detach vdisk
 exit
 ```
 
+### 3.7 允许通过防火墙
+
+```powershell
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
 ## 4. VsCode
 
 直接下载安装即可，有同步功能，详细插件见 Linux 部分。
