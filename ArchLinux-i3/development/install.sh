@@ -4,7 +4,7 @@
 ####                       C and C++                   ####
 ###########################################################
 
-sudo pacman -S gdb      \
+sudo pacman -S gdb cgdb \
                gcc      \
                valgrind \
                clang    \

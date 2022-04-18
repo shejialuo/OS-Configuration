@@ -5,7 +5,7 @@
 ## 1. c and c++
 
 ```shell
-sudo pacman -S gdb
+sudo pacman -S gdb cgdb
 ```
 
 ```shell
