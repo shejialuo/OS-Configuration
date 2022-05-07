@@ -61,7 +61,7 @@ echo $SHELL
 + zsh-autosuggestions
 
   ```shell
-  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
 + dracula-highlighting
