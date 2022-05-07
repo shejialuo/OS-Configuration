@@ -553,6 +553,14 @@ SSID=AP_Ali
 PASSPHRASE=yourpasswordhere
 ```
 
+### 4.8 远程桌面
+
+#### 4.8.1 rdp协议
+
+```shell
+sudo pacman -S freerdp
+```
+
 ## 5 媒体
 
 ### 5.1 图片

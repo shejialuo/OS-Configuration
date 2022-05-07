@@ -105,7 +105,8 @@ sudo pacman -S clash            \
                nitroshare       \
                newsboat         \
                proxychains-ng   \
-               create_ap
+               create_ap        \
+               freerdp
 
 #* To install Microsoft Edge
 yay -S microsoft-edge-dev
