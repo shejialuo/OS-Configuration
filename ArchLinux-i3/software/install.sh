@@ -94,18 +94,18 @@ sudo pacman -S pandoc            \
 ###########################################################
 
 #* To install clash
-sudo pacman -S clash            \
-               w3m              \
-               tor              \
-               tor-browser      \
-               telegram-desktop \
-               aria2            \
-               youtube-dl       \
-               qbittorrent      \
-               nitroshare       \
-               newsboat         \
-               proxychains-ng   \
-               create_ap        \
+sudo pacman -S clash-premium-bin \
+               w3m               \
+               tor               \
+               tor-browser       \
+               telegram-desktop  \
+               aria2             \
+               youtube-dl        \
+               qbittorrent       \
+               nitroshare        \
+               newsboat          \
+               proxychains-ng    \
+               create_ap         \
                freerdp
 
 #* To install Microsoft Edge

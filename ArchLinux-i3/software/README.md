@@ -369,8 +369,122 @@ sudo pacman -S goldendict
 
 安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认 HTTP 端口为 7890,默认 socks 端口为 7891。必须同步时钟，才能使用（别问我为什么知道，fuck it）。
 
+由于需要使用premium提供的一些规则故使用premium版蹦，这样就不需要自己写了，有HTTP的方式和FILE的方式，目前clash不支持提供的规则走代理，这样GitHub的文件根本下不下来，所以采用FILE的方式进行，参考别人GitHub Action写了个脚本自己手动更新。
+
 ```shell
-sudo pacman -S clash
+sudo pacman -S clash-premium-bin
+```
+
+```shell
+#!/bin/bash
+
+output_dir=./rule/
+
+custom_icloud=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt
+custom_tld_not_cn=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/tld-!cn.txt
+custom_private=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/private.txt
+Loyalsoldier_reject=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+Loyalsoldier_proxy=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt
+Loyalsoldier_direct=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt
+Loyalsoldier_gfw=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
+Loyalsoldier_greatfire=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/greatfire.txt
+felixonmars_apple=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
+felixonmars_google=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+cn_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt
+lan_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/private.txt
+telegram_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt
+
+generate_icloud() {
+  echo "payload:" > icloud.yaml
+  curl -sSL ${custom_icloud} | grep -E "^(full|domain):" | awk -F ':' '{printf "  - |+.%s|\n", $2}' | sed "s/|/'/g" >> icloud.yaml
+}
+
+generate_google() {
+  echo "payload:" > google.yaml
+  curl -sSL ${felixonmars_google} | perl -ne '/^server=\/([^\/]+)\// && print "  - |+.$1|\n"' | sed "s/|/'/g" >> google.yaml
+}
+
+generate_apple() {
+  echo "payload:" > apple.yaml
+  curl -sSL ${felixonmars_apple} | perl -ne '/^server=\/([^\/]+)\// && print "  - |+.$1|\n"' | sed "s/|/'/g" >> apple.yaml
+}
+
+generate_private() {
+  echo "payload:" > private.yaml
+  curl -sSL ${custom_private} | awk -F ':' '/^full:/ {printf "  - |%s|\n", $2}' | sed "s/|/'/g" >> private.yaml
+  curl -sSL ${custom_private} | awk -F ':' '/^domain:/ {printf "  - |+.%s|\n", $2}' | sed "s/|/'/g" >> private.yaml
+}
+
+generate_direct() {
+  echo "payload:" > direct.yaml
+  curl -sSL ${Loyalsoldier_direct} | grep -Ev "^(regexp|keyword):" | perl -ne '/^(full:)([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |$2|\n"' | sed "s/|/'/g" >> direct.yaml
+  curl -sSL ${Loyalsoldier_direct} | grep -Ev "^(regexp|keyword|full):" | perl -ne '/^(domain:)?([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$2|\n"' | sed "s/|/'/g" >> direct.yaml
+}
+
+generate_proxy() {
+  echo "payload:" > proxy.yaml
+  curl -sSL ${Loyalsoldier_proxy} | grep -Ev "^(regexp|keyword):" | perl -ne '/^(full:)([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |$2|\n"' | sed "s/|/'/g" >> proxy.yaml
+  curl -sSL ${Loyalsoldier_proxy} | grep -Ev "^(regexp|keyword|full):" | perl -ne '/^(domain:)?([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$2|\n"' | sed "s/|/'/g" >> proxy.yaml
+}
+
+generate_reject() {
+  echo "payload:" > reject.yaml
+  curl -sSL ${Loyalsoldier_reject} | grep -Ev "^(regexp|keyword):" | perl -ne '/^(domain:|full:)?([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$2|\n"' | sed "s/|/'/g" >> reject.yaml
+
+}
+
+generate_gfw() {
+  echo "payload:" > gfw.yaml
+  curl -sSL ${Loyalsoldier_gfw} | grep -Ev "^(regexp|keyword):" | perl -ne '/^(domain:|full:)?([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$2|\n"' | sed "s/|/'/g" >> gfw.yaml
+
+}
+
+generate_greatfire() {
+  echo "payload:" > greatfire.yaml
+  curl -sSL ${Loyalsoldier_greatfire} | grep -Ev "^(regexp|keyword):" | perl -ne '/^(domain:|full:)?([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$2|\n"' | sed "s/|/'/g" >> greatfire.yaml
+}
+
+generate_tld-not-cn() {
+  echo "payload:" > tld-not-cn.yaml
+  curl -sSL "${custom_tld_not_cn}" | perl -ne '/^domain:([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "  - |+.$1|\n"' | sed "s/|/'/g" >> tld-not-cn.yaml
+}
+
+generate_cncidr() {
+  echo "payload:" > cncidr.yaml
+  curl -sSL ${cn_cidr} | perl -ne '/(.+\/\d+)/ && print "  - |$1|\n"' | sed "s/|/'/g" >> cncidr.yaml
+}
+
+generate_telegramcidr() {
+  echo "payload:" > telegramcidr.yaml
+  curl -sSL ${telegram_cidr} | perl -ne '/(.+\/\d+)/ && print "  - |$1|\n"' | sed "s/|/'/g" >> telegramcidr.yaml
+}
+
+generate_lancidr() {
+  echo "payload:" > lancidr.yaml
+  curl -sSL ${lan_cidr} | perl -ne '/(.+\/\d+)/ && print "  - |$1|\n"' | sed "s/|/'/g" >> lancidr.yaml
+}
+
+main() {
+  if [[ ! -d  ${output_dir} ]]; then
+    mkdir ${output_dir}
+  fi
+  cd ${output_dir}
+  generate_icloud
+  generate_google
+  generate_apple
+  generate_private
+  generate_direct
+  generate_proxy
+  generate_reject
+  generate_gfw
+  generate_greatfire
+  generate_tld-not-cn
+  generate_cncidr
+  generate_telegramcidr
+  generate_lancidr
+}
+
+main
 ```
 
 #### 4.2.1 后台运行方式不能自动更新订阅
