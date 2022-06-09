@@ -163,4 +163,6 @@ sudo pacman -S mysql
 sudo pacman -S redis
 sudo pacman -S wireshark-cli
 yay -S mongodb-bin
+sudo pacman -S net-tools dnsutils inetutils
 ```
+

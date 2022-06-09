@@ -117,13 +117,14 @@ sudo pacman -S jdk11-openjdk scala kotlin
 ###########################################################
 
 ###########################################################
-####                       Java                        ####
+####                      Other                        ####
 ###########################################################
 
 sudo pacman -S mysql         \
                redis         \
                wireshark-cli
 yay -S mongodb-bin
+sudo pacman -S net-tools dnsutils inetutils
 
 ###########################################################
 ####                        End                        ####
