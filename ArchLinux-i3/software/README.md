@@ -363,6 +363,14 @@ sudo pacman -S goldendict
 
 注意对词典进行备份。
 
+### 3.10 xournalpp
+
+目前采用的编辑器基本都是单一的文本，然而有时候需要手动绘图作理解，或者增加一些PDF的批注。xournalpp是一个很好用的工具。
+
+```shell
+sudo pacman -S xournalpp
+```
+
 ## 4 网络
 
 ### 4.1 代理安装

@@ -81,7 +81,8 @@ sudo pacman -S pandoc            \
                zathura-pdf-mupdf \
                calibre           \
                zeal              \
-               goldendict
+               goldendict        \
+               xournalpp
 
 ###########################################################
 ####                        End                        ####
