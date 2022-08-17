@@ -8,7 +8,8 @@ sudo pacman -S gdb cgdb \
                gcc      \
                valgrind \
                clang    \
-               libdwarf
+               libdwarf \
+               doxygen  \
 
 ###########################################################
 ####                        End                        ####
