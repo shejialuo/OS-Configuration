@@ -338,3 +338,37 @@ ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
 ```
 
 使用`mimeapps.list`管理默认程序。
+
+### 11.3 电源管理
+
++ `shutdown`：关机。
++ `systemctl suspend`：挂起到内存。
++ `systemctl hibernate`：挂起到交换空间(硬盘)。
++ `systemctl hybrid-sleep`：既挂起到内存又挂起到交换空间。
++ `systemctl suspend-then-hibernate`：先挂起到内存再挂起到交换空间。
+
+挂起到硬盘需要进行配置。首先要得到交换空间的UUID。
+
+```sh
+lsblk -o name,mountpoint,size,uuid
+```
+
+然后，编辑`/etc/default/grub`, 将相关参数加入内核启动参数中找到`GRUB_CMDLINE_LINUX_DEFAULT`一行，在其值后添加类似如下数据
+
+```ini
+resume=UUID=<value>
+```
+
+然后更新Grub。
+
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+此之外，还需配置`initranfs`的`resume`钩子。编辑`/etc/mkinitcpio.conf`，在`HOOKS`行添加`resume`值。注意，`resume`需要加入在`udev`后。
+
+最后通过以下命令重新生成`initramfs`镜像：
+
+```sh
+sudo mkinitcpio -P
+```
