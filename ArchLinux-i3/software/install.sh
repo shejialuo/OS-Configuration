@@ -142,8 +142,7 @@ yay -S spotify-tray-git
 sudo pacman -S mutt      \
                fetchmail \
                procmail  \
-               msmtp     \
-               mailnag
+               msmtp
 
 sudo pacman -S mpv                  \
                simplescreenrecorder \
@@ -177,7 +176,8 @@ sudo pacman -S drawio-desktop-bin \
                seahorse           \
                arandr             \
                github-cli         \
-               kdeconnect
+               kdeconnect         \
+               tmux
 yay -S stretchly-bin
 
 ###########################################################

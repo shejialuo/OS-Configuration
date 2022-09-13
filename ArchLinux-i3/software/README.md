@@ -826,14 +826,6 @@ sudo pacman -S msmtp
 
 用于发送邮件的软件，其配置文件位于`~/.mstmtprc`。
 
-#### 5.3.5 mailnag
-
-安装`mailnag`实现邮件的通知：
-
-```sh
-sudo pacman -S mailnag
-```
-
 ### 5.4 视频
 
 #### 5.4.1 播放器
@@ -940,4 +932,12 @@ sudo pacman -S kdeconnect
 
 ```shell
 yay -S stretchly-bin
+```
+
+### 7.9 tmux
+
+还是用一下`tmux`吧，主要还是服务器端使用多，顺便练习一下，过于依赖i3了。
+
+```sh
+sudo pacman -S tmux
 ```
