@@ -76,6 +76,12 @@ sudo pacman -S python-pip
 sudo pacman -S python-pylint
 ```
 
+### 4.3 Jupyter
+
+```sheel
+sudo pacman -S jupyter-notebook
+```
+
 ## 5. NodeJs
 
 ### 5.1 安装

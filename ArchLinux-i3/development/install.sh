@@ -46,7 +46,8 @@ echo 'export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"' >> ~/.profile
 ####                       Python                      ####
 ###########################################################
 
-sudo pacman -S python-pip
+sudo pacman -S python-pip \
+               jupyter-notebook
 
 ###########################################################
 ####                        End                        ####
