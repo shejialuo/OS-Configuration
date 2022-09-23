@@ -1,12 +1,11 @@
 #!/bin/bash
 
 #* To install DM
-sudo pacman -S lightdm \
-               lightdm-webkit2-greeter
-sudo systemctl enable lightdm
-cd /usr/share/lightdm-webkit/themes/
-sudo git clone https://github.com/artur9010/lightdm-webkit-material.git material
-cd ~
+sudo pacman -S sddm
+sudo systemctl enable sddm
+
+git clone https://github.com/shejialuo/sddm-theme-clairvoyance \
+/usr/share/sddm/themes/clairvoyance
 
 #* To install network management
 sudo systemctl enable NetworkManager
@@ -34,11 +33,12 @@ sudo pacman -S ttf-fira-code \
                ttf-font-awesome \
                noto-fonts \
                noto-fonts-cjk \
-               noto-fonts-emoji
+               noto-fonts-emoji \
+               ttf-fira-mono
 yay -S ttf-font-icons \
        ttf-material-design-iconic-font
 
-#* To install notification management
+#* To install notification mansagement
 sudo pacman -S dunst
 
 #* To install bluetooth management

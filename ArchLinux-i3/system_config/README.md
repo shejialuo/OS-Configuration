@@ -2,79 +2,44 @@
 
 ## 1 系统 DM
 
-用 lightDM 作为系统的 display manager。
+更换 sddm 作为系统的 display manager。
 
 ```shell
-sudo pacman -S lightdm
-sudo systemctl enable lightdm
+sudo pacman -S sddm
+sudo systemctl enable sddm
 ```
 
-### 1.1 安装 greeter
-
-为了好看的登录界面，安装`lightdm-webkit2-greeter`。
+### 1.1 安装主题
 
 ```shell
-sudo pacman -S lightdm-webkit2-greeter
+git clone https://github.com/shejialuo/sddm-theme-clairvoyance /usr/share/sddm/themes/clairvoyance
 ```
 
-### 1.2 安装主题及相关配置
+#### 1.1.1 背景图片
 
-`lightdm-webkit-theme-material-git`近期已经移除了`aur`，故采用`git`安装。
+登录的背景图片位于目录`/usr/share/sddm/themes/clairvoyance/Assets/background.jpg`。注意名字保持一致，不要修改配置文件。
 
-```shell
-cd /usr/share/lightdm-webkit/themes/
-sudo git clone https://github.com/artur9010/lightdm-webkit-material.git material
+#### 1.1.2 登录头像
+
+用户头像的目录位于`/usr/share/sddm/faces`，文件名为`<username>.face.icon`。
+
+### 1.2 配置文件
+
+在目录`/etc/sddm.conf.d`中创建以下的文件。
+
+```conf
+# theme.conf
+[Theme]
+Current=clairvoyance
+autoFocusPassword=true
+enableHDPI=true
 ```
 
-#### 1.2.1 背景图片
-
-登录的背景图片位于目录`/var/lib/AccountsService/wallpapers`。注意在命令行使用`lightdm-webkit2-greeter`，进入`Setting`，选择`background engine`为`image`。(见`lightdm-webkit2-greeter.conf`文件)。注意文件的权限。
-
-#### 1.2.2 登录头像
-
-用户头像的目录位于`/var/lib/AccountsService/icons`。注意在`/var/lib/AccountsService/users`新建文件`$USER`，输入以下内容：
-
-```shell
-[User]
-Icon=/var/lib/AccountsService/icons/shejialuo.jpg
-```
-
-#### 1.2.3 lightDM 设置
-
-编辑文件`/etc/lightdm/lightdm.conf`,设置`greeter-session=lightdm-webkit2-greeter`。
-
-#### 1.2.4 双显示器问题
-
-可能存在双显示问题，自写脚本解决。在`/etc/lightdm.conf`，设置`display-setup-script=/usr/bin/lightDMScript.sh`。
-
-```shell
-#!bin/bash
-xrandr | grep "HDMI-1 disconnected"
-result=$?
-if [ $result -gt 0 ]
-then
-    xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 2560x1440     --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off
-else
-    xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off
-fi
-```
-
-#### 1.2.5 总体配置
-
-```ini
-[greeter]
-debug_mode          = false
-detect_theme_errors = true
-screensaver_timeout = 300
-secure_mode         = true
-time_format         = LT
-time_language       = auto
-webkit_theme        = material
-
-[branding]
-background_images = /var/lib/AccountsService/wallpapers
-logo              = /usr/share/pixmaps/archlinux-logo.svg
-user_image        = /var/lib/AccountsService/icons/shejialuo.jpg
+```conf
+# x11.conf
+[X11]
+EnableHiDPI=true
+MinimumVT=7
 ```
 
 ## 2 网络管理
@@ -186,6 +151,7 @@ sudo pacman -S ttf-font-awesome
 sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-cjk
 sudo pacman -S noto-fonts-emoji
+sudo pacman -S ttf-fira-mono
 yay -S ttf-font-icons
 yay -S ttf-material-design-iconic-font
 ```
