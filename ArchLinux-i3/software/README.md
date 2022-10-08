@@ -941,3 +941,13 @@ yay -S stretchly-bin
 ```sh
 sudo pacman -S tmux
 ```
+
+### 7.10 Remote Desktop
+
+因为疫情等各方面，不想只ssh过来，有时候也想用远程桌面，故部署远程桌面的环境。
+
+```sh
+yay -S rdp
+```
+
+注意需要使用`.xinitrc`文件。

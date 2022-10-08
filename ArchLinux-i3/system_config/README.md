@@ -338,3 +338,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```sh
 sudo mkinitcpio -P
 ```
+
+### 11.4 定时任务
+
+最近需要执行定时任务，安装`crontab`。
+
+```sh
+sudo pacman -S cronie
+systemctl start cronie.service
+```
+
