@@ -242,13 +242,15 @@ sudo pacman -S fcitx5-mozc
 
 ### 2.5 配置
 
-在`$HOME`的目录编辑文件`.pam_environment`，如果没有则创建该文件，输入以下信息：
+`.pam_environment`文件已经被弃用了，需要用在全局。故在`/etc/pam_environment`中，输入
+以下信息：
 
 ```shell
-INPUT_METHOD  DEFAULT=fcitx
-GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE  DEFAULT=fcitx
-XMODIFIERS    DEFAULT=\@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
 ```
 
 后面进行 GUI 设置。
