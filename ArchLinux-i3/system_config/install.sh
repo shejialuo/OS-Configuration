@@ -30,6 +30,7 @@ sudo pacman -S picom
 
 #* To install font management
 sudo pacman -S ttf-fira-code \
+               ttf-fira-sans \
                ttf-font-awesome \
                noto-fonts \
                noto-fonts-cjk \

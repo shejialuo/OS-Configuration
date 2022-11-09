@@ -147,6 +147,7 @@ sudo pacman -S picom
 
 ```shell
 sudo pacman -S ttf-fira-code
+sudo pacman -S ttf-fira-sans
 sudo pacman -S ttf-font-awesome
 sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-cjk
@@ -158,7 +159,7 @@ yay -S ttf-material-design-iconic-font
 
 ### 6.2 字体配置
 
-对`~/.config/fontconfig/fonts.conf`进行配置。默认字体为`Fira Code`。
+对`~/.config/fontconfig/fonts.conf`进行配置。默认字体为`Fira Code`，本次更新细分了字体，主要更改了衬体。
 
 ## 7 通知管理
 
