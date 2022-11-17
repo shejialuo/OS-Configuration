@@ -126,7 +126,7 @@ sudo pacman -S mysql         \
                redis         \
                wireshark-cli
 yay -S mongodb-bin
-sudo pacman -S net-tools dnsutils inetutils
+sudo pacman -S net-tools dnsutils inetutils ethtool
 
 ###########################################################
 ####                        End                        ####
