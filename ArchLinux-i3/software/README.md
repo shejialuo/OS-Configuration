@@ -618,6 +618,14 @@ env QT_IM_MODULE=fcitx
 
 参考 efb-qq-slave 和 efb-wechat-slave
 
+#### 4.3.2 QQ
+
+出了一个十分好用的客户端，本质也是机器人。用来传文件。`efb-qq-slave`不支持传文件。
+
+```sh
+yay -S icalingua++
+```
+
 ### 4.4 下载软件
 
 #### 4.4.1 Aria2 安装

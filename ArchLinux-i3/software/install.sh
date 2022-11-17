@@ -109,6 +109,9 @@ sudo pacman -S clash-premium-bin \
                create_ap         \
                freerdp
 
+#* To install qq
+yay -S icalingua++
+
 #* To install Microsoft Edge
 yay -S microsoft-edge-dev
 
