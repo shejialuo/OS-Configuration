@@ -73,10 +73,13 @@ sudo npm install -g sql-language-server
 
 
 ###########################################################
-####                        Docker                     ####
+####                       Operation                   ####
 ###########################################################
 
 sudo pacman -S docker
+sudo pacman -S minikube
+sudo pacman -S kubectl
+sudo pacman -S istio
 
 ###########################################################
 ####                        End                        ####

@@ -126,10 +126,17 @@ sudo npm install picgo -g
 sudo npm install -g sql-language-server
 ```
 
-## 6. Docker
+## 6. DevOps
+
+Docker、minikube以及Istio三件套安装
 
 ```shell
 sudo pacman -S docker
+sudo pacman -S minikube
+minikube start --image-mirror-country=cn --kubernetes-version=1.23.0
+sudo pacman -S kubectl
+sudo pacman -S istio
+istioctl install --set profile=demo -y
 ```
 
 ## 7. LaTex
