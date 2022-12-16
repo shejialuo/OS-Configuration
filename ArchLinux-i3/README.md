@@ -80,3 +80,4 @@
 + `useradd -m shejialuo -g shejialuo`
 + 编辑`/etc/sudoers`文件
 + `sudo pacman -S xorg i3-gaps`
++ 对于双系统：`sudo pacman -S os-prober`，编辑`/etc/default/grub`文件，然后挂载Windows的启动盘。再执行`grub-mkconfig -o /boot/grub/grub.cfg`
