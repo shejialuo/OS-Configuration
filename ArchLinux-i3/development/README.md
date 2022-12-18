@@ -68,7 +68,7 @@ ghcup tui
 sudo pacman -S python-pip
 ```
 
-注意如果能使用`pacman`包管理器安装软件，一定使用`pacman`包管理器。如果必须使用`pip`，务必加上`--user`，避免安装到`/usr`目录，防止与系统以来出现问题，滚挂了。
+注意如果能使用`pacman`包管理器安装软件，一定使用`pacman`包管理器。如果必须使用`pip`，务必加上`--user`，避免安装到`/usr`目录，防止与系统级别出现问题，滚挂了。
 
 ### 4.2 代码检查工具
 
@@ -96,34 +96,16 @@ sudo pacman -S nodejs npm
 sudo pacman -S eslint
 ```
 
-### 5.3 Angular
-
-```shell
-npm install -g @angular/cli
-```
-
-### 5.4 NestJs
-
-```shell
-sudo npm install -g @nestjs/cli
-```
-
-### 5.5 Hexo
+### 5.3 Hexo
 
 ```shell
 sudo npm install -g hexo-cli
 ```
 
-### 5.6 Pigco
+### 5.4 Pigco
 
 ```shell
 sudo npm install picgo -g
-```
-
-### 5.7 LanguageServer
-
-```shell
-sudo npm install -g sql-language-server
 ```
 
 ## 6. DevOps
@@ -176,6 +158,5 @@ sudo pacman -S mysql
 sudo pacman -S redis
 sudo pacman -S wireshark-cli
 yay -S mongodb-bin
-sudo pacman -S net-tools dnsutils inetutils ethtool
+sudo pacman -S net-tools dnsutils inetutils ethtool frpc
 ```
-

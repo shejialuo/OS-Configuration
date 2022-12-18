@@ -60,11 +60,8 @@ sudo pacman -S python-pip \
 ###########################################################
 
 sudo pacman -S nodejs npm
-sudo npm install -g @angular/cli
-sudo npm install -g @nestjs/cli
 sudo npm install -g hexo-cli
 sudo npm install picgo -g
-sudo npm install -g sql-language-server
 
 ###########################################################
 ####                        End                        ####
