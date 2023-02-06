@@ -356,3 +356,11 @@ systemctl start cronie.service
 ```c++
 sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia
 ```
+
+### 11.6 时间同步
+
+偶尔时间会出现漂移，使用`ntp`进行时间的同步。
+
+```sh
+sudo pacman -S ntp
+```
