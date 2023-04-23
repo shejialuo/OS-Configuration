@@ -286,6 +286,12 @@ ifuse --list-apps
 ifuse --documents org.vediolan.vlc-ios mountpoint
 ```
 
+#### 10.3.4 自动挂载USB
+
+```sh
+sudo pacman -S udisks2
+```
+
 ## 11 其他
 
 ### 11.1 关闭终端 Beep

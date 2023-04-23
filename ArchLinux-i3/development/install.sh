@@ -4,12 +4,13 @@
 ####                       C and C++                   ####
 ###########################################################
 
-sudo pacman -S gdb cgdb \
+sudo pacman -S gdb      \
                gcc      \
                valgrind \
                clang    \
                libdwarf \
                doxygen  \
+               cmake    \
 
 ###########################################################
 ####                        End                        ####
@@ -59,7 +60,7 @@ sudo pacman -S python-pip \
 ####                        NodeJs                     ####
 ###########################################################
 
-sudo pacman -S nodejs npm
+sudo pacman -S nodejs ts-node npm yarn
 sudo npm install -g hexo-cli
 sudo npm install picgo -g
 
@@ -88,7 +89,8 @@ sudo pacman -S istio
 ####                        Latex                      ####
 ###########################################################
 
-sudo pacman -S  texlive-core texlive-langchinese
+sudo pacman -S  texlive-core texlive-langchinese \
+                texlive-bibtexextra texlive-latexextra texlive-science
 
 ###########################################################
 ####                        End                        ####
@@ -112,7 +114,7 @@ sudo pacman -S gnuplot
 ####                       Java                        ####
 ###########################################################
 
-sudo pacman -S jdk11-openjdk scala kotlin
+sudo pacman -S jdk11-openjdk
 
 ###########################################################
 ####                        End                        ####
@@ -126,7 +128,8 @@ sudo pacman -S mysql         \
                redis         \
                wireshark-cli
 yay -S mongodb-bin
-sudo pacman -S net-tools dnsutils inetutils ethtool
+sudo pacman -S net-tools dnsutils inetutils ethtool \
+               traceroute
 
 ###########################################################
 ####                        End                        ####

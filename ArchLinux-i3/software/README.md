@@ -94,7 +94,7 @@ alias p-off="unset http_proxy https_proxy"
 ### 1.2 终端安装
 
 ```shell
-sudo pacman -S alacritty
+sudo pacman -S alacritty tmux
 ```
 
 ### 1.3 文件管理
@@ -121,7 +121,7 @@ sudo pacman -S ranger
 sudo pacman -S highlight
 ```
 
-##### 1.3.2.2 HTML 预览
+##### 1.3.2.2 HTML和图片预览
 
 ```shell
 sudo pacman -S w3m
@@ -133,9 +133,48 @@ sudo pacman -S w3m
 sudo pacman -S mediainfo
 ```
 
-##### 1.3.3.4 图片预览
+##### 1.3.2.4 压缩文件预览
+
+```shell
+sudo pacman -S atool
+```
+
+##### 1.3.2.5 图片预览
 
 在`rc.conf`中设置图片预览为`true`即可。
+
+##### 1.3.2.6 视频预览
+
+参照官方[Wiki](https://github.com/ranger/ranger/wiki/Video-Previews)
+
+```shell
+sudo pacman -S ffmpegthumbnailer
+```
+
+##### 1.3.2.7 Drag and Drop
+
+参照[Wiki](https://github.com/ranger/ranger/wiki/Drag-and-Drop)
+
+```shell
+yay -S dragon-drop
+```
+
+##### 1.3.2.8 Mount support
+
+该部分没有写入脚本，自行处理。
+
+```sh
+cd ~/.config/ranger
+git clone https://github.com/SL-RU/ranger_udisk_menu
+```
+
+然后在`~/.config/ranger/commands.py`添加如下信息：
+
+```py
+from ranger_udisk_menu.mounter import mount
+```
+
+不知道为何，不需要设置`polkit`，可能是因为没有桌面环境的原因吧。
 
 #### 1.3.3 回收站
 
@@ -148,6 +187,7 @@ sudo pacman -S trash-cli
 #### 1.3.4 压缩工具
 
 ```shell
+sudo pacman -S zip
 sudo pacman -S p7zip
 ```
 
@@ -201,6 +241,12 @@ sudo pacman -S conky
 
 ```shell
 sudo pacman -S neofetch
+```
+
+#### 1.5.4 多显示器管理
+
+```shell
+sudo pacman -S arandr
 ```
 
 ### 1.6 任务栏安装
@@ -329,10 +375,11 @@ sudo pacman -S zotero
 sudo pacman -S zathura
 ```
 
-在`~/.config/zathura/zathurarc`中进行配置，以便直接复制到剪贴板：
+在`~/.config/zathura/zathurarc`中进行配置，以便直接复制到剪贴板，同时关闭沙盒以确保能打开链接：
 
 ```shell
 set selection-clipboard clipboard
+set sandbox
 ```
 
 #### 安装相关依赖
@@ -371,6 +418,14 @@ sudo pacman -S goldendict
 
 ```shell
 sudo pacman -S xournalpp
+```
+
+### 3.11 drawio
+
+安装矢量图绘制工具：
+
+```shell
+sudo pacman -S drawio-desktop-bin
 ```
 
 ## 4 网络
@@ -547,13 +602,6 @@ yay -S microsoft-edge-dev-bin
 
 直接安装`SwitchyOmega`使用即可，已采用备份。
 
-Microsoft Edge dev for Linux 存在不联网就会直接 crash 的[bug](https://techcommunity.microsoft.com/t5/discussions/edge-dev-crashing-at-start-up-in-linux/m-p/2629267)，校园网可以采取 ipv6 进行免流，但是如果不让 Microsoft Edge 走代理，会直接 crash，故通过编辑本地`.desktop`文件，添加代理的环境变量即可。
-
-+ `mod + F2`： 启动 Edge，不添加环境变量。
-+ `rofi`： 启动 Edge，添加环境变量。
-
-~~Fuck it~~
-
 ##### 全键盘操作
 
 安装`Vimium`插件。用法与 vim 的逻辑十分相似。自定义搜索引擎如下：
@@ -620,10 +668,10 @@ env QT_IM_MODULE=fcitx
 
 #### 4.3.2 QQ
 
-出了一个十分好用的客户端，本质也是机器人。用来传文件。`efb-qq-slave`不支持传文件。
+QQ官方出了本地客户端，用沙盒版本。偶尔用。
 
 ```sh
-yay -S icalingua++
+yay -S linuxqq-nt-bwrap
 ```
 
 ### 4.4 下载软件
@@ -640,8 +688,10 @@ sudo pacman -S aria2
 
 #### 4.4.2 Youtube-dl 安装
 
+使用Git版本，pip版本几乎没更新了。archlinuxcn有人维护该包。
+
 ```shell
-sudo pacman -S youtube-dl
+sudo pacman -S youtube-dl-git
 ```
 
 #### 4.4.3 qbittorrent 安装
@@ -691,6 +741,14 @@ PASSPHRASE=yourpasswordhere
 
 ```shell
 sudo pacman -S freerdp
+```
+
+### 4.9 Kdeconnect
+
+办公效率神器。
+
+```shell
+sudo pacman -S kdeconnect
 ```
 
 ## 5 媒体
@@ -886,15 +944,7 @@ yay -S rofi-bluetooth-git
 yay -S networkmanager-dmenu-git
 ```
 
-### 7.2 drawio
-
-安装矢量图绘制工具：
-
-```shell
-sudo pacman -S drawio-desktop-bin
-```
-
-### 7.3 chezmoi 安装
+### 7.2 chezmoi 安装
 
 安装 dotfiles 管理工具：
 
@@ -904,7 +954,7 @@ sudo pacman -S chezmoi
 
 对于不需要加密的文件直接 Add 即可，对于需要加密的文件采取`gnome-kerying`的方式保存。
 
-### 7.4 密码管理
+### 7.3 密码管理
 
 ```shell
 sudo pacman -S gnome-keyring
@@ -916,27 +966,13 @@ sudo pacman -S gnome-keyring
 sudo pacman -S seahorse
 ```
 
-### 7.5 多显示器管理
-
-```shell
-sudo pacman -S arandr
-```
-
-### 7.6 Github Cli
+### 7.4 Github Cli
 
 ```shell
 sudo pacman -S github-cli
 ```
 
-### 7.7 Kdeconnect
-
-Ios 终于支持 kdeconnect 了。
-
-```shell
-sudo pacman -S kdeconnect
-```
-
-### 7.8 stretchly
+### 7.5 stretchly
 
 安装一个定时软件，不能久坐，养身。
 
@@ -944,10 +980,8 @@ sudo pacman -S kdeconnect
 yay -S stretchly-bin
 ```
 
-### 7.9 tmux
-
-还是用一下`tmux`吧，主要还是服务器端使用多，顺便练习一下，过于依赖i3了。
+### 7.6 键鼠同步工具
 
 ```sh
-sudo pacman -S tmux
+sudo pacman -S barrier
 ```

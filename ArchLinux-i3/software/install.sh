@@ -23,18 +23,24 @@ git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins
 sudo pacman -S autojump
 
 sudo pacman -S alacritty \
+               tmux     \
                pcmanfm  \
                ranger    \
                highlight \
                w3m       \
+               atool     \
                mediainfo \
+               ffmpegthumbnailer \
                trash-cli \
                p7zip     \
                ncdu      \
                htop      \
                conky     \
                neofetch  \
-               polybar
+               polybar   \
+               arandr    \
+
+yay -S dragon-drop
 
 ###########################################################
 ####                        End                        ####
@@ -82,7 +88,8 @@ sudo pacman -S pandoc            \
                calibre           \
                zeal              \
                goldendict        \
-               xournalpp
+               xournalpp         \
+               drawio-desktop-bin \
 
 ###########################################################
 ####                        End                        ####
@@ -101,16 +108,17 @@ sudo pacman -S clash-premium-bin \
                tor-browser       \
                telegram-desktop  \
                aria2             \
-               youtube-dl        \
+               youtube-dl-git    \
                qbittorrent       \
                nitroshare        \
                newsboat          \
                proxychains-ng    \
                create_ap         \
-               freerdp
+               freerdp           \
+               kdeconnect
 
 #* To install qq
-yay -S icalingua++
+yay -S linuxqq-nt-bwrap
 
 #* To install Microsoft Edge
 yay -S microsoft-edge-dev
@@ -173,14 +181,11 @@ sudo pacman -S rofi               \
 yay -S rofi-bluetooth-git
 yay -S networkmanager-dmenu-git
 
-sudo pacman -S drawio-desktop-bin \
-               chezmoi            \
+sudo pacman -S chezmoi            \
                gnome-keyring      \
                seahorse           \
-               arandr             \
                github-cli         \
-               kdeconnect         \
-               tmux
+               barrier            \
 yay -S stretchly-bin
 
 ###########################################################

@@ -5,11 +5,11 @@
 ## 1. c and c++
 
 ```shell
-sudo pacman -S gdb cgdb doxygen
+sudo pacman -S gdb doxygen
 ```
 
 ```shell
-sudo pacman -S gcc
+sudo pacman -S gcc cmake
 ```
 
 ```shell
@@ -87,22 +87,16 @@ sudo pacman -S jupyter-notebook
 ### 5.1 安装
 
 ```shell
-sudo pacman -S nodejs npm
+sudo pacman -S nodejs ts-node npm yarn
 ```
 
-### 5.2 代码检测工具
-
-```shell
-sudo pacman -S eslint
-```
-
-### 5.3 Hexo
+### 5.2 Hexo
 
 ```shell
 sudo npm install -g hexo-cli
 ```
 
-### 5.4 Pigco
+### 5.3 Pigco
 
 ```shell
 sudo npm install picgo -g
@@ -137,6 +131,12 @@ sudo pacman -S texlive-core
 sudo pacman -S texlive-langchinese
 ```
 
+### 7.3 其他包安装
+
+```sh
+sudo pacman -S texlive-bibtexextra texlive-latexextra texlive-science
+```
+
 ## 8. gnuplot
 
 安装命令行绘图工具：
@@ -145,10 +145,10 @@ sudo pacman -S texlive-langchinese
 sudo pacman -S gnuplot
 ```
 
-## 9. java scala
+## 9. java
 
 ```shell
-sudo pacman -S jdk11-openjdk scala kotlin
+sudo pacman -S jdk11-openjdk
 ```
 
 ## 10. 工具
@@ -158,5 +158,5 @@ sudo pacman -S mysql
 sudo pacman -S redis
 sudo pacman -S wireshark-cli
 yay -S mongodb-bin
-sudo pacman -S net-tools dnsutils inetutils ethtool frpc
+sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute
 ```
