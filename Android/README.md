@@ -53,12 +53,6 @@ sudo adb sideload ./Magisk.zip
 
 安装模块[notocjk](https://github.com/simonsmh/notocjk)
 
-### 电池管理
-
-安装模块[acc](https://github.com/VR-25/acc)和模块[djs](https://github.com/VR-25/djs)
-
-使用[AccA](https://github.com/MatteCarra/AccA)作为这两个模块的前端。
-
 ## 录音功能
 
 安装[GAppsMod](https://github.com/jacopotediosi/GAppsMod)，设置好了可以直接删除，其通过修改数据库更改信息，完美。
