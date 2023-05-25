@@ -57,6 +57,14 @@ sudo adb sideload ./Magisk.zip
 
 安装[GAppsMod](https://github.com/jacopotediosi/GAppsMod)，设置好了可以直接删除，其通过修改数据库更改信息，完美。
 
+## NFC
+
+购买NFC卡模拟器进行IC卡模拟，ID卡就别指望了，请支持正版，也不贵。
+
+## 相机
+
+原生的相机过于丑陋，安装[GCam](https://www.celsoazevedo.com/)和Google图库，简单。
+
 ## 其他
 
 其他就是一些常规操作了。Enjoy Android
