@@ -53,6 +53,16 @@ sudo adb sideload ./Magisk.zip
 
 安装模块[notocjk](https://github.com/simonsmh/notocjk)
 
+### 去广告
+
+~~结合Magisk自带Systemless Hosts以及[AdAway](https://github.com/AdAway/AdAway)使用，不需要使用vpn，避免和clash冲突。本质也是修改hosts，还是root的方式更加轻量。~~
+
+~~然而问题在于`hosts`文件不能过长，由于Linux查找映射是顺序查找的，解析dns就会相当慢。所以最合适的方式是应该是只保留官方的几千条hosts，加一些常见的即可。过长不适合。参考[ADhosts](https://github.com/otobtc/ADhosts)。过于折腾。~~
+
+突然反思，有必要这么复杂吗？实际上安卓上比起苹果最不好的就是没有url rewriter的功能。不能做中间人攻击，还是思考通过clash把广告屏蔽呢？这或许才是最简单的方法。
+
+实际上去广告最合适的还是使用好软件。没有净土。
+
 ## 录音功能
 
 安装[GAppsMod](https://github.com/jacopotediosi/GAppsMod)，设置好了可以直接删除，其通过修改数据库更改信息，完美。
