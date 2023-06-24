@@ -90,7 +90,8 @@ sudo pacman -S istio
 ###########################################################
 
 sudo pacman -S  texlive-core texlive-langchinese \
-                texlive-bibtexextra texlive-latexextra texlive-science
+                texlive-bibtexextra texlive-latexextra texlive-science \
+                texlive-binextra
 
 ###########################################################
 ####                        End                        ####

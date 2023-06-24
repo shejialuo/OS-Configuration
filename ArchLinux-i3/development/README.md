@@ -134,7 +134,7 @@ sudo pacman -S texlive-langchinese
 ### 7.3 其他包安装
 
 ```sh
-sudo pacman -S texlive-bibtexextra texlive-latexextra texlive-science
+sudo pacman -S texlive-bibtexextra texlive-latexextra texlive-science texlive-binextra
 ```
 
 ## 8. gnuplot
