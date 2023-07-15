@@ -22,7 +22,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
 sudo pacman -S autojump
 
-sudo pacman -S alacritty \
+sudo pacman -S kitty \
                tmux     \
                pcmanfm  \
                ranger    \
