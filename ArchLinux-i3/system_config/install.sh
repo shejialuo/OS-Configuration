@@ -37,7 +37,8 @@ sudo pacman -S ttf-fira-code \
                noto-fonts-emoji \
                ttf-fira-mono
 yay -S ttf-font-icons \
-       ttf-material-design-iconic-font
+       ttf-material-design-iconic-font \
+       otf-san-francisco-new-york
 
 #* To install notification mansagement
 sudo pacman -S dunst

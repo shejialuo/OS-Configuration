@@ -155,6 +155,7 @@ sudo pacman -S noto-fonts-emoji
 sudo pacman -S ttf-fira-mono
 yay -S ttf-font-icons
 yay -S ttf-material-design-iconic-font
+yay -S otf-san-francisco-new-york
 ```
 
 ### 6.2 字体配置

@@ -64,6 +64,12 @@ echo $SHELL
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
++ zsh-history-substring-search
+
+  ```shell
+   git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+  ```
+
 + dracula-highlighting
 
   ```shell
@@ -84,11 +90,18 @@ echo $SHELL
 export ZSH="/home/shejialuo/.oh-my-zsh"
 export EDITOR="vim"
 ZSH_THEME="agnoster"
-plugins=(git zsh-autosuggestions web-search autojump zsh-syntax-highlighting)
+plugins=(git copyfile copypath zsh-autosuggestions web-search autojump zsh-syntax-highlighting zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
 alias pc="proxychains4"
 alias p-on="export https_proxy=http://127.0.0.1:7890; export http_proxy=http://127.0.0.1:7890"
 alias p-off="unset http_proxy https_proxy"
+alias fm="pcmanfm"
+source $ZSH_CUSTOM/plugins/dracula/zsh-syntax-highlighting.sh
+source $HOME/.profile
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
 ```
 
 ### 1.2 终端安装
