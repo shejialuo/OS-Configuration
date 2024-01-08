@@ -603,10 +603,10 @@ WantedBy=multi-user.target
 
 #### 4.2.1 Microsoft Edge
 
-Microsoft Edge 目前只有 dev 版本，通过`yay`安装。目前 Edge 已支持全平台同步：
+安装Stable版本。
 
 ```shell
-yay -S microsoft-edge-dev-bin
+yay -S microsoft-edge-stable-bin
 ```
 
 安装后登陆微软帐号直接全平台同步，会自动安装插件`SwitchyOmega`，若不能走代理命令行加上参数`--proxy-server="socks5://127.0.0.1:port`。

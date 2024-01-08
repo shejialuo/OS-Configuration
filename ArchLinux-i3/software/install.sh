@@ -122,7 +122,7 @@ sudo pacman -S clash-premium-bin \
 yay -S linuxqq-nt-bwrap
 
 #* To install Microsoft Edge
-yay -S microsoft-edge-dev
+yay -S microsoft-edge-stable-bin
 
 ###########################################################
 ####                       End                         ####
