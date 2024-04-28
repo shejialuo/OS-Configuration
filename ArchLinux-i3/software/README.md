@@ -998,3 +998,13 @@ yay -S stretchly-bin
 ```sh
 sudo pacman -S barrier
 ```
+
+### 7.7 Yubikey
+
+公司使用了yubikey，使用下面的命令在ArchLinux上开启yubikey。
+
+```sh
+sudo pacman -S yubikey-manager-qt
+systemctl enable pcscd.service --now
+sudo pacman -S libfido2
+```
