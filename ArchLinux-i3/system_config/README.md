@@ -371,3 +371,7 @@ sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia li
 ```sh
 sudo pacman -S ntp
 ```
+
+### 11.7 禁用AUR DEBUG
+
+改变`/etc/makepkg.conf`，将`debug`改为`!debug`。
