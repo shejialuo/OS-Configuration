@@ -22,8 +22,10 @@ yay -S pa-applet-git
 sudo pacman -S lxappearance \
                materia-gtk-theme \
                papirus-icon-theme \
-               qt5ct
-yay -S qt5-styleplugins
+               qt5ct \
+               qt6ct
+yay -S qt5-styleplugins \
+       qt6gtk2
 
 #* To install compositor
 sudo pacman -S picom

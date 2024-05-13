@@ -78,7 +78,7 @@ sudo pacman -S python-pylint
 
 ### 4.3 Jupyter
 
-```sheel
+```shell
 sudo pacman -S jupyter-notebook
 ```
 

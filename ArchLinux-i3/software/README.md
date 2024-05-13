@@ -102,6 +102,15 @@ source $HOME/.profile
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
+export MANPAGER="/usr/bin/less -s -M +Gg"
+export LESS_TERMCAP_mb=$'\e[1;31m'      # begin bold
+export LESS_TERMCAP_md=$'\e[1;34m'      # begin blink
+export LESS_TERMCAP_so=$'\e[01;45;37m'  # begin reverse video
+export LESS_TERMCAP_us=$'\e[01;36m'     # begin underline
+export LESS_TERMCAP_me=$'\e[0m'         # reset bold/blink
+export LESS_TERMCAP_se=$'\e[0m'         # reset reverse video
+export LESS_TERMCAP_ue=$'\e[0m'         # reset underline
+export GROFF_NO_SGR=1                   # for konsole
 ```
 
 ### 1.2 终端安装
@@ -407,15 +416,7 @@ sudo pacman -S zathura-pdf-mupdf
 sudo pacman -S calibre
 ```
 
-### 3.8 zeal
-
-开发文档查看器：
-
-```shell
-sudo pacman -S zeal
-```
-
-### 3.9 goldendict
+### 3.8 goldendict
 
 安装字典：
 
@@ -425,20 +426,12 @@ sudo pacman -S goldendict
 
 注意对词典进行备份。
 
-### 3.10 xournalpp
+### 3.9 xournalpp
 
-目前采用的编辑器基本都是单一的文本，然而有时候需要手动绘图作理解，或者增加一些PDF的批注。xournalpp是一个很好用的工具。
+目前采用的编辑器基本都是单一的文本，然而有时候需要手动绘图作理解，或者增加一些PDF的批注。`xournalpp`是一个很好用的工具。
 
 ```shell
 sudo pacman -S xournalpp
-```
-
-### 3.11 drawio
-
-安装矢量图绘制工具：
-
-```shell
-sudo pacman -S drawio-desktop-bin
 ```
 
 ## 4 网络
@@ -447,7 +440,7 @@ sudo pacman -S drawio-desktop-bin
 
 安装很简单，但是安装后会下载`MMDB`，不跑代理很慢。默认 HTTP 端口为 7890,默认 socks 端口为 7891。必须同步时钟，才能使用（别问我为什么知道，fuck it）。
 
-由于需要使用premium提供的一些规则故使用premium版蹦，这样就不需要自己写了，有HTTP的方式和FILE的方式，目前clash不支持提供的规则走代理，这样GitHub的文件根本下不下来，所以采用FILE的方式进行，参考别人GitHub Action写了个脚本自己手动更新。
+由于需要使用premium提供的一些规则故使用premium版本，这样就不需要自己写了，有HTTP的方式和FILE的方式，目前clash不支持提供的规则走代理，这样GitHub的文件根本下不下来，所以采用FILE的方式进行，参考别人GitHub Action写了个脚本自己手动更新。
 
 ```shell
 sudo pacman -S clash-premium-bin
@@ -746,22 +739,6 @@ WIFI_IFACE=wlp1
 INTERNET_IFACE=wlp1s0
 SSID=AP_Ali
 PASSPHRASE=yourpasswordhere
-```
-
-### 4.8 远程桌面
-
-#### 4.8.1 rdp协议
-
-```shell
-sudo pacman -S freerdp
-```
-
-### 4.9 Kdeconnect
-
-办公效率神器。
-
-```shell
-sudo pacman -S kdeconnect
 ```
 
 ## 5 媒体

@@ -39,7 +39,6 @@ enableHDPI=true
 # x11.conf
 [X11]
 EnableHiDPI=true
-MinimumVT=7
 ```
 
 ## 2 网络管理
@@ -87,7 +86,7 @@ yay -S pa-applet-git
 
 ## 4 系统主题设置
 
-安装 GTK2、GTK3 主题管理器：`lxappearance`。
+安装 GTK2 主题管理器：`lxappearance`。
 
 ```shell
 sudo pacman -S lxappearance
@@ -111,22 +110,22 @@ sudo pacman -S papirus-icon-theme
 
 ### 4.3 QT 主题
 
-QT 主题与 GTK 主题相统一。首先安装 QT 主题管理器：
+目前在Arch里面有应用使用QT5，有应用使用QT6，QT 主题与 GTK 主题相统一。首先安装 QT 主题管理器：
 
 ```shell
-sudo pacman -S qt5ct
+sudo pacman -S qt5ct qt6ct
 ```
 
-其次通过`yay`安装插件：
+其次通过`yay`安装style plugin插件：
 
 ```shell
-yay -S qt5-styleplugins
+yay -S qt5-styleplugins qt6gtk2
 ```
 
-在`~/.xprofile`中添加语句：
+在`/etc/environment`中添加语句：
 
 ```shell
-export QT_QPA_PLATFORMTHEME=gtk2
+QT_QPA_PLATFORMTHEME=gtk2
 ```
 
 打开`qt5ct`，将 QT 主题设置为 gtk2。
@@ -160,7 +159,7 @@ yay -S otf-san-francisco-new-york
 
 ### 6.2 字体配置
 
-对`~/.config/fontconfig/fonts.conf`进行配置。默认字体为`Fira Code`，本次更新细分了字体，主要更改了衬体。
+对`~/.config/fontconfig/fonts.conf`进行配置。详细参考 `dotfiles`。
 
 ## 7 通知管理
 

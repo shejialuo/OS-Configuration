@@ -87,10 +87,8 @@ sudo pacman -S pandoc            \
                zathura           \
                zathura-pdf-mupdf \
                calibre           \
-               zeal              \
                goldendict        \
                xournalpp         \
-               drawio-desktop-bin \
 
 ###########################################################
 ####                        End                        ####
@@ -114,9 +112,6 @@ sudo pacman -S clash-premium-bin \
                nitroshare        \
                newsboat          \
                proxychains-ng    \
-               create_ap         \
-               freerdp           \
-               kdeconnect
 
 #* To install qq
 yay -S linuxqq-nt-bwrap
