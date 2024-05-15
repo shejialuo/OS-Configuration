@@ -69,7 +69,7 @@ sudo pacman -S alsa-utils
 使用 ArchWiki 推荐的`pipewire`管理。
 
 ```shell
-sudo pacman -S pipewire-pulse
+sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse
 sudo pacman -S pavucontrol
 sudo pacman -S pamixer
 ```

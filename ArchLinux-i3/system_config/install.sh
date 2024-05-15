@@ -13,7 +13,7 @@ sudo pacman -S network-manager-applet dhclient
 
 #* To install sound management
 sudo pacman -S alsa-utils \
-               pipewire-pulse \
+               pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse \
                pavucontrol \
                pamixer
 yay -S pa-applet-git

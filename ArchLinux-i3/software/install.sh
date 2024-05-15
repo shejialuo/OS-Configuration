@@ -26,12 +26,8 @@ sudo pacman -S autojump
 sudo pacman -S kitty \
                tmux     \
                pcmanfm  \
-               ranger    \
-               highlight \
-               w3m       \
+               gvfs     \
                atool     \
-               mediainfo \
-               ffmpegthumbnailer \
                trash-cli \
                p7zip     \
                ncdu      \

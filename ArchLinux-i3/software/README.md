@@ -121,84 +121,13 @@ sudo pacman -S kitty tmux
 
 ### 1.3 文件管理
 
-#### 1.3.1 pcmanfm
-
-安装 GUI 文件管理器（备用）：
+安装 GUI 文件管理器：
 
 ```shell
-sudo pacman -S pcmanfm
+sudo pacman -S pcmanfm gvfs
 ```
 
-#### 1.3.2 ranger
-
-主程序安装：
-
-```shell
-sudo pacman -S ranger
-```
-
-##### 1.3.2.1 高亮代码
-
-```shell
-sudo pacman -S highlight
-```
-
-##### 1.3.2.2 HTML和图片预览
-
-```shell
-sudo pacman -S w3m
-```
-
-##### 1.3.2.3 Media 预览
-
-```shell
-sudo pacman -S mediainfo
-```
-
-##### 1.3.2.4 压缩文件预览
-
-```shell
-sudo pacman -S atool
-```
-
-##### 1.3.2.5 图片预览
-
-在`rc.conf`中设置图片预览为`true`即可。
-
-##### 1.3.2.6 视频预览
-
-参照官方[Wiki](https://github.com/ranger/ranger/wiki/Video-Previews)
-
-```shell
-sudo pacman -S ffmpegthumbnailer
-```
-
-##### 1.3.2.7 Drag and Drop
-
-参照[Wiki](https://github.com/ranger/ranger/wiki/Drag-and-Drop)
-
-```shell
-yay -S dragon-drop
-```
-
-##### 1.3.2.8 Mount support
-
-该部分没有写入脚本，自行处理。
-
-```sh
-cd ~/.config/ranger
-git clone https://github.com/SL-RU/ranger_udisk_menu
-```
-
-然后在`~/.config/ranger/commands.py`添加如下信息：
-
-```py
-from ranger_udisk_menu.mounter import mount
-```
-
-不知道为何，不需要设置`polkit`，可能是因为没有桌面环境的原因吧。
-
-#### 1.3.3 回收站
+#### 1.3.1 回收站
 
 ```shell
 sudo pacman -S trash-cli
@@ -206,35 +135,12 @@ sudo pacman -S trash-cli
 
 回收站位于`~/.local/share/Trash`。
 
-#### 1.3.4 压缩工具
+#### 1.3.2 压缩工具
 
 ```shell
 sudo pacman -S zip
 sudo pacman -S p7zip
-```
-
-#### 1.3.5 设置为默认文件浏览器
-
-[参考资料](https://www.reddit.com/r/ranger/comments/f6b6u7/how_to_open_containing_folder_with_ranger/)
-
-由于原始的`ranger.desktop`文件中存在`Terminal=true`，所以修改为由终端模拟器执行`ranger`:
-
-```shell
-cp /usr/share/applications/ranger.desktop ~/.local/share/applications/ranger.desktop
-vim ~/.local/share/applications/ranger.desktop
-```
-
-改变为以下的值：
-
-```shell
-Terminal=false
-Exec=Exec=alacritty -e ranger
-```
-
-在`mimeapps.list`添加`ranger.desktop`，并更新数据库：
-
-```shell
-update-desktop-database ~/.local/share/applications
+sudo pacman -S atool
 ```
 
 ### 1.4 磁盘管理
