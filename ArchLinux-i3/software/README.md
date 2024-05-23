@@ -121,13 +121,35 @@ sudo pacman -S kitty tmux
 
 ### 1.3 文件管理
 
-安装 GUI 文件管理器：
+### 1.3.1 GUI文件管理器
+
+安装轻量级别软件：
 
 ```shell
 sudo pacman -S pcmanfm gvfs
 ```
 
-#### 1.3.1 回收站
+### 1.3.2 终端文件管理器
+
+安装`ranger`:
+
+```shell
+sudo pacman -S ranger
+```
+
+#### 高亮代码
+
+```shell
+sudo pacman -S highlight
+```
+
+#### 媒体信息
+
+```shell
+sudo pacman -S mediainfo
+```
+
+#### 1.3.3 回收站
 
 ```shell
 sudo pacman -S trash-cli
@@ -135,7 +157,7 @@ sudo pacman -S trash-cli
 
 回收站位于`~/.local/share/Trash`。
 
-#### 1.3.2 压缩工具
+#### 1.3.4 压缩工具
 
 ```shell
 sudo pacman -S zip
@@ -145,7 +167,7 @@ sudo pacman -S atool
 
 ### 1.4 磁盘管理
 
-#### 1.4.1 磁盘清理工具
+#### 1.4.1 磁盘查看工具
 
 ```shell
 sudo pacman -S ncdu

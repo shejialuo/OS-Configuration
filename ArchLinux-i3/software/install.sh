@@ -27,6 +27,7 @@ sudo pacman -S kitty \
                tmux     \
                pcmanfm  \
                gvfs     \
+               ranger    \
                atool     \
                trash-cli \
                p7zip     \
