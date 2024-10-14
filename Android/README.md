@@ -1,6 +1,9 @@
 # Android
 
-最近抛弃了苹果生态，完全使用安卓，购买了Redmi K40S。为什么购买这款机型，因为Arrow OS类原生官方支持。
+最近打算双持，购买了Xiaomi 13，至于购买的原因：
+
+1. 小屏且屏幕素质过关，小屏的安卓手机几乎没有选了，选择小米13属于是无奈之举。
+2. 有比较好的[类原生ROM](https://paranoidandroid.co/)。
 
 ## 原理
 
@@ -12,32 +15,19 @@ sudo pacman -S android-sdk-platform-tools
 
 ## 刷机
 
-首先需要解锁bl，类似PC机的bios。首先需要下载`twrp`的image，然后使用`fastboot`命令直接启动该镜像。
+首先需要解锁bl（我到手的时候已经是Hyper OS了，用了点[小手段](https://github.com/MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass)），类似PC机的bios。刷机的流程如下：
 
 ```sh
-sudo fastboot boot ./twrp-3.7.0_12-0-munch.img # 别在乎名字
+# 进入recovery模式，update firmware。（我选择的是Global OS1.0.6.0.UMCMIXM）
+sudo adb sideload ./fw_fuxi_miui_FUXIGlobal_OS1.0.6.0.UMCMIXM_160365d42d_14.0.zip
+
+# 进入fastboot直接线刷
+sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 ```
-
-进入了`twrp`的界面，首先格式化`data`分区，然后开启`Apply from ADB`。
-
-```sh
-sudo adb sideload ./much.zip # 别在乎名字
-```
-
-搞定。个人认为是相当简单的刷机过程，没有任何难度。说白了基本原理就是Linux系统的安装过程。一般来说Linux系统安装可以通过U盘先启动一个基本的系统进行安装，`twrp`就是一个最简单的安卓系统。
 
 ## Root权限
 
-原生有很多麻烦的事情，比如说指纹支付就是一个痛点。所以需要刷入Magisk等模块，本质上就是获得Root权限？（不懂其基本原理）。刷入官方有详细的教程，然而我找不到`boot.img`，于是用笨方法。
-
-首先从GitHub下载Magisk的apk，修改后缀为zip，即`Magisk.zip`。重复刷机的步骤即可。
-
-```sh
-sudo fastboot boot ./twrp-3.7.0_12-0-munch.img
-sudo adb sideload ./Magisk.zip
-```
-
-搞定了Magisk模块，从而获得了Root权限。（很简单）
+原生有很多麻烦的事情，比如说指纹支付就是一个痛点。所以需要刷入Magisk等模块，本质上就是获得Root权限？（不懂其基本原理）。刷入官方有详细的教程，参考官方教程即可。
 
 ### 隐藏Root
 
@@ -67,13 +57,17 @@ sudo adb sideload ./Magisk.zip
 
 安装[GAppsMod](https://github.com/jacopotediosi/GAppsMod)，设置好了可以直接删除，其通过修改数据库更改信息，完美。
 
+## 词库
+
+安装[CustomPinyinDictionary](https://github.com/wuhgit/CustomPinyinDictionary).
+
 ## NFC
 
 购买NFC卡模拟器进行IC卡模拟，ID卡就别指望了，请支持正版，也不贵。
 
 ## 相机
 
-原生的相机过于丑陋，安装[GCam](https://www.celsoazevedo.com/)和Google图库，简单。
+~~原生的相机过于丑陋，安装[GCam](https://www.celsoazevedo.com/)和Google图库，简单。~~
 
 ## 其他
 
