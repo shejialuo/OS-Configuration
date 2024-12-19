@@ -135,18 +135,51 @@ sudo pacman -S pcmanfm gvfs
 
 ```shell
 sudo pacman -S ranger
+ranger --copy-config=all
 ```
 
-#### 高亮代码
+#### 1.3.2.1 主题
+
+使用 [dracula](https://github.com/dracula/ranger) 主题。
+
+#### 1.3.2.2 图片预览
+
+```sh
+sudo pacman -S w3m
+```
+
+在`~/.config/rc.conf`中添加如下的配置：
+
+```config
+# Image Preview Settings
+set preview_images true
+set preview_images_method w3m
+set w3m_delay 0.02
+set w3m_offset 0
+```
+
+#### 1.3.2.2 高亮代码
 
 ```shell
 sudo pacman -S highlight
 ```
 
-#### 媒体信息
+### 1.3.2.3 压缩文件预览
+
+```shell
+sudo pacman -S atool
+```
+
+#### 1.2.3.4 媒体信息
 
 ```shell
 sudo pacman -S mediainfo
+```
+
+### 1.2.3.5 PDF预览
+
+```shell
+sudo pacman -S poppler
 ```
 
 #### 1.3.3 回收站

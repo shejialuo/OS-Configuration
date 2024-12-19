@@ -4,13 +4,14 @@
 
 1. 小屏且屏幕素质过关，小屏的安卓手机几乎没有选了，选择小米13属于是无奈之举。
 2. 有比较好的[类原生ROM](https://paranoidandroid.co/)。
+3. 苹果的手机极其无趣，选择苹果只因为是小屏手机。
 
 ## 原理
 
 刷机的原理很简单，如果你会使用Linux，你也就能够明白安卓，当然安卓肯定有许多魔改，但是理念是不会改变的。我刷机的工作都是在ArchLinux上完成的，先下载必要的包。
 
 ```sh
-sudo pacman -S android-sdk-platform-tools
+yay -S android-sdk-platform-tools
 ```
 
 ## 刷机
@@ -48,6 +49,7 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 ~~结合Magisk自带Systemless Hosts以及[AdAway](https://github.com/AdAway/AdAway)使用，不需要使用vpn，避免和clash冲突。本质也是修改hosts，还是root的方式更加轻量。~~
 
 ~~然而问题在于`hosts`文件不能过长，由于Linux查找映射是顺序查找的，解析dns就会相当慢。所以最合适的方式是应该是只保留官方的几千条hosts，加一些常见的即可。过长不适合。参考[ADhosts](https://github.com/otobtc/ADhosts)。过于折腾。~~
+
 
 突然反思，有必要这么复杂吗？实际上安卓上比起苹果最不好的就是没有url rewriter的功能。不能做中间人攻击，还是思考通过clash把广告屏蔽呢？这或许才是最简单的方法。
 

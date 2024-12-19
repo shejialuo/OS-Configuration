@@ -28,6 +28,10 @@ sudo pacman -S kitty \
                pcmanfm  \
                gvfs     \
                ranger    \
+               w3m       \
+               highlight \
+               mediainfo \
+               poppler  \
                atool     \
                trash-cli \
                p7zip     \
