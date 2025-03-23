@@ -1,53 +1,49 @@
-# VsCode 插件
+# VsCode/Cursor 插件
 
 ## 1. 基本工具
 
 + Better Comments
-+ Bracket Pair Colorizer
-+ Code Runner
 + file-size
 + Todo Tree
-+ TabOut
-+ Svg Preview
 + Vim
-+ Beautify
 + Code Spell Checker
-+ Dracula Official
++ Dracula Theme Official
 + Guides
 + Material Icon Theme
-+ Visual Studio IntelliCode
 + Path Intellisense
-+ Dash
-+ GitHub Pull Request
 + Remote - SSH
 + Remote - SSH: Editing Configuration file
-+ Remote - WSL
-+ Vs Cide Coubrer
++ Remote Explorer
++ Trailing Spaces
++ EditorConfig for VS Code
 + WakaTime
 
-## 2. HTML
+## 2. Shell
 
-+ Auto Close Tag
-+ Auto Rename Tag
-+ Highlight Matching Tag
-+ HTML Snippets
-+ IntelliSense for CSS class names in HTML
++ Bash IDE
 
 ## 3. C/C++
 
-+ C/C++
++ clangd
++ CMake Tools
++ Doxygen Documentation Generator
 
 ## 4. Haskell
 
-+ Haskell Syntax Highlighting
 + Haskell
-+ hoogle-vscode
++ Haskell Syntax Highlighting
+
+## 5. Toml
+
++ Even Better TOML
 
 ## 6. Python
 
 + Python
-+ Python Intellisense
++ Python Debugger
 + Pylance
++ Black Formatter
++ isort
 
 ## 7. Latex
 
@@ -57,13 +53,9 @@
 
 + Mermaid Markdown Syntax Highlighting
 + markdownlint
++ Markdown Preview Mermaid Support
++ Markdown Preview Enhanced
 
-## 9. TypeScript
+## 9. Go
 
-+ TypeScript Hero
-+ TSLint
-
-## 10. 快捷键
-
-+ `Alt+Up`: To editor
-+ `Alt+Down`: To terminal
++ Go
