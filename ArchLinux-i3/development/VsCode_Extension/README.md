@@ -59,3 +59,31 @@
 ## 9. Go
 
 + Go
+
+## 10. Github Copilot
+
++ GitHub Copilot
++ Github Copilot Chat
+
+Install some copilot based extensions in [Github Market](https://github.com/marketplace?type=apps&copilot_app=true).
+
++ PerplexityAI
++ Mermaid Chart
+
+## 11. WorkAround for Panel Size
+
+VsCode似乎一直不支持自定义panel size，但是偏偏Github copilot chat就是用的panel，只能hack。
+
+安装插件`Custom CSS and JS Loader`，使用如下的配置：
+
+```json
+{
+    "vscode_custom_css.imports": ["file:///home/shejialuo/.config/Code/editor.css"],
+}
+```
+
+其中，文件的内容如下：
+
+```css
+.pane-composite-part.right .content * { font-size: 14px !important; }
+```
