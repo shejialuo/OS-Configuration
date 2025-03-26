@@ -47,8 +47,7 @@ echo 'export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"' >> ~/.profile
 ####                       Python                      ####
 ###########################################################
 
-sudo pacman -S python-pip \
-               jupyter-notebook
+sudo pacman -S python-pip
 
 ###########################################################
 ####                        End                        ####
@@ -60,9 +59,9 @@ sudo pacman -S python-pip \
 ####                        NodeJs                     ####
 ###########################################################
 
-sudo pacman -S nodejs ts-node npm yarn
+sudo pacman -S nodejs npm
 sudo npm install -g hexo-cli
-sudo npm install picgo -g
+sudo npm install -g picgo
 
 ###########################################################
 ####                        End                        ####
@@ -75,9 +74,6 @@ sudo npm install picgo -g
 ###########################################################
 
 sudo pacman -S docker
-sudo pacman -S minikube
-sudo pacman -S kubectl
-sudo pacman -S istio
 
 ###########################################################
 ####                        End                        ####
@@ -115,7 +111,7 @@ sudo pacman -S gnuplot
 ####                       Java                        ####
 ###########################################################
 
-sudo pacman -S jdk11-openjdk
+sudo pacman -S jdk17-openjdk
 
 ###########################################################
 ####                        End                        ####
@@ -125,10 +121,7 @@ sudo pacman -S jdk11-openjdk
 ####                      Other                        ####
 ###########################################################
 
-sudo pacman -S mysql         \
-               redis         \
-               wireshark-cli
-yay -S mongodb-bin
+sudo pacman -S wireshark-cli
 sudo pacman -S net-tools dnsutils inetutils ethtool \
                traceroute
 

@@ -1,7 +1,5 @@
 # 开发环境
 
-在该文件安装中的环境，除了`Haskell`以外全部安装在`/`。其余的开发环境应该尽可能地安装在`~/.local/bin`中，保持鲁棒性。
-
 ## 1. c and c++
 
 ```shell
@@ -70,24 +68,12 @@ sudo pacman -S python-pip
 
 注意如果能使用`pacman`包管理器安装软件，一定使用`pacman`包管理器。如果必须使用`pip`，务必加上`--user`，避免安装到`/usr`目录，防止与系统级别出现问题，滚挂了。
 
-### 4.2 代码检查工具
-
-```shell
-sudo pacman -S python-pylint
-```
-
-### 4.3 Jupyter
-
-```shell
-sudo pacman -S jupyter-notebook
-```
-
 ## 5. NodeJs
 
 ### 5.1 安装
 
 ```shell
-sudo pacman -S nodejs ts-node npm yarn
+sudo pacman -S nodejs npm
 ```
 
 ### 5.2 Hexo
@@ -99,20 +85,15 @@ sudo npm install -g hexo-cli
 ### 5.3 Pigco
 
 ```shell
-sudo npm install picgo -g
+sudo npm install -g picgo
 ```
 
 ## 6. DevOps
 
-Docker、minikube以及Istio三件套安装
+仅仅需要Docker。
 
 ```shell
 sudo pacman -S docker
-sudo pacman -S minikube
-minikube start --image-mirror-country=cn --kubernetes-version=1.23.0
-sudo pacman -S kubectl
-sudo pacman -S istio
-istioctl install --set profile=demo -y
 ```
 
 ## 7. LaTex
@@ -148,15 +129,12 @@ sudo pacman -S gnuplot
 ## 9. java
 
 ```shell
-sudo pacman -S jdk11-openjdk
+sudo pacman -S jdk17-openjdk
 ```
 
 ## 10. 工具
 
 ```shell
-sudo pacman -S mysql
-sudo pacman -S redis
 sudo pacman -S wireshark-cli
-yay -S mongodb-bin
 sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute
 ```
