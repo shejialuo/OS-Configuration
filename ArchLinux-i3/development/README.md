@@ -135,6 +135,5 @@ sudo pacman -S jdk17-openjdk
 ## 10. 工具
 
 ```shell
-sudo pacman -S wireshark-cli
 sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute
 ```

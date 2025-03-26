@@ -1,6 +1,6 @@
 # Game
 
-折腾如何在ArchLinux上玩Game。主要还是玩一点VN game。
+~~折腾如何在ArchLinux上玩Game。主要还是玩一点VN game。~~（直接逃到了Windows）
 
 ## Steam
 

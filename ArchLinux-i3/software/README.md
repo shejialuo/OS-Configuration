@@ -119,6 +119,16 @@ export GROFF_NO_SGR=1                   # for konsole
 sudo pacman -S kitty tmux
 ```
 
+#### Tmux设置
+
+安装tmp plugin管理工具。
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+安装[Dracula主题](https://github.com/dracula/tmux)
+
 ### 1.3 文件管理
 
 ### 1.3.1 GUI文件管理器
@@ -194,13 +204,12 @@ sudo pacman -S trash-cli
 
 ```shell
 sudo pacman -S zip
-sudo pacman -S p7zip
+sudo pacman -S 7zip
+sudo pacman -S unrar
 sudo pacman -S atool
 ```
 
 ### 1.4 磁盘管理
-
-#### 1.4.1 磁盘查看工具
 
 ```shell
 sudo pacman -S ncdu
@@ -214,19 +223,13 @@ sudo pacman -S ncdu
 sudo pacman -S htop
 ```
 
-#### 1.5.2 系统状态监视
-
-```shell
-sudo pacman -S conky
-```
-
-#### 1.5.3 系统信息查看
+#### 1.5.2 系统信息查看
 
 ```shell
 sudo pacman -S neofetch
 ```
 
-#### 1.5.4 多显示器管理
+#### 1.5.3 多显示器管理
 
 ```shell
 sudo pacman -S arandr
@@ -238,7 +241,6 @@ sudo pacman -S arandr
 
 ```shell
 sudo pacman -S polybar
-yay -S ttf-material-design-iconic-font
 ```
 
 ## 2 输入法
@@ -763,42 +765,6 @@ yay -S spotify-tray-git
 
 使用`spotify-tray`来启动`spotify`。并在 i3 中配置 toggle。
 
-#### 5.2.2 mpd
-
-```shell
-sudo pacman -S mpd
-```
-
-在`~/.config/mpd/mpd.conf`中配置。
-
-##### 5.2.2.1 相关依赖
-
-```shell
-sudo pacman -S timidity++
-```
-
-#### 5.2.3 ncmpcpp
-
-```shell
-sudo pacman -S ncmpcpp
-```
-
-在文件`~/.config/ncmpcpp/config`配置。
-
-#### 5.2.4 mpc
-
-```shell
-sudo pacman -S mpc
-```
-
-#### 5.2.5 easytag
-
-安装标签编辑工具，虽然 ncmpcpp 自带编辑 tag 功能，主要为了添加封面：
-
-```shell
-sudo pacman -S easytag
-```
-
 ### 5.3 邮件
 
 #### 5.3.1 mutt
@@ -881,7 +847,7 @@ sudo pacman -S rclone
 
 ### 7.1 rofi
 
-使用`rofi`作为`dmenu`的替代品，使用[Dracula 主题](https://draculatheme.com/rofi)。
+使用`rofi`作为`dmenu`的替代品。
 
 ```shell
 sudo pacman -S rofi
@@ -922,6 +888,10 @@ sudo pacman -S seahorse
 ```shell
 sudo pacman -S github-cli
 ```
+
+#### Copilot Extension
+
+参考[copilot cli](https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-the-cli)。
 
 ### 7.5 stretchly
 

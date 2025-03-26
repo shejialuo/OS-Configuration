@@ -23,24 +23,26 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
 sudo pacman -S autojump
 
-sudo pacman -S kitty \
-               tmux     \
-               pcmanfm  \
-               gvfs     \
-               ranger    \
-               w3m       \
-               highlight \
-               mediainfo \
-               poppler  \
-               atool     \
-               trash-cli \
-               p7zip     \
-               ncdu      \
-               htop      \
-               conky     \
-               neofetch  \
-               polybar   \
-               arandr    \
+sudo pacman -S kitty      \
+               tmux       \
+               pcmanfm    \
+               gvfs       \
+               ranger     \
+               w3m        \
+               highlight  \
+               mediainfo  \
+               poppler    \
+               unrar      \
+               trash-cli  \
+               7zip       \
+               unrar      \
+               atool      \
+               ncdu       \
+               htop       \
+               neofetch   \
+               polybar    \
+               arandr     \
+               neofetch
 
 yay -S dragon-drop
 
@@ -74,7 +76,6 @@ sudo pacman -S fcitx5                \
 
 #* To install gvim
 sudo pacman -S gvim
-bash ~/.install_vim_plugin.sh
 
 #* To install vscode
 yay -S visual-studio-code-bin
@@ -89,7 +90,7 @@ sudo pacman -S pandoc            \
                zathura-pdf-mupdf \
                calibre           \
                goldendict        \
-               xournalpp         \
+               xournalpp
 
 ###########################################################
 ####                        End                        ####
@@ -104,15 +105,12 @@ sudo pacman -S pandoc            \
 #* To install clash
 sudo pacman -S clash-premium-bin \
                w3m               \
-               tor               \
-               tor-browser       \
                telegram-desktop  \
-               aria2             \
                youtube-dl-git    \
                qbittorrent       \
                nitroshare        \
                newsboat          \
-               proxychains-ng    \
+               proxychains-ng
 
 #* To install qq
 yay -S linuxqq-nt-bwrap
@@ -138,13 +136,7 @@ sudo pacman -S viewnior    \
                flameshot   \
                nitrogen
 
-sudo pacman -S spotify    \
-               mpd        \
-               timidity++ \
-               ncmpcpp    \
-               mpc        \
-               easytag
-
+sudo pacman -S spotify
 yay -S spotify-tray-git
 
 sudo pacman -S mutt      \

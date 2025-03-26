@@ -217,7 +217,7 @@ sudo pacman -S blueman
 
 ### 8.4 k380 罗技蓝牙键盘存在的问题
 
-入了一个 k380 罗技的蓝牙键盘，安装`k380-function-keys-conf`让 k380 默认开启 Fn。
+~~入了一个 k380 罗技的蓝牙键盘，安装`k380-function-keys-conf`让 k380 默认开启 Fn。~~
 
 ```shell
 yay -S k380-function-keys-conf

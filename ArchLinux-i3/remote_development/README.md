@@ -9,7 +9,7 @@
 ### Server端
 
 ```ini
-[common]
+[common]}
 bind_port = 7000
 tls_enable = true
 token = <your_token>

@@ -121,7 +121,6 @@ sudo pacman -S jdk17-openjdk
 ####                      Other                        ####
 ###########################################################
 
-sudo pacman -S wireshark-cli
 sudo pacman -S net-tools dnsutils inetutils ethtool \
                traceroute
 
