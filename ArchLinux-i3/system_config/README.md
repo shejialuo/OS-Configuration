@@ -11,26 +11,14 @@ sudo systemctl enable sddm
 
 ### 1.1 安装主题
 
-```shell
-git clone https://github.com/shejialuo/sddm-theme-clairvoyance /usr/share/sddm/themes/clairvoyance
-```
-
-#### 1.1.1 背景图片
-
-登录的背景图片位于目录`/usr/share/sddm/themes/clairvoyance/Assets/background.jpg`。注意名字保持一致，不要修改配置文件。
-
-#### 1.1.2 登录头像
-
-用户头像的目录位于`/usr/share/sddm/faces`，文件名为`<username>.face.icon`。
-
-### 1.2 配置文件
+使用QT6主题：[sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme)
 
 在目录`/etc/sddm.conf.d`中创建以下的文件。
 
 ```conf
 # theme.conf
 [Theme]
-Current=clairvoyance
+Current=sddm-astronaut-theme
 autoFocusPassword=true
 enableHDPI=true
 ```
@@ -39,6 +27,13 @@ enableHDPI=true
 # x11.conf
 [X11]
 EnableHiDPI=true
+```
+
+```conf
+# general.conf
+[General]
+GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
+InputMethod=qtvirtualkeyboard
 ```
 
 ## 2 网络管理
