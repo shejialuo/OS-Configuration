@@ -377,7 +377,7 @@ systemctl start cronie.service
 
 ### 11.5 Nvidia驱动
 
-最近入手了一个2060的显卡，安装驱动
+最近入手了一个4080的显卡，安装驱动
 
 ```c++
 sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia
