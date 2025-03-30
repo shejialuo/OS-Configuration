@@ -81,10 +81,10 @@ yay -S pa-applet-git
 
 ## 4 系统主题设置
 
-安装 GTK2 主题管理器：`lxappearance`。
+安装GTK3主题管理器：`lxappearance-gtk3`。完全抛弃GTK2。
 
 ```shell
-sudo pacman -S lxappearance
+sudo pacman -S lxappearance-gtk3
 ```
 
 ### 4.1 GTK 主题选择
@@ -105,25 +105,22 @@ sudo pacman -S papirus-icon-theme
 
 ### 4.3 QT 主题
 
-目前在Arch里面有应用使用QT5，有应用使用QT6，QT 主题与 GTK 主题相统一。首先安装 QT 主题管理器：
+QT主题过于麻烦，原先我采取的思路是让QT5和QT6都使用GTK2的主题，即使用如下的方式处理：
 
 ```shell
 sudo pacman -S qt5ct qt6ct
-```
-
-其次通过`yay`安装style plugin插件：
-
-```shell
 yay -S qt5-styleplugins qt6gtk2
 ```
 
-在`/etc/environment`中添加语句：
+然后设置`/etc/environment`:
 
 ```shell
 QT_QPA_PLATFORMTHEME=gtk2
 ```
 
-打开`qt5ct`，将 QT 主题设置为 gtk2。
+然而，QT6可以是直接通过在`/etc/environment`里面设置`QT_QPA_PLATFORMTHEME=gtk3`来支持GTK 3主题的。所以尽可能使用的软件基于QT6。
+
+目前唯一我安装的基于QT5的软件是flameshot。由于是截图软件几乎没有主题的影响。
 
 ## 5 混成器安装
 
