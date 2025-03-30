@@ -134,24 +134,52 @@ sudo pacman -S picom
 
 ## 6 字体设置
 
-### 6.1 安装常见字体
+### 6.1 英文字体
+
+`sans-serif`采用苹果的SF Pro字体：
+
+```shell
+yay -S otf-san-francisco
+```
+
+`serif`采用`sans-serif`字体，不想为这个进行单独设计。
+
+`mono`字体采用Fira Code字体：
 
 ```shell
 sudo pacman -S ttf-fira-code
-sudo pacman -S ttf-fira-sans
-sudo pacman -S ttf-font-awesome
-sudo pacman -S noto-fonts
-sudo pacman -S noto-fonts-cjk
-sudo pacman -S noto-fonts-emoji
-sudo pacman -S ttf-fira-mono
-yay -S ttf-font-icons
-yay -S ttf-material-design-iconic-font
-yay -S otf-san-francisco-new-york
 ```
 
-### 6.2 字体配置
+### 6.2 中文字体
+
+中文字体比较好处理，直接安装Google的Noto字体就可以包含`serif`，`sans-serif`和`mono`字体。
+
+```shell
+sudo pacman -S noto-fonts
+sudo pacman -S noto-fonts-cjk
+```
+
+### 6.3 Unicode icon字体
+
+```shell
+sudo pacman -S ttf-font-awesome
+sudo pacman -S noto-fonts-emoji
+```
+
+### 6.4 字体配置
 
 对`~/.config/fontconfig/fonts.conf`进行配置。详细参考 `dotfiles`。
+
+可以使用`fc-match`命令进行检测：
+
+```shell
+fc-match serif:lang=en
+fc-match sans-serif:lang=en
+fc-match mono:lang=en
+fc-match serif:lang=zh
+fc-match sans-serif:lang=zh
+fc-match mono:lang=zh
+```
 
 ## 7 通知管理
 
