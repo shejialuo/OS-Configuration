@@ -20,7 +20,6 @@ sudo systemctl enable sddm
 [Theme]
 Current=sddm-astronaut-theme
 autoFocusPassword=true
-enableHDPI=true
 ```
 
 ```conf

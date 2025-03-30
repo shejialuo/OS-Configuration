@@ -29,7 +29,6 @@
 + microsoft-edge-dev-bin
 + lightdm-webkit-theme-material-git
 + pa-applet-git
-+ qt5-styleplugins
 + jmtpfs
 + autojump
 + visual-studio-code-bin
@@ -37,7 +36,6 @@
 + ttf-wps-fonts
 + spotify-tray-git
 + ifuse-git
-+ ttf-material-design-iconic-font
 
 ## 安装
 

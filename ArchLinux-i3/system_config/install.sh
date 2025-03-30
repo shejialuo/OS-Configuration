@@ -24,23 +24,18 @@ sudo pacman -S lxappearance \
                papirus-icon-theme \
                qt5ct \
                qt6ct
-yay -S qt5-styleplugins \
-       qt6gtk2
 
 #* To install compositor
 sudo pacman -S picom
 
 #* To install font management
 sudo pacman -S ttf-fira-code \
-               ttf-fira-sans \
                ttf-font-awesome \
                noto-fonts \
                noto-fonts-cjk \
                noto-fonts-emoji \
-               ttf-fira-mono
 yay -S ttf-font-icons \
-       ttf-material-design-iconic-font \
-       otf-san-francisco-new-york
+       otf-san-francisco
 
 #* To install notification mansagement
 sudo pacman -S dunst

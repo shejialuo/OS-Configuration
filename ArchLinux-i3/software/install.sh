@@ -23,25 +23,25 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
 sudo pacman -S autojump
 
-sudo pacman -S kitty      \
-               tmux       \
-               pcmanfm    \
-               gvfs       \
-               ranger     \
-               w3m        \
-               highlight  \
-               mediainfo  \
-               poppler    \
-               unrar      \
-               trash-cli  \
-               7zip       \
-               unrar      \
-               atool      \
-               ncdu       \
-               htop       \
-               neofetch   \
-               polybar    \
-               arandr     \
+sudo pacman -S kitty        \
+               tmux         \
+               pcmanfm-gtk3 \
+               gvfs         \
+               ranger       \
+               w3m          \
+               highlight    \
+               mediainfo    \
+               poppler      \
+               unrar        \
+               trash-cli    \
+               7zip         \
+               unrar        \
+               atool        \
+               ncdu         \
+               htop         \
+               neofetch     \
+               polybar      \
+               arandr       \
                neofetch
 
 yay -S dragon-drop
@@ -89,7 +89,7 @@ sudo pacman -S pandoc            \
                zathura           \
                zathura-pdf-mupdf \
                calibre           \
-               goldendict        \
+               goldendict-ng     \
                xournalpp
 
 ###########################################################
@@ -108,8 +108,6 @@ sudo pacman -S clash-premium-bin \
                telegram-desktop  \
                youtube-dl-git    \
                qbittorrent       \
-               nitroshare        \
-               newsboat          \
                proxychains-ng
 
 #* To install qq
@@ -134,7 +132,7 @@ sudo pacman -S viewnior    \
                guetzli     \
                gpick       \
                flameshot   \
-               nitrogen
+               feh
 
 sudo pacman -S spotify
 yay -S spotify-tray-git
@@ -144,8 +142,8 @@ sudo pacman -S mutt      \
                procmail  \
                msmtp
 
-sudo pacman -S mpv                  \
-               simplescreenrecorder \
+sudo pacman -S mpv        \
+               obs-studio \
                shotcut
 
 ###########################################################
@@ -174,7 +172,6 @@ sudo pacman -S chezmoi            \
                gnome-keyring      \
                seahorse           \
                github-cli         \
-               barrier            \
 yay -S stretchly-bin
 
 ###########################################################

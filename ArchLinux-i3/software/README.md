@@ -136,7 +136,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 安装轻量级别软件：
 
 ```shell
-sudo pacman -S pcmanfm gvfs
+sudo pacman -S pcmanfm-gtk3 gvfs
 ```
 
 ### 1.3.2 终端文件管理器
@@ -381,13 +381,19 @@ sudo pacman -S calibre
 
 ### 3.8 goldendict
 
-安装字典：
+安装字典，使用QT6版本：
 
 ```shell
-sudo pacman -S goldendict
+sudo pacman -S goldendict-ng
 ```
 
 注意对词典进行备份。
+
+由于其popup是一个新的window，需要配置i3设置其默认为floating：
+
+```ini
+for_window [instance="goldendict" title="Dialog"] floating enable
+```
 
 ### 3.9 xournalpp
 
@@ -671,25 +677,13 @@ sudo pacman -S qbittorrent
 
 添加 tracer 即可。
 
-#### 4.4.4 局域网文件分享
-
-```shell
-sudo pacman -S nitroshare
-```
-
-### 4.5 RSS
-
-```shell
-sudo pacman -S newsboat
-```
-
-### 4.6 终端代理工具
+### 4.5 终端代理工具
 
 ```shell
 sudo pacman -S proxychains-ng
 ```
 
-### 4.7 热点
+### 4.6 热点
 
 ```shell
 sudo pacman -S create_ap
@@ -748,10 +742,10 @@ sudo pacman -S flameshot
 
 #### 5.1.7 壁纸工具
 
-处理壁纸，直接安装即可，在 i3 配置自动启动加上`--restore`：
+处理壁纸，直接安装即可，在i3配置文件中设置壁纸。
 
 ```shell
-sudo pacman -S nitrogen
+sudo pacman -S feh
 ```
 
 ### 5.2 音频
@@ -824,7 +818,7 @@ sudo pacman -S mpv
 #### 5.4.2 录屏软件安装
 
 ```shell
-sudo pacman -S simplescreenrecorder
+sudo pacman -S obs-studio
 ```
 
 #### 5.4.3 视频剪辑工具
@@ -901,18 +895,12 @@ sudo pacman -S github-cli
 yay -S stretchly-bin
 ```
 
-### 7.6 键鼠同步工具
-
-```sh
-sudo pacman -S barrier
-```
-
-### 7.7 Yubikey
+### 7.6 Yubikey
 
 公司使用了yubikey，使用下面的命令在ArchLinux上开启yubikey。
 
 ```sh
-sudo pacman -S yubikey-manager-qt
+sudo pacman -S yubikey-manager
 systemctl enable pcscd.service --now
 sudo pacman -S libfido2
 ```
