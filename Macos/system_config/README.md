@@ -17,7 +17,7 @@ brew install stats
 
 ## 3. macos手势
 
-直接在系统中设置即可。 
+直接在系统中设置即可。
 
 ## 4. 快捷键设置
 
@@ -41,4 +41,3 @@ brew install stats
 
 + 剪贴板记录：`command + shift + v`
 + 移动窗口：`ctrl + option + arrow/enter`
-

@@ -1,4 +1,4 @@
- # 软件安装
+# 软件安装
 
 ## 1. 实用工具
 
@@ -11,6 +11,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
+brew install autojump
 ```
 
 ### 1.2 终端安装
@@ -75,7 +78,6 @@ macos有zathura直接曲线救国一波，参考
 + [安装zathura](https://github.com/zegervdv/homebrew-zathura)
 + [使用zathura作为默认的pdf阅读器](https://gist.github.com/agzam/76d761804330cc8c4600fccda952ed1c)
 
-
 ## 3. 网络
 
 ### 3.1 代理
@@ -136,7 +138,7 @@ brew install imagemagick
 
 ```sh
 brew install guetzli
-``` 
+```
 
 ### 4.2 音频
 
@@ -148,7 +150,7 @@ brew install spotify
 
 ### 4.3 邮件
 
-邮件使用自带的，不用`mutt`了，不想折腾。
+使用Mutt，采用和ArchLinux一样的配置。
 
 ### 4.4 视频
 
@@ -160,16 +162,16 @@ brew install spotify
 brew install mpv
 ```
 
-#### 4.4.2 视频剪辑工具
-
-```sh
-brew install shotcut
-```
-
-#### 4.4.3 推流和录制
+#### 4.4.2 推流和录制
 
 ```sh
 brew install obs
+```
+
+### 4.5 图书
+
+```sh
+brew install calibre
 ```
 
 ## 5. 云盘
@@ -177,10 +179,3 @@ brew install obs
 ```sh
 brew install rclone
 ```
-
-## 6. 其他
-
-```sh
-brew install nitroshare
-```
-
