@@ -104,7 +104,7 @@ sudo pacman -S pandoc            \
 ###########################################################
 
 #* To install clash
-sudo pacman -S clash-premium-bin \
+sudo pacman -S clash-meta        \
                w3m               \
                telegram-desktop  \
                yt-dlp            \
