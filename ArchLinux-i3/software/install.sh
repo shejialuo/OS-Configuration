@@ -29,14 +29,15 @@ sudo pacman -S kitty        \
                gvfs         \
                ranger       \
                w3m          \
+               atool        \
                highlight    \
                mediainfo    \
                poppler      \
-               unrar        \
                trash-cli    \
-               7zip         \
                unrar        \
-               atool        \
+               7zip         \
+               zip          \
+               unrar        \
                ncdu         \
                htop         \
                neofetch     \
@@ -106,7 +107,7 @@ sudo pacman -S pandoc            \
 sudo pacman -S clash-premium-bin \
                w3m               \
                telegram-desktop  \
-               youtube-dl-git    \
+               yt-dlp            \
                qbittorrent       \
                proxychains-ng
 
@@ -150,6 +151,9 @@ sudo pacman -S mpv        \
 ####                        End                        ####
 ###########################################################
 
+###########################################################
+####                       Net Tool                    ####
+###########################################################
 
 #* To install rclone
 sudo pacman -S rclone

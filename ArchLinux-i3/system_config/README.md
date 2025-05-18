@@ -265,50 +265,11 @@ sudo pacman -S ntfs-3g
 UUID=6A56CF5056CF1BA7 /mnt ntfs-3g   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
 ```
 
-### 10.2 andorid 挂载
+### 10.2 Android 挂载
 
 ```shell
 sudo pacman -S mtpfs
-yay -S jmtpfs
-```
-
-利用`jmtpfs`进行挂载：`jmtpfs -o allow_other /mnt/android`
-
-利用`fusermount`umount：`fusermount -u /mnt/android`。
-
-### 10.3 iphone 挂载
-
-[ArchWiki 参考](https://wiki.archlinux.org/index.php/IOS)
-
-由于 IOS 的市场更新，为了确保软件的使用，采用`git`版本。注意每次 ArchLinux 更新视情况是否重新编译.
-
-```shell
-yay -S ifuse-git
-```
-
-#### 10.3.1 配对
-
-```shell
-idevicepair pair
-```
-
-#### 10.3.2 配对媒体目录
-
-```shell
-ifuse -o allow_other mountpoint
-```
-
-#### 10.3.3 配对应用文档
-
-```shell
-ifuse --list-apps
-ifuse --documents org.vediolan.vlc-ios mountpoint
-```
-
-#### 10.3.4 自动挂载USB
-
-```sh
-sudo pacman -S udisks2
+sudo pacman -S gvfs-mtp
 ```
 
 ## 11 其他
@@ -379,7 +340,7 @@ systemctl start cronie.service
 最近入手了一个4080的显卡，安装驱动
 
 ```c++
-sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia
+sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia
 ```
 
 ### 11.6 时间同步

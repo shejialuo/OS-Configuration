@@ -314,11 +314,6 @@ sudo pacman -S fcitx5-pinyin-moegirl
 sudo pacman -S gvim
 ```
 
-使用`vim`自带的插件管理器进行管理：
-
-+ `~/.install_vim_plugin.sh`
-+ `~/.update_vim_plguin.sh`
-
 ### 3.2 VsCode
 
 `archlinuxcn`不再提供`visual-studio-code-bin`的二进制包，详见[issue](https://github.com/archlinuxcn/repo/issues/2460)。只能手动编译了。
@@ -389,11 +384,6 @@ sudo pacman -S goldendict-ng
 
 注意对词典进行备份。
 
-由于其popup是一个新的window，需要配置i3设置其默认为floating：
-
-```ini
-for_window [instance="goldendict" title="Dialog"] floating enable
-```
 
 ### 3.9 xournalpp
 
@@ -661,12 +651,10 @@ sudo pacman -S aria2
 
 [配置参考](https://github.com/P3TERX/aria2.conf)
 
-#### 4.4.2 Youtube-dl 安装
-
-使用Git版本，pip版本几乎没更新了。archlinuxcn有人维护该包。
+#### 4.4.2 yt-dlp 安装
 
 ```shell
-sudo pacman -S youtube-dl-git
+sudo pacman -S yt-dlp
 ```
 
 #### 4.4.3 qbittorrent 安装

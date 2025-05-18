@@ -47,13 +47,3 @@ sudo pacman -S bluez \
 
 #* To install brightness management
 sudo pacman -S xorg-xbacklight
-
-#* To install MS support
-sudo pacman -S ntfs-3g
-#* To install android mount support
-sudo pacman -S mtpfs
-yay -S jmtpfs
-#* To install iphone mount support
-yay -S ifuse-git
-#* To install automatically mount
-sudo pacman -S udisks2
