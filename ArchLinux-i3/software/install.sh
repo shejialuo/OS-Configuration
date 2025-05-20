@@ -103,9 +103,7 @@ sudo pacman -S pandoc            \
 ####                      network                      ####
 ###########################################################
 
-#* To install clash
-sudo pacman -S clash-meta        \
-               w3m               \
+sudo pacman -S w3m               \
                telegram-desktop  \
                yt-dlp            \
                qbittorrent       \

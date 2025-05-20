@@ -396,11 +396,7 @@ sudo pacman -S xournalpp
 
 ### 4.1 代理安装
 
-安装`clash-meta`：
-
-```shell
-sudo pacman -S clash-meta
-```
+Install from [clash premium archive](https://downloads.clash.wiki/ClashPremium/)
 
 ### 4.2 浏览器
 
