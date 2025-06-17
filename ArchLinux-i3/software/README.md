@@ -396,7 +396,11 @@ sudo pacman -S xournalpp
 
 ### 4.1 代理安装
 
-Install from [clash premium archive](https://downloads.clash.wiki/ClashPremium/)
+Install from [clash premium archive](https://downloads.clash.wiki/ClashPremium/)。我希望使用`--user`的方式启动服务，然而clash需要绑定DNS服务器，使用`setcap`:
+
+```sh
+sudo setcap 'cap_net_bind_service=+ep' /usr/bin/clash
+```
 
 ### 4.2 浏览器
 
