@@ -67,4 +67,3 @@ brew install gnuplot
 ```sh
 brew install java11
 ```
-
