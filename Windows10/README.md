@@ -1,16 +1,3 @@
 # Windows 配置
 
-安装采用 Windows To Go。由于 Windows To Go 默认硬盘脱机，可以采用`diskpart`工具挂载硬盘：
-
-```txt
-san
-san policy=onlineall
-list disk
-select disk 1
-attributes disk clear readonly
-online disk
-```
-
-主要通过 WSL 的 Arch Linux 部署开发环境。
-
-首次在Win10采用了平铺式的[窗口管理器](https://github.com/fuhsjr00/bug.n).
+目前Windows基本用来打游戏了，仍然保留采用[bug.n](https://github.com/fuhsjr00/bug.n)作为平铺式桌面的配置，参考[配置文件](./system_config/Config.ini)。
