@@ -74,31 +74,53 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 
 [Driod-ify](https://github.com/Iamlooker/Droid-ify)
 
-### 2.2 即使通讯软件
+### 安装的软件
 
-#### Telegram
+除显示说明以外，默认从Google play安装。
 
-Google play安装即可。使用主题[dracula](https://github.com/dracula/telegram-android)。
-
-#### IRC
-
-安装[Goguma](https://git.sr.ht/~emersion/goguma)。
-
-#### 其他
-
++ Telegram: 使用主题[dracula](https://github.com/dracula/telegram-android)。
 + 微信
-+ QQ
++ QQ：只能从腾讯官网安装，腾讯不更新其在GoogleA play上的版本，没有任何办法。
++ 支付宝
++ 小红书
++ Perplexity
++ Clash Meta: clash的新fork，从F-Droid安装。
++ Stocks Widget: 股票信息，从F-Droid安装。
++ 哔哩哔哩
++ Linkedin
++ 万能遥控
++ Microsoft Authenticator
++ Bmap：白马地图，从官网安装。
++ Creator's App：用来管理相机。
++ Eboox
++ Microsoft Edge：默认浏览器。
++ FCM查看器
++ Feeder：RSS阅读器，从F-Droid安装。
++ final connect：用来管理蓝牙耳机。
++ Github
++ Keepass2Android：密码管理器。
++ Lens：用来扫描。
++ MOONDROP
++ OneDrive
++ Outlook
++ Payoneer
++ Paypal
++ Retro Music：离线音乐播放器，从F-Droid安装。
++ Schwab
 + Slack
++ Spotify
++ Steam
 + Teams
++ Telegram
++ Microsoft Todo
++ X
++ Youtube
++ ZArchiver
 
-### 2.3 音乐
+## 3. 在安卓手机上玩Galgame
 
-+ Spotify: 流媒体播放器
-+ Retro: 本地音乐播放器
+有三种方式：
 
-### 2.4 视频
-
-### 2.5 文档
-
-+ 邮件: Outlook，从google play下载。
-+ RSS阅读器: [Feeder](https://github.com/spacecowboy/Feeder)
+1. 直接安装移植好的apk。
+2. Google play安装ONScripter Plus
+3. 安装[krkr2](https://github.com/2468785842/krkr2)
