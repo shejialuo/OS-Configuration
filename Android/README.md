@@ -116,6 +116,7 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 + X
 + Youtube
 + ZArchiver
++ Sound connect
 
 ## 3. 在安卓手机上玩Galgame
 
