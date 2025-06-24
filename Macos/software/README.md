@@ -2,7 +2,9 @@
 
 ## 1. 实用工具
 
-### 1.1 zsh
+### 1.1 Terminal & Shell
+
+#### 1.1.1 zsh
 
 macos已经自带了zsh，不需要额外安装。
 
@@ -10,34 +12,34 @@ macos已经自带了zsh，不需要额外安装。
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-brew install autojump
 ```
 
-### 1.2 终端安装
+#### 1.1.2 终端安装
 
 ```sh
 brew install kitty tmux
 ```
 
-### 1.3 文件管理
-
-类似ArchLinux使用ranger。
+#### 1.1.3 其他命令行工具
 
 ```sh
-brew install ranger
+brew install fzf zoxide bat fd ripgrep
+```
+
+### 1.2 文件管理
+
+类似ArchLinux使用`yazi`。
+
+```sh
 brew install highlight
-brew install w3m
 brew install mediainfo
-brew install ffmpegthumbnailer
 brew install trash-cli
 brew install p7zip
 brew install ncdu
+brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font
 ```
 
-### 1.4 系统管理
+### 1.3 系统管理
 
 ```sh
 brew install htop
@@ -176,6 +178,4 @@ brew install calibre
 
 ## 5. 云盘
 
-```sh
-brew install rclone
-```
+由于`rclone`需要挂载，只能从Github中安装。

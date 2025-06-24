@@ -46,8 +46,6 @@ brew install go
 ```sh
 brew install nodejs
 brew install npm
-brew install yarn
-brew install typescript
 ```
 
 ## 7. Docker
