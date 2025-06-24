@@ -2,17 +2,17 @@
 
 ## 1 实用程序
 
-### 1.1 zsh
+### 1.1 Terminal & Shell
 
-直接通过 pacman 包管理器安装：
+#### 1.1.1 zsh
+
+直接通过 pacman 包管理器安装 `zsh`：
 
 ```shell
-sudo pacman -S zsh
+sudo pacman -S zsh powerline-fonts
 ```
 
-#### 1.1.1 Oh-My-Zsh
-
-以下过程参考 Oh-My-Zsh 的 GitHub 项目主页。
+然后安装`oh-my-zsh`:
 
 通过`curl`：
 
@@ -20,37 +20,7 @@ sudo pacman -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-或者`wget`：
-
-```shell
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-#### 1.1.2 安装 powerline 字体
-
-```shell
-sudo pacman -S powerline-fonts
-```
-
-#### 1.1.3 更改终端
-
-在终端输入以下命令：
-
-```shell
-chsh -s /bin/zsh
-```
-
-重启终端查看是否修改成功：
-
-```shell
-echo $SHELL
-```
-
-#### 1.1.4 Oh-My-Zsh 的配置
-
-本部分主要参考其 GitHub 项目的 Wiki。
-
-##### 1.1.4.1 相关插件下载
+对`oh-my-zsh`进行如下的配置：
 
 + zsh-syntax-highlighting
 
@@ -64,62 +34,23 @@ echo $SHELL
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
-+ zsh-history-substring-search
-
-  ```shell
-   git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-  ```
-
 + dracula-highlighting
 
   ```shell
   git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
   ```
 
-+ autojump
-
-  ```shell
-  sudo pacman -S autojump
-  ```
-
-##### 1.1.4.2 配置
-
-在`.zshrc`中输入以下信息：
+#### 1.1.2 终端安装
 
 ```shell
-export ZSH="/home/shejialuo/.oh-my-zsh"
-export EDITOR="vim"
-ZSH_THEME="agnoster"
-plugins=(git copyfile copypath zsh-autosuggestions web-search autojump zsh-syntax-highlighting zsh-history-substring-search)
-source $ZSH/oh-my-zsh.sh
-alias pc="proxychains4"
-alias p-on="export https_proxy=http://127.0.0.1:7890; export http_proxy=http://127.0.0.1:7890"
-alias p-off="unset http_proxy https_proxy"
-alias fm="pcmanfm"
-source $ZSH_CUSTOM/plugins/dracula/zsh-syntax-highlighting.sh
-source $HOME/.profile
-
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-
-export MANPAGER="/usr/bin/less -s -M +Gg"
-export LESS_TERMCAP_mb=$'\e[1;31m'      # begin bold
-export LESS_TERMCAP_md=$'\e[1;34m'      # begin blink
-export LESS_TERMCAP_so=$'\e[01;45;37m'  # begin reverse video
-export LESS_TERMCAP_us=$'\e[01;36m'     # begin underline
-export LESS_TERMCAP_me=$'\e[0m'         # reset bold/blink
-export LESS_TERMCAP_se=$'\e[0m'         # reset reverse video
-export LESS_TERMCAP_ue=$'\e[0m'         # reset underline
-export GROFF_NO_SGR=1                   # for konsole
+sudo pacman -S kitty
 ```
 
-### 1.2 终端安装
+#### 1.1.3 Tmux
 
 ```shell
-sudo pacman -S kitty tmux
+sudo pacman -S tmux
 ```
-
-#### Tmux设置
 
 安装tmp plugin管理工具。
 
@@ -129,9 +60,35 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 安装[Dracula主题](https://github.com/dracula/tmux)
 
-### 1.3 文件管理
+#### 1.1.4 fzf
 
-### 1.3.1 GUI文件管理器
+[fzf](https://github.com/junegunn/fzf)是一个在terminal里面进行模糊搜索的工具。
+
+```shell
+sudo pacman -S fzf
+```
+
+#### 1.1.5 zoxide
+
+原先我使用`autojump`，由于会使用`yazi`，直接从`autojump`切换到`zoxide`
+
+```shell
+sudo pacman -S zoxide
+```
+
+#### 1.1.6 Other Command Line Tools
+
++ `bat`: `cat`的rust实现。
++ `fd`：`find`的rust实现。
++ `ripgrep`: `grep`的rust实现。
+
+```shell
+sudo pacman -S bat fd ripgrep
+```
+
+### 1.2 文件管理
+
+### 1.2.1 GUI文件管理器
 
 安装轻量级别软件：
 
@@ -139,60 +96,30 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo pacman -S pcmanfm-gtk3 gvfs
 ```
 
-### 1.3.2 终端文件管理器
+### 1.2.2 终端文件管理
 
-安装`ranger`:
-
-```shell
-sudo pacman -S ranger
-ranger --copy-config=all
-```
-
-#### 1.3.2.1 主题
-
-使用 [dracula](https://github.com/dracula/ranger) 主题。
-
-#### 1.3.2.2 图片预览
-
-```sh
-sudo pacman -S w3m
-```
-
-在`~/.config/rc.conf`中添加如下的配置：
-
-```config
-# Image Preview Settings
-set preview_images true
-set preview_images_method w3m
-set w3m_delay 0.02
-set w3m_offset 0
-```
-
-#### 1.3.2.2 高亮代码
+安装`yazi`，体验比`ranger`好太多。
 
 ```shell
-sudo pacman -S highlight
+sudo pacman -S yazi
 ```
 
-### 1.3.2.3 压缩文件预览
+#### 1.2.2.1 主题
+
+使用 [dracula](https://github.com/yazi-rs/flavors) 主题。
 
 ```shell
-sudo pacman -S atool
+ya pkg add yazi-rs/flavors:dracula
 ```
 
-#### 1.2.3.4 媒体信息
+#### 1.2.2.2 预览支持
 
 ```shell
-sudo pacman -S mediainfo
+sudo pacman -S yazi ffmpeg 7zip jq poppler \
+               fd ripgrep fzf zoxide imagemagick mediainfo
 ```
 
-### 1.2.3.5 PDF预览
-
-```shell
-sudo pacman -S poppler
-```
-
-#### 1.3.3 回收站
+### 1.2.3 回收站
 
 ```shell
 sudo pacman -S trash-cli
@@ -200,7 +127,7 @@ sudo pacman -S trash-cli
 
 回收站位于`~/.local/share/Trash`。
 
-#### 1.3.4 压缩工具
+### 1.2.4 压缩工具
 
 ```shell
 sudo pacman -S zip
@@ -209,33 +136,27 @@ sudo pacman -S unrar
 sudo pacman -S atool
 ```
 
-### 1.4 磁盘管理
+### 1.3 磁盘管理
 
 ```shell
 sudo pacman -S ncdu
 ```
 
-### 1.5 系统管理
+### 1.4 系统管理
 
-#### 1.5.1 任务管理
+#### 1.4.1 任务管理
 
 ```shell
 sudo pacman -S htop
 ```
 
-#### 1.5.2 系统信息查看
-
-```shell
-sudo pacman -S neofetch
-```
-
-#### 1.5.3 多显示器管理
+#### 1.4.2 多显示器管理
 
 ```shell
 sudo pacman -S arandr
 ```
 
-### 1.6 任务栏安装
+### 1.5 任务栏安装
 
 使用 polybar
 
