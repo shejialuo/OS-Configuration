@@ -519,6 +519,12 @@ yay -S spotify-tray-git
 
 使用`spotify-tray`来启动`spotify`。并在 i3 中配置 toggle。
 
+#### 5.2.2 easytag
+
+```shell
+sudo pacman -S easytag
+```
+
 ### 5.3 邮件
 
 #### 5.3.1 mutt
