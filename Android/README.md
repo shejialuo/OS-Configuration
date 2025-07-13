@@ -3,7 +3,7 @@
 最近打算双持，购买了Xiaomi 13，至于购买的原因：
 
 1. 小屏且屏幕素质过关，小屏的安卓手机几乎没有选了，选择小米13属于是无奈之举。
-2. 有比较好的[类原生ROM](https://paranoidandroid.co/)。
+2. 有官方支持的[lineageos](https://wiki.lineageos.org/devices/fuxi/)。
 3. 苹果的手机极其无趣，选择苹果只因为是小屏手机。
 
 ## 1. 类原生刷机
@@ -16,17 +16,9 @@
 yay -S android-sdk-platform-tools
 ```
 
-### 1.2 原生包处理
+### 1.2 安装教程
 
-首先需要解锁bl（我到手的时候已经是Hyper OS了，用了点[小手段](https://github.com/MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass)），类似PC机的bios。刷机的流程如下：
-
-```sh
-# 进入recovery模式，update firmware。（我选择的是Global OS1.0.6.0.UMCMIXM）
-sudo adb sideload ./fw_fuxi_miui_FUXIGlobal_OS1.0.6.0.UMCMIXM_160365d42d_14.0.zip
-
-# 进入fastboot直接线刷
-sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
-```
+参考[官方页面](https://wiki.lineageos.org/devices/fuxi/)。
 
 ### 1.3 Root权限 (Magisk)
 
@@ -58,7 +50,7 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 
 #### 录音功能
 
-安装[GAppsMod](https://github.com/jacopotediosi/GAppsMod)，设置好了可以直接删除，其通过修改数据库更改信息，完美。
+安装[BCR](https://github.com/chenxiaolong/BCR)。默认的规则都是丢弃。
 
 #### 词库
 
@@ -67,6 +59,18 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 #### NFC
 
 购买NFC卡模拟器（google play）进行IC卡模拟，ID卡就别指望了，请支持正版，也不贵。
+
+### FCM
+
+由于Magisk自带Systemless Hosts模块，可以直接修改Host文件（用adb shell或者文件管理器）
+
+```sh
+vim /data/adb/modules/hosts/system/etc/hosts
+```
+
+### GCam
+
+安装[google相机](https://xdaforums.com/t/gcam-configurations-for-xiaomi-13-fuxi.4657342/)。由于ROM自带的图库，GCAM无法支持打开，故通过Google play直接安装Google的图库。就不用ROM自带的相机和图库了。
 
 ## 2. 软件
 
@@ -85,7 +89,6 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 + 小红书
 + Perplexity
 + Clash Meta: clash的新fork，从F-Droid安装。
-+ Stocks Widget: 股票信息，从F-Droid安装。
 + 哔哩哔哩
 + Linkedin
 + 万能遥控
@@ -98,14 +101,17 @@ sudo fastboot update ./aospa-uvite-beta-fuxi-20240904-image.zip
 + Feeder：RSS阅读器，从F-Droid安装。
 + final connect：用来管理蓝牙耳机。
 + Github
++ Google 地图
 + Keepass2Android：密码管理器。
 + Lens：用来扫描。
++ Word
++ Excel
 + MOONDROP
 + OneDrive
++ Drive
 + Outlook
 + Payoneer
 + Paypal
-+ Retro Music：离线音乐播放器，从F-Droid安装。
 + Schwab
 + Slack
 + Spotify
