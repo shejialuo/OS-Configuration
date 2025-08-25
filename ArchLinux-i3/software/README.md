@@ -161,7 +161,7 @@ sudo pacman -S arandr
 使用 polybar
 
 ```shell
-sudo pacman -S polybar
+sudo pacman -S polybar python-pywal
 ```
 
 ## 2 输入法

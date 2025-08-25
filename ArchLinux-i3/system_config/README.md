@@ -1,8 +1,8 @@
 # 系统配置
 
-## 1 系统 DM
+## 1 系统DM
 
-更换 sddm 作为系统的 display manager。
+使用sddm作为系统的display manager。
 
 ```shell
 sudo pacman -S sddm
@@ -44,7 +44,7 @@ sudo systemctl enable NetworkManager
 sudo pacman -S network-manager-applet
 ```
 
-安装`dhclinet`作为 DHCP client。参考[ArchWiki](https://wiki.archlinux.org/title/NetworkManager#DHCP_client)
+安装`dhclinet`作为DHCP client。参考[ArchWiki](https://wiki.archlinux.org/title/NetworkManager#DHCP_client)
 
 ```shell
 sudo pacman -S dhclient
@@ -52,7 +52,7 @@ sudo pacman -S dhclient
 
 ## 3 音频管理
 
-### 3.1 ALSA 安装
+### 3.1 ALSA安装
 
 ```shell
 sudo pacman -S alsa-utils
@@ -60,7 +60,7 @@ sudo pacman -S alsa-utils
 
 ### 3.2 管理
 
-使用 ArchWiki 推荐的`pipewire`管理。
+使用`pipewire`管理。
 
 ```shell
 sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse
@@ -68,15 +68,7 @@ sudo pacman -S pavucontrol
 sudo pacman -S pamixer
 ```
 
-在 i3 配置文件中，可利用`pamixer`快捷键音量调节。
-
-### 3.3 托盘安装
-
-```shell
-yay -S pa-applet-git
-```
-
-并在 i3 的配置文件中，自动启动`pa-applet`。
+在i3配置文件中，可利用`pamixer`快捷键音量调节。
 
 ## 4 系统主题设置
 
@@ -86,7 +78,7 @@ yay -S pa-applet-git
 sudo pacman -S lxappearance-gtk3
 ```
 
-### 4.1 GTK 主题选择
+### 4.1 GTK主题选择
 
 选择`material`主题：
 
@@ -94,12 +86,24 @@ sudo pacman -S lxappearance-gtk3
 sudo pacman -S materia-gtk-theme
 ```
 
-### 4.2 Icon 主题选择
+### 4.2 图标主题选择
 
-选择`papirus-icon-theme`：
+选择`papirus-icon-theme`还得安装其继承的主题`breeze-icons`:
 
 ```shell
-sudo pacman -S papirus-icon-theme
+sudo pacman -S papirus-icon-theme breeze-icons
+```
+
+现在许多应用图标采取[SNI协议](https://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/)，但是由于i3不是一个完整的桌面环境，需要安装`snixembed`实现支持：
+
+```sh3
+sudo pacman -S snixembed
+```
+
+然后在i3配置，自行启动：
+
+```conf
+exec --no-startup-id snixembed --fork
 ```
 
 ### 4.3 QT 主题
@@ -117,7 +121,7 @@ yay -S qt5-styleplugins qt6gtk2
 QT_QPA_PLATFORMTHEME=gtk2
 ```
 
-然而，QT6可以是直接通过在`/etc/environment`里面设置`QT_QPA_PLATFORMTHEME=gtk3`来支持GTK 3主题的。所以尽可能使用的软件基于QT6。
+然而，QT6可以是直接通过在`/etc/environment`里面设置`QT_QPA_PLATFORMTHEME=gtk3`来支持GTK3主题的。所以尽可能使用的软件基于QT6。
 
 目前唯一我安装的基于QT5的软件是flameshot。由于是截图软件几乎没有主题的影响。
 
@@ -129,7 +133,7 @@ QT_QPA_PLATFORMTHEME=gtk2
 sudo pacman -S picom
 ```
 
-此部分见配置文件`picom.conf`，并在 i3 配置文件中设置自启。
+此部分见配置文件`picom.conf`，并在i3配置文件中设置自启。
 
 ## 6 字体设置
 
@@ -149,6 +153,12 @@ yay -S otf-san-francisco
 sudo pacman -S ttf-fira-code
 ```
 
+同时有些配置需要用到Jetbrains的mono字体，用于配置文件：
+
+```shell
+sudo pacman -S ttf-jetbrains-mono
+```
+
 ### 6.2 中文字体
 
 中文字体比较好处理，直接安装Google的Noto字体就可以包含`serif`，`sans-serif`和`mono`字体。
@@ -161,7 +171,8 @@ sudo pacman -S noto-fonts-cjk
 ### 6.3 Unicode icon字体
 
 ```shell
-sudo pacman -S ttf-font-awesome
+sudo pacman -S ttf-nerd-fonts-symbols
+sudo pacman -S ttf-nerd-fonts-symbols-commons
 sudo pacman -S noto-fonts-emoji
 ```
 
@@ -200,7 +211,7 @@ man dunst
 
 ### 7.3 dunstctl 使用
 
-在 i3 中配置`dunstctl action`用来跳转通知（即时通讯软件）。
+在i3中配置`dunstctl action`用来跳转通知（即时通讯软件）。
 
 ## 8 蓝牙管理
 
@@ -234,14 +245,6 @@ sudo pacman -S blueman
 
 [ArchWiki 解决方案](https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing)
 
-### 8.4 k380 罗技蓝牙键盘存在的问题
-
-~~入了一个 k380 罗技的蓝牙键盘，安装`k380-function-keys-conf`让 k380 默认开启 Fn。~~
-
-```shell
-yay -S k380-function-keys-conf
-```
-
 ## 9 亮度管理
 
 安装`xorg-xbacklight`:
@@ -252,20 +255,7 @@ sudo pacman -S xorg-xbacklight
 
 ## 10 挂载
 
-### 10.1 自动挂载
-
-```shell
-sudo pacman -S ntfs-3g
-```
-
-自动挂载与 Windows To Go 的公共机械盘，修改`/etc/fstab`文件如下：
-
-```shell
-# /dev/sda3
-UUID=6A56CF5056CF1BA7 /mnt ntfs-3g   rw,auto,users,uid=1000,gid=1000,dmask=022,fmask=133 0 0
-```
-
-### 10.2 Android 挂载
+### 10.1 Android 挂载
 
 ```shell
 sudo pacman -S mtpfs
