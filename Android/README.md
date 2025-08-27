@@ -123,6 +123,8 @@ vim /data/adb/modules/hosts/system/etc/hosts
 + Youtube
 + ZArchiver
 + Sound connect
++ RealVNC Viewer
++ OpenTracks
 
 ## 3. 在安卓手机上玩Galgame
 
