@@ -83,42 +83,24 @@ vim /data/adb/modules/hosts/system/etc/hosts
 除显示说明以外，默认从Google play安装。
 
 + Telegram: 使用主题[dracula](https://github.com/dracula/telegram-android)。
-+ 微信
-+ QQ：只能从腾讯官网安装，腾讯不更新其在GoogleA play上的版本，没有任何办法。
-+ 支付宝
-+ 小红书
-+ Perplexity
 + Clash Meta: clash的新fork，从F-Droid安装。
 + 哔哩哔哩
 + Linkedin
 + 万能遥控
-+ Microsoft Authenticator
-+ Bmap：白马地图，从官网安装。
++ 高德地图
 + Creator's App：用来管理相机。
 + Eboox
 + Microsoft Edge：默认浏览器。
 + FCM查看器
 + Feeder：RSS阅读器，从F-Droid安装。
 + final connect：用来管理蓝牙耳机。
-+ Github
 + Google 地图
 + Keepass2Android：密码管理器。
 + Lens：用来扫描。
-+ Word
-+ Excel
 + MOONDROP
-+ OneDrive
-+ Drive
 + Outlook
-+ Payoneer
-+ Paypal
-+ Schwab
-+ Slack
 + Spotify
-+ Steam
-+ Teams
 + Telegram
-+ Microsoft Todo
 + X
 + Youtube
 + ZArchiver

@@ -1,10 +1,12 @@
 # iphone
 
-iphone目前主要作为备用机使用，用于安装国内的一些软件。
+iphone目前作为主要机使用，主要是17标准版默认支持了高刷，没有任何理由使用安卓。
 
-+ 三大运营商：中国电信，中国移动和中国联通
-+ 财务
-  + 银行A：中国银行，中国工商银行和招商银行
-  + 个人所得税
-  + 同花顺，京东金融
-+ 出行：东方航空，滴滴出行，铁路12306和华住会
+## 1. Quantumult X
+
+参考如下两个repo进行配置：
+
++ [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
++ [Profiles4limbo](https://github.com/limbopro/Profiles4limbo)
+
+添加[iconset](https://raw.githubusercontent.com/Koolson/Qure/master/Other/Quremini.json)。
