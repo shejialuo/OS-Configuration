@@ -15,7 +15,7 @@
 + 切换到新的系统：`arch-chroot /mnt`
 + 时间和区域设置：
   + 区域：`ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
-  + 时间：`hwclock --systohc` and `timedatectl set-local-rtc true`
+  + 时间：`hwclock --systohc`
 + 语言设置：
   + `vim /etc/locale.gen`
   + `locale-gen`
@@ -41,4 +41,9 @@
 + `useradd -m shejialuo -g shejialuo`
 + 编辑`/etc/sudoers`文件
 + `sudo pacman -S xorg i3-wm`
-+ 对于双系统：`sudo pacman -S os-prober`，编辑`/etc/default/grub`文件，然后挂载Windows的启动盘。再执行`grub-mkconfig -o /boot/grub/grub.cfg`
++ 对于双系统：`sudo pacman -S os-prober`，编辑`/etc/default/grub`文件，然后挂载Windows的启动盘。再执行`grub-mkconfig -o /boot/grub/grub.cfg`。
+  + 对于Windows，执行如下的powershell命令，让windows认为是UTC时间。
+
+    ```powershell
+    reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+    ```

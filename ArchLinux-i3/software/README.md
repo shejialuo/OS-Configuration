@@ -18,7 +18,7 @@ sudo pacman -S zsh powerline-fonts
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+```l
 
 对`oh-my-zsh`进行如下的配置：
 
@@ -34,11 +34,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
-+ dracula-highlighting
-
-  ```shell
-  git clone https://github.com/dracula/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/dracula
-  ```
+安装[dracula](https://github.com/dracula/zsh)主题。
 
 #### 1.1.2 终端安装
 

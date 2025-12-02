@@ -96,7 +96,7 @@ sudo pacman -S papirus-icon-theme breeze-icons
 
 现在许多应用图标采取[SNI协议](https://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/)，但是由于i3不是一个完整的桌面环境，需要安装`snixembed`实现支持：
 
-```sh3
+```sh
 sudo pacman -S snixembed
 ```
 
@@ -327,7 +327,7 @@ systemctl start cronie.service
 
 ### 11.5 Nvidia驱动
 
-最近入手了一个4080的显卡，安装驱动
+最近入手了一个4080s的显卡，安装驱动
 
 ```c++
 sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia
@@ -335,12 +335,50 @@ sudo pacman -S nvidia nvidia-prime nvidia-settings nvidia-utils opencl-nvidia
 
 ### 11.6 时间同步
 
-偶尔时间会出现漂移，使用`ntp`进行时间的同步。
+使用`systemd-timesyncd`进行时间同步。
 
 ```sh
-sudo pacman -S ntp
+sudo mkdir -p /etc/systemd/timesyncd.conf.d
+sudo vim /etc/systemd/timesyncd.conf.d/local.conf
+```
+
+添加如下的内容：
+
+```conf
+[Time]
+NTP=ntp.ntsc.ac.cn cn.pool.ntp.org
+```
+
+然后执行如下的shell命令：
+
+```sh
+sudo systemctl restart systemd-timesyncd.service
+sudo timedatectl set-ntp true
 ```
 
 ### 11.7 禁用AUR DEBUG
 
 改变`/etc/makepkg.conf`，将`debug`改为`!debug`。
+
+### 11.8 XDG Desktop Portal
+
+```sh
+sudo pacman -S xdg-desktop-portal
+sudo pacman -S xdg-desktop-portal-gtk
+```
+
+然后执行以下的命令：
+
+```sh
+gsettings set org.gnome.desktop.interface color-scheme 'default'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Material-dark-compact'
+```
+
+### 11.9 固件更新
+
+安装`fwupd`:
+
+```sh
+sudo pacman -S fwupd
+```
