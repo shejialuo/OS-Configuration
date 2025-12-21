@@ -68,6 +68,15 @@ sudo pacman -S python-pip
 
 注意如果能使用`pacman`包管理器安装软件，一定使用`pacman`包管理器。如果必须使用`pip`，务必加上`--user`，避免安装到`/usr`目录，防止与系统级别出现问题，滚挂了。
 
+### 4.2 依赖管理工具安装
+
+`pipx`是专门给命令行工具用的安装器，每个工具都装在独立的虚拟环境里，但命令全局可用。然后安装`pdm`用于管理python项目。
+
+```shell
+sudo pacman -S python-pipx
+pipx install pdm
+```
+
 ## 5. NodeJs
 
 ### 5.1 安装
@@ -132,7 +141,13 @@ sudo pacman -S gnuplot
 sudo pacman -S jdk17-openjdk
 ```
 
-## 10. 工具
+## 10. beancount
+
+```shell
+sudo pacman -S beancount
+```
+
+## 11. 工具
 
 ```shell
 sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute

@@ -521,6 +521,19 @@ yay -S spotify-tray-git
 sudo pacman -S easytag
 ```
 
+#### 5.2.3 easyeffects
+
+```shell
+sudo pacman -S easyeffects
+sudo pacman -S lsp-plugins-lv2 jalv
+```
+
+并在i3中自启。
+
+```config
+exec --no-startup-id easyeffects --service-mode --hide-window
+```
+
 ### 5.3 邮件
 
 #### 5.3.1 mutt
