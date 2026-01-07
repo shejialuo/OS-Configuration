@@ -58,7 +58,7 @@ ghcup tui
 
 ## 4. python
 
-自带 python2、python3。需要安装以下软件：
+自带python3。需要安装以下软件：
 
 ### 4.1 包管理器
 
@@ -75,6 +75,13 @@ sudo pacman -S python-pip
 ```shell
 sudo pacman -S python-pipx
 pipx install pdm
+```
+
+### 4.3 IDE配套工具安装
+
+```shell
+sudo pacman -S pyright
+pipx install black isort
 ```
 
 ## 5. NodeJs
@@ -144,10 +151,16 @@ sudo pacman -S jdk17-openjdk
 ## 10. beancount
 
 ```shell
-sudo pacman -S beancount
+sudo pacman -S beancount beancount-language-server
 ```
 
-## 11. 工具
+## 11. rust
+
+```shell
+sudo pacman -S rust cargo rust-analyzer
+```
+
+## 12. 工具
 
 ```shell
 sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute
