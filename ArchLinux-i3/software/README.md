@@ -18,7 +18,7 @@ sudo pacman -S zsh powerline-fonts
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```l
+```
 
 对`oh-my-zsh`进行如下的配置：
 
@@ -190,7 +190,7 @@ sudo pacman -S fcitx5-mozc
 
 ### 2.5 配置
 
-`.pam_environment`文件已经被弃用了，需要用在全局。故在`/etc/pam_environment`中，输入
+`.pam_environment`文件已经被弃用了，需要用在全局。故在`/etc/environment`中，输入
 以下信息：
 
 ```shell
@@ -218,6 +218,7 @@ sudo pacman -S fcitx5-material-color
 ### 2.7 中文词库
 
 ```shell
+sudo pacman -S fcitx5-pinyin-zhwiki
 sudo pacman -S fcitx5-pinyin-moegirl
 ```
 
