@@ -149,15 +149,15 @@ sudo pacman -S htop
 #### 1.4.2 多显示器管理
 
 ```shell
-sudo pacman -S arandr
+sudo pacman -S wdisplays
 ```
 
 ### 1.5 任务栏安装
 
-使用 polybar
+使用 waybar
 
 ```shell
-sudo pacman -S polybar python-pywal
+sudo pacman -S waybar
 ```
 
 ## 2 输入法
@@ -224,12 +224,10 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ## 3 文档与编辑
 
-### 3.1 gvim
-
-`vim`并不能使用系统的剪贴板，安装`gvim`。
+### 3.1 vim/neovim
 
 ```shell
-sudo pacman -S gvim
+sudo pacman -S vim neovim
 ```
 
 ### 3.2 VsCode
@@ -244,11 +242,10 @@ yay -S visual-studio-code-bin
 
 ### 3.3 office
 
-安装 wps office：
+安装 Libre office：
 
 ```shell
-yay -S wps-office
-yay -S ttf-wps-fonts
+sudo pacman -S libreoffice-fresh
 ```
 
 ### 3.4 pandoc
@@ -372,12 +369,6 @@ Y: https://www.youtube.com/results?search_query=%s Youtube
 sudo pacman -S w3m
 ```
 
-#### 4.2.3 匿名浏览器下载
-
-```shell
-sudo pacman -S tor tor-browser
-```
-
 ### 4.3 即使通讯软件
 
 #### 4.3.1 telegram 安装
@@ -390,7 +381,6 @@ sudo pacman -S telegram-desktop
 
 找到`/usr/share/applications/telegramdesktop.desktop`文件，在`Exec`行中加入：
 
-在`~/.local/share/applications`添加文件`telegramdesktop.desktop`:
 
 ```shell
 env QT_IM_MODULE=fcitx
@@ -440,29 +430,14 @@ sudo pacman -S qbittorrent
 sudo pacman -S proxychains-ng
 ```
 
-### 4.6 热点
-
-```shell
-sudo pacman -S create_ap
-```
-
-配置`/etc/create_ap.conf`:
-
-```sh
-WIFI_IFACE=wlp1
-INTERNET_IFACE=wlp1s0
-SSID=AP_Ali
-PASSPHRASE=yourpasswordhere
-```
-
 ## 5 媒体
 
 ### 5.1 图片
 
-#### 5.1.1 GUI 查看器
+#### 5.1.1 CLI/GUI 查看器
 
 ```shell
-sudo pacman -S viewnior
+sudo pacman -S imv viewnior
 ```
 
 #### 5.1.2 图片管理工具
@@ -485,24 +460,10 @@ sudo pacman -S imagemagick
 sudo pacman -S guetzli
 ```
 
-#### 5.1.5 取色工具
+#### 5.1.5 截屏工具
 
 ```shell
-sudo pacman -S gpick
-```
-
-#### 5.1.6 截屏工具
-
-```shell
-sudo pacman -S flameshot
-```
-
-#### 5.1.7 壁纸工具
-
-处理壁纸，直接安装即可，在i3配置文件中设置壁纸。
-
-```shell
-sudo pacman -S feh
+sudo pacman -S grim slurp
 ```
 
 ### 5.2 音频
@@ -511,10 +472,9 @@ sudo pacman -S feh
 
 ```shell
 sudo pacman -S spotify
-yay -S spotify-tray-git
 ```
 
-使用`spotify-tray`来启动`spotify`。并在 i3 中配置 toggle。
+spotify不能最小化，只能放到scratchpad里面了。
 
 #### 5.2.2 easytag
 
@@ -597,12 +557,6 @@ sudo pacman -S mpv
 sudo pacman -S obs-studio
 ```
 
-#### 5.4.3 视频剪辑工具
-
-```shell
-sudo pacman -S shotcut
-```
-
 ## 6 云盘
 
 避免折腾，直接使用统一的多协议客户端：
@@ -626,7 +580,6 @@ sudo pacman -S rofi
 #### 相关 rofi 工具安装
 
 ```sh
-sudo pacman -S rofi-greenclip
 yay -S rofi-bluetooth-git
 yay -S networkmanager-dmenu-git
 ```
@@ -645,7 +598,10 @@ sudo pacman -S chezmoi
 
 ```shell
 sudo pacman -S gnome-keyring
+systemctl --user enable gnome-keyring-daemon.service
 ```
+
+当使用SDDM启动时，会自动解锁`Login`这个Keyring。
 
 下载 GUI 管理器：
 
@@ -658,10 +614,6 @@ sudo pacman -S seahorse
 ```shell
 sudo pacman -S github-cli
 ```
-
-#### Copilot Extension
-
-参考[copilot cli](https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-the-cli)。
 
 ### 7.5 stretchly
 
@@ -679,4 +631,13 @@ yay -S stretchly-bin
 sudo pacman -S yubikey-manager
 systemctl enable pcscd.service --now
 sudo pacman -S libfido2
+```
+
+### 7.7 crontab
+
+最近需要执行定时任务，安装`crontab`。
+
+```sh
+sudo pacman -S cronie
+systemctl start cronie.service
 ```
