@@ -319,49 +319,20 @@ sudo setcap 'cap_net_bind_service=+ep' /usr/bin/clash
 
 ### 4.2 浏览器
 
-#### 4.2.1 Microsoft Edge
+#### 4.2.1 Chromium
 
-安装Stable版本。
+安装开源的浏览器，初次安装需走命令行代理，加上参数`--proxy-server="socks5://127.0.0.1:port`。
 
 ```shell
-yay -S microsoft-edge-stable-bin
+sudo pacman -S chromium
 ```
 
-安装后登陆微软帐号直接全平台同步，会自动安装插件`SwitchyOmega`，若不能走代理命令行加上参数`--proxy-server="socks5://127.0.0.1:port`。
+相关插件安装:
 
-##### 代理插件安装
-
-直接安装`SwitchyOmega`使用即可，已采用备份。
-
-##### 全键盘操作
-
-安装`Vimium`插件。用法与 vim 的逻辑十分相似。自定义搜索引擎如下：
-
-```txt
-w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
-
-# More examples.
-#
-# (Vimium supports search completion Wikipedia, as
-# above, and for these.)
-#
-g: https://www.google.com/search?q=%s Google
-G: https://www.google.com/search?q=%s Google
-zh: https://www.zhihu.com/search?type=content&q=%s 知乎
-ZH: https://www.zhihu.com/search?type=content&q=%s 知乎
-tb: https://s.taobao.com/search?q=%s 淘宝
-TB: https://s.taobao.com/search?q=%s 淘宝
-jd: https://search.jd.com/Search?keyword=%s 京东
-JD: https://search.jd.com/Search?keyword=%s 京东
-bd: https://www.baidu.com/s?wd=%s 百度
-BD: https://www.baidu.com/s?wd=%s 百度
-bz https://search.bilibili.com/all?keyword=%s b站
-BZ https://search.bilibili.com/all?keyword=%s b站
-b: https://www.bing.com/search?setmkt=en-GB&q=%s 必应
-B: https://www.bing.com/search?setmkt=en-GB&q=%s 必应
-y: https://www.youtube.com/results?search_query=%s Youtube
-Y: https://www.youtube.com/results?search_query=%s Youtube
-```
++ 代理插件安装：`SwitchyOmega`。
++ 全键盘操作：`Vimium`。
++ Keepassxc: 用于和keepassxc联动。
++ floccus: 结合webdav同步书签，不依赖于任何公司管理书签。
 
 #### 4.2.2 终端浏览器下载
 
@@ -489,10 +460,10 @@ sudo pacman -S easyeffects
 sudo pacman -S lsp-plugins-lv2 jalv
 ```
 
-并在i3中自启。
+### 5.2.4 mpd
 
-```config
-exec --no-startup-id easyeffects --service-mode --hide-window
+```shell
+sudo pacman -S mpd rmpc
 ```
 
 ### 5.3 邮件
