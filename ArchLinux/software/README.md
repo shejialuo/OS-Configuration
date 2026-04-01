@@ -8,7 +8,7 @@
 
 直接通过 pacman 包管理器安装 `zsh`：
 
-```shell
+```sh
 sudo pacman -S zsh powerline-fonts
 ```
 
@@ -16,7 +16,7 @@ sudo pacman -S zsh powerline-fonts
 
 通过`curl`：
 
-```shell
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -24,13 +24,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 + zsh-syntax-highlighting
 
-  ```shell
+  ```sh
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
 + zsh-autosuggestions
 
-  ```shell
+  ```sh
   git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
 
@@ -38,13 +38,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 #### 1.1.2 终端安装
 
-```shell
+```sh
 sudo pacman -S kitty
 ```
 
 #### 1.1.3 Tmux
 
-```shell
+```sh
 sudo pacman -S tmux
 ```
 
@@ -60,7 +60,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 [fzf](https://github.com/junegunn/fzf)是一个在terminal里面进行模糊搜索的工具。
 
-```shell
+```sh
 sudo pacman -S fzf
 ```
 
@@ -68,7 +68,7 @@ sudo pacman -S fzf
 
 原先我使用`autojump`，由于会使用`yazi`，直接从`autojump`切换到`zoxide`
 
-```shell
+```sh
 sudo pacman -S zoxide
 ```
 
@@ -78,7 +78,7 @@ sudo pacman -S zoxide
 + `fd`：`find`的rust实现。
 + `ripgrep`: `grep`的rust实现。
 
-```shell
+```sh
 sudo pacman -S bat fd ripgrep
 ```
 
@@ -88,7 +88,7 @@ sudo pacman -S bat fd ripgrep
 
 安装轻量级别软件：
 
-```shell
+```sh
 sudo pacman -S pcmanfm-gtk3 gvfs
 ```
 
@@ -96,7 +96,7 @@ sudo pacman -S pcmanfm-gtk3 gvfs
 
 安装`yazi`，体验比`ranger`好太多。
 
-```shell
+```sh
 sudo pacman -S yazi
 ```
 
@@ -104,20 +104,20 @@ sudo pacman -S yazi
 
 使用 [dracula](https://github.com/yazi-rs/flavors) 主题。
 
-```shell
+```sh
 ya pkg add yazi-rs/flavors:dracula
 ```
 
 #### 1.2.2.2 预览支持
 
-```shell
+```sh
 sudo pacman -S yazi ffmpeg 7zip jq poppler \
                fd ripgrep fzf zoxide imagemagick mediainfo
 ```
 
 ### 1.2.3 回收站
 
-```shell
+```sh
 sudo pacman -S trash-cli
 ```
 
@@ -125,7 +125,7 @@ sudo pacman -S trash-cli
 
 ### 1.2.4 压缩工具
 
-```shell
+```sh
 sudo pacman -S zip
 sudo pacman -S 7zip
 sudo pacman -S unrar
@@ -134,7 +134,7 @@ sudo pacman -S atool
 
 ### 1.3 磁盘管理
 
-```shell
+```sh
 sudo pacman -S ncdu
 ```
 
@@ -142,13 +142,13 @@ sudo pacman -S ncdu
 
 #### 1.4.1 任务管理
 
-```shell
+```sh
 sudo pacman -S htop
 ```
 
 #### 1.4.2 多显示器管理
 
-```shell
+```sh
 sudo pacman -S wdisplays
 ```
 
@@ -156,7 +156,7 @@ sudo pacman -S wdisplays
 
 使用 waybar
 
-```shell
+```sh
 sudo pacman -S waybar
 ```
 
@@ -164,7 +164,7 @@ sudo pacman -S waybar
 
 ### 2.1 Flexible Input Method Framework 5
 
-```shell
+```sh
 sudo pacman -S fcitx5
 sudo pacman -S fcitx5-qt
 sudo pacman -S fcitx5-gtk
@@ -172,19 +172,19 @@ sudo pacman -S fcitx5-gtk
 
 ### 2.2 配置工具
 
-```shell
+```sh
 sudo pacman -S fcitx5-configtool
 ```
 
 ### 2.3 拼音
 
-```shell
+```sh
 sudo pacman -S fcitx5-chinese-addons
 ```
 
 ### 2.4 日语
 
-```shell
+```sh
 sudo pacman -S fcitx5-mozc
 ```
 
@@ -193,7 +193,7 @@ sudo pacman -S fcitx5-mozc
 `.pam_environment`文件已经被弃用了，需要用在全局。故在`/etc/environment`中，输入
 以下信息：
 
-```shell
+```sh
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
@@ -209,7 +209,7 @@ GLFW_IM_MODULE=ibus
 
 ### 2.6 皮肤
 
-```shell
+```sh
 sudo pacman -S fcitx5-material-color
 ```
 
@@ -217,7 +217,7 @@ sudo pacman -S fcitx5-material-color
 
 ### 2.7 中文词库
 
-```shell
+```sh
 sudo pacman -S fcitx5-pinyin-zhwiki
 sudo pacman -S fcitx5-pinyin-moegirl
 ```
@@ -226,7 +226,7 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ### 3.1 vim/neovim
 
-```shell
+```sh
 sudo pacman -S vim neovim
 ```
 
@@ -234,7 +234,7 @@ sudo pacman -S vim neovim
 
 `archlinuxcn`不再提供`visual-studio-code-bin`的二进制包，详见[issue](https://github.com/archlinuxcn/repo/issues/2460)。只能手动编译了。
 
-```shell
+```sh
 yay -S visual-studio-code-bin
 ```
 
@@ -244,7 +244,7 @@ yay -S visual-studio-code-bin
 
 安装 Libre office：
 
-```shell
+```sh
 sudo pacman -S libreoffice-fresh
 ```
 
@@ -252,7 +252,7 @@ sudo pacman -S libreoffice-fresh
 
 安装 pandoc：
 
-```shell
+```sh
 sudo pacman -S pandoc
 ```
 
@@ -260,32 +260,32 @@ sudo pacman -S pandoc
 
 安装 zotero：
 
-```shell
+```sh
 sudo pacman -S zotero
 ```
 
 ### 3.6 zathura
 
-```shell
+```sh
 sudo pacman -S zathura
 ```
 
 在`~/.config/zathura/zathurarc`中进行配置，以便直接复制到剪贴板，同时关闭沙盒以确保能打开链接：
 
-```shell
+```sh
 set selection-clipboard clipboard
 set sandbox
 ```
 
 #### 安装相关依赖
 
-```shell
+```sh
 sudo pacman -S zathura-pdf-mupdf
 ```
 
 ### 3.7 calibre
 
-```shell
+```sh
 sudo pacman -S calibre
 ```
 
@@ -293,7 +293,7 @@ sudo pacman -S calibre
 
 安装字典，使用QT6版本：
 
-```shell
+```sh
 sudo pacman -S goldendict-ng
 ```
 
@@ -303,7 +303,7 @@ sudo pacman -S goldendict-ng
 
 目前采用的编辑器基本都是单一的文本，然而有时候需要手动绘图作理解，或者增加一些PDF的批注。`xournalpp`是一个很好用的工具。
 
-```shell
+```sh
 sudo pacman -S xournalpp
 ```
 
@@ -323,7 +323,7 @@ sudo setcap 'cap_net_bind_service=+ep' /usr/bin/clash
 
 安装开源的浏览器，初次安装需走命令行代理，加上参数`--proxy-server="socks5://127.0.0.1:port`。
 
-```shell
+```sh
 sudo pacman -S chromium
 ```
 
@@ -336,7 +336,7 @@ sudo pacman -S chromium
 
 #### 4.2.2 终端浏览器下载
 
-```shell
+```sh
 sudo pacman -S w3m
 ```
 
@@ -344,7 +344,7 @@ sudo pacman -S w3m
 
 #### 4.3.1 telegram 安装
 
-```shell
+```sh
 sudo pacman -S telegram-desktop
 ```
 
@@ -353,7 +353,7 @@ sudo pacman -S telegram-desktop
 找到`/usr/share/applications/telegramdesktop.desktop`文件，在`Exec`行中加入：
 
 
-```shell
+```sh
 env QT_IM_MODULE=fcitx
 ```
 
@@ -375,7 +375,7 @@ yay -S linuxqq-nt-bwrap
 
 下载工具安装：
 
-```shell
+```sh
 sudo pacman -S aria2
 ```
 
@@ -383,13 +383,13 @@ sudo pacman -S aria2
 
 #### 4.4.2 yt-dlp 安装
 
-```shell
+```sh
 sudo pacman -S yt-dlp
 ```
 
 #### 4.4.3 qbittorrent 安装
 
-```shell
+```sh
 sudo pacman -S qbittorrent
 ```
 
@@ -397,7 +397,7 @@ sudo pacman -S qbittorrent
 
 ### 4.5 终端代理工具
 
-```shell
+```sh
 sudo pacman -S proxychains-ng
 ```
 
@@ -407,19 +407,19 @@ sudo pacman -S proxychains-ng
 
 #### 5.1.1 CLI/GUI 查看器
 
-```shell
+```sh
 sudo pacman -S imv viewnior
 ```
 
 #### 5.1.2 图片管理工具
 
-```shell
+```sh
 sudo pacman -S shotwell
 ```
 
 #### 5.1.3 图片处理工具
 
-```shell
+```sh
 sudo pacman -S imagemagick
 ```
 
@@ -427,13 +427,13 @@ sudo pacman -S imagemagick
 
 压缩`.png`和`.jpeg`图片：
 
-```shell
+```sh
 sudo pacman -S guetzli
 ```
 
 #### 5.1.5 截屏工具
 
-```shell
+```sh
 sudo pacman -S grim slurp
 ```
 
@@ -441,7 +441,7 @@ sudo pacman -S grim slurp
 
 #### 5.2.1 spotify
 
-```shell
+```sh
 sudo pacman -S spotify
 ```
 
@@ -449,20 +449,20 @@ spotify不能最小化，只能放到scratchpad里面了。
 
 #### 5.2.2 easytag
 
-```shell
+```sh
 sudo pacman -S easytag
 ```
 
 #### 5.2.3 easyeffects
 
-```shell
+```sh
 sudo pacman -S easyeffects
 sudo pacman -S lsp-plugins-lv2 jalv
 ```
 
 ### 5.2.4 mpd
 
-```shell
+```sh
 sudo pacman -S mpd rmpc
 ```
 
@@ -470,43 +470,43 @@ sudo pacman -S mpd rmpc
 
 #### 5.3.1 mutt
 
-```shell
+```sh
 sudo pacman -S mutt
 ```
 
 Mutt 仅仅只是一个收发邮件的中转站，UNIX 哲学。其配置文件位于`~/.config/mutt/muttrc`：
 
-```shell
+```sh
 chmod 600 ~/.config/mutt/muttrc
 ```
 
 #### 5.3.2 fetchmail
 
-```shell
+```sh
 sudo pacman -S fetchmail
 ```
 
 用于收取邮件的软件，其配置文件位于`~/.fetchmailrc`：
 
-```shell
+```sh
 chmod 600 ~/.fetchmailrc
 ```
 
 #### 5.3.3 procmail
 
-```shell
+```sh
 sudo pacman -S procmail
 ```
 
 用于存储邮件的软件，其配置文件位于`~/.procmailrc`：
 
-```shell
+```sh
 chmod 600 ~/.procmailrc
 ```
 
 #### 5.3.4 msmtp
 
-```shell
+```sh
 sudo pacman -S msmtp
 ```
 
@@ -518,13 +518,13 @@ sudo pacman -S msmtp
 
 安装 mpv 视频播放器：
 
-```shell
+```sh
 sudo pacman -S mpv
 ```
 
 #### 5.4.2 录屏软件安装
 
-```shell
+```sh
 sudo pacman -S obs-studio
 ```
 
@@ -532,7 +532,7 @@ sudo pacman -S obs-studio
 
 避免折腾，直接使用统一的多协议客户端：
 
-```shell
+```sh
 sudo pacman -S rclone
 ```
 
@@ -544,7 +544,7 @@ sudo pacman -S rclone
 
 使用`rofi`作为`dmenu`的替代品。
 
-```shell
+```sh
 sudo pacman -S rofi
 ```
 
@@ -559,7 +559,7 @@ yay -S networkmanager-dmenu-git
 
 安装 dotfiles 管理工具：
 
-```shell
+```sh
 sudo pacman -S chezmoi
 ```
 
@@ -567,7 +567,7 @@ sudo pacman -S chezmoi
 
 ### 7.3 密码管理
 
-```shell
+```sh
 sudo pacman -S gnome-keyring
 systemctl --user enable gnome-keyring-daemon.service
 ```
@@ -576,13 +576,13 @@ systemctl --user enable gnome-keyring-daemon.service
 
 下载 GUI 管理器：
 
-```shell
+```sh
 sudo pacman -S seahorse
 ```
 
 ### 7.4 Github Cli
 
-```shell
+```sh
 sudo pacman -S github-cli
 ```
 
@@ -590,7 +590,7 @@ sudo pacman -S github-cli
 
 安装一个定时软件，不能久坐，养身。
 
-```shell
+```sh
 yay -S stretchly-bin
 ```
 
@@ -611,4 +611,12 @@ sudo pacman -S libfido2
 ```sh
 sudo pacman -S cronie
 systemctl start cronie.service
+```
+
+### 7.8 zk
+
+使用zk来构建自己的知识库：
+
+```sh
+sudo pacman -S zk
 ```

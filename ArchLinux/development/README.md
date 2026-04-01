@@ -2,23 +2,23 @@
 
 ## 1. c and c++
 
-```shell
+```sh
 sudo pacman -S gdb doxygen
 ```
 
-```shell
+```sh
 sudo pacman -S gcc cmake
 ```
 
-```shell
+```sh
 sudo pacman -S valgrind
 ```
 
-```shell
+```sh
 sudo pacman -S clang
 ```
 
-```shell
+```sh
 sudo pacman -S libdwarf
 ```
 
@@ -26,7 +26,7 @@ sudo pacman -S libdwarf
 
 ### 2.1 安装
 
-```shell
+```sh
 sudo pacman -S go
 ```
 
@@ -36,19 +36,19 @@ sudo pacman -S go
 
 ### 3.1 ghcup
 
-```shell
+```sh
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
 只需要安装 ghcup 安装即可，在`.profile`中添加：
 
-```shell
+```sh
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 ```
 
 ### 3.2 安装包
 
-```shell
+```sh
 ghcup tui
 ```
 
@@ -62,7 +62,7 @@ ghcup tui
 
 ### 4.1 包管理器
 
-```shell
+```sh
 sudo pacman -S python-pip
 ```
 
@@ -72,14 +72,14 @@ sudo pacman -S python-pip
 
 `pipx`是专门给命令行工具用的安装器，每个工具都装在独立的虚拟环境里，但命令全局可用。然后安装`pdm`用于管理python项目。
 
-```shell
+```sh
 sudo pacman -S python-pipx
 pipx install pdm
 ```
 
 ### 4.3 IDE配套工具安装
 
-```shell
+```sh
 sudo pacman -S pyright
 pipx install black isort
 ```
@@ -88,19 +88,19 @@ pipx install black isort
 
 ### 5.1 安装
 
-```shell
+```sh
 sudo pacman -S nodejs npm
 ```
 
 ### 5.2 Hexo
 
-```shell
+```sh
 sudo npm install -g hexo-cli
 ```
 
 ### 5.3 Pigco
 
-```shell
+```sh
 sudo npm install -g picgo
 ```
 
@@ -108,7 +108,7 @@ sudo npm install -g picgo
 
 仅仅需要Docker。
 
-```shell
+```sh
 sudo pacman -S docker
 ```
 
@@ -116,7 +116,7 @@ sudo pacman -S docker
 
 ### 7.1 TexLive 安装
 
-```shell
+```sh
 sudo pacman -S texlive-core
 ```
 
@@ -124,7 +124,7 @@ sudo pacman -S texlive-core
 
 中文语言包安装：
 
-```shell
+```sh
 sudo pacman -S texlive-langchinese
 ```
 
@@ -138,30 +138,36 @@ sudo pacman -S texlive-bibtexextra texlive-latexextra texlive-science texlive-bi
 
 安装命令行绘图工具：
 
-```shell
+```sh
 sudo pacman -S gnuplot
 ```
 
 ## 9. java
 
-```shell
+```sh
 sudo pacman -S jdk17-openjdk
 ```
 
 ## 10. beancount
 
-```shell
+```sh
 sudo pacman -S beancount beancount-language-server
 ```
 
 ## 11. rust
 
-```shell
+```sh
 sudo pacman -S rust cargo rust-analyzer
 ```
 
-## 12. 工具
+## 12. bash
 
-```shell
+```sh
+sudo pacman -S bash-language-server
+```
+
+## 13. 工具
+
+```sh
 sudo pacman -S net-tools dnsutils inetutils ethtool frpc traceroute
 ```
