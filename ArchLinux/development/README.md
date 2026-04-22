@@ -82,6 +82,7 @@ pipx install pdm
 ```sh
 sudo pacman -S pyright
 pipx install black isort
+pipx install compiledb
 ```
 
 ## 5. NodeJs

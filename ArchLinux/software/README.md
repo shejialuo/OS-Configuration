@@ -224,10 +224,10 @@ sudo pacman -S fcitx5-pinyin-moegirl
 
 ## 3 文档与编辑
 
-### 3.1 vim/neovim
+### 3.1 neovim
 
 ```sh
-sudo pacman -S vim neovim
+sudo pacman -S neovim
 ```
 
 ### 3.2 VsCode
@@ -619,4 +619,12 @@ systemctl start cronie.service
 
 ```sh
 sudo pacman -S zk
+```
+
+### 7.9 codex
+
+claude code的token消耗量实在是过于夸张，转向codex:
+
+```sh
+yay -S openai-codex-bin codex-acp
 ```
