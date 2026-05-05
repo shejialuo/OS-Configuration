@@ -9,7 +9,7 @@
 直接通过 pacman 包管理器安装 `zsh`：
 
 ```sh
-sudo pacman -S zsh powerline-fonts
+sudo pacman -S zsh
 ```
 
 然后安装`oh-my-zsh`:
@@ -351,7 +351,6 @@ sudo pacman -S telegram-desktop
 ##### 解决无法输入中文问题
 
 找到`/usr/share/applications/telegramdesktop.desktop`文件，在`Exec`行中加入：
-
 
 ```sh
 env QT_IM_MODULE=fcitx
