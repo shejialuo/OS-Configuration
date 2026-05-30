@@ -142,7 +142,7 @@ sudo mkinitcpio -P
 原来我使用[i3wm](https://i3wm.org/)作为桌面环境，现在wayland比起当时成熟了太多，故切换到了Hyprland
 
 ```sh
-sudo pacman -S hyprland hyprpaper hypridle hyprlock
+sudo pacman -S hyprland hyprpaper hypridle hyprlock hyprpolkitagent
 ```
 
 尽管使用wayland，但仍然保留基本的xserver以及Xwayland（SDDM也需要xserver的依赖）:

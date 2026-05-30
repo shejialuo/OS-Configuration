@@ -609,7 +609,6 @@ sudo pacman -S libfido2
 
 ```sh
 sudo pacman -S cronie
-systemctl start cronie.service
 ```
 
 ### 7.8 zk
@@ -620,10 +619,31 @@ systemctl start cronie.service
 sudo pacman -S zk
 ```
 
-### 7.9 codex
+## 8. 远程开发
 
-claude code的token消耗量实在是过于夸张，转向codex:
+在外也想用主机进行开发。使用[frp](https://github.com/fatedier/frp)进行内网穿透。
 
-```sh
-yay -S openai-codex-bin codex-acp
+
+```toml
+# server
+bindPort = 7000
+auth.token = "<token>"
+```
+
+```toml
+#client
+user = "shejialuo_china"
+
+serverAddr = "<server_addr>"
+serverPort = 7000
+
+auth.method = "token"
+auth.token = "<token>"
+
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 6000
 ```

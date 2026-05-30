@@ -73,7 +73,3 @@
 ## 12. Rust
 
 + rust-analyzer
-
-## 13. Claude Code
-
-+ Claude Code for VS Code

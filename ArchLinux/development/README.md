@@ -3,31 +3,15 @@
 ## 1. c and c++
 
 ```sh
-sudo pacman -S gdb doxygen
-```
-
-```sh
-sudo pacman -S gcc cmake
-```
-
-```sh
-sudo pacman -S valgrind
-```
-
-```sh
-sudo pacman -S clang
-```
-
-```sh
-sudo pacman -S libdwarf
+sudo pacman -S gcc clang \
+               cmake doxygen \
+               gdb valgrind
 ```
 
 ## 2. go
 
-### 2.1 安装
-
 ```sh
-sudo pacman -S go
+sudo pacman -S go gopls
 ```
 
 ## 3. haskell
@@ -40,12 +24,6 @@ sudo pacman -S go
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
-只需要安装 ghcup 安装即可，在`.profile`中添加：
-
-```sh
-export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-```
-
 ### 3.2 安装包
 
 ```sh
@@ -55,6 +33,7 @@ ghcup tui
 + `Stack`
 + `cabal`
 + `HLS`
++ `ghc`
 
 ## 4. python
 
@@ -91,18 +70,25 @@ pipx install compiledb
 
 ```sh
 sudo pacman -S nodejs npm
+npm config set prefix "$HOME/.local"
 ```
 
 ### 5.2 Hexo
 
 ```sh
-sudo npm install -g hexo-cli
+npm install -g hexo-cli
 ```
 
 ### 5.3 Pigco
 
 ```sh
-sudo npm install -g picgo
+npm install -g picgo
+```
+
+### 5.4 claude-agent-acp
+
+```sh
+npm install -g @agentclientprotocol/claude-agent-acp
 ```
 
 ## 6. DevOps
