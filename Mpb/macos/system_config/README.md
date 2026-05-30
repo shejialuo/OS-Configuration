@@ -29,6 +29,6 @@ brew install aerospace sketchybar
 brew install sol
 ```
 
-+ 启动美好：`alt + <space>`
-+ 剪贴板记录：`alt + c`
-+ lock: `alt + l`
++ 启动美好：`option + <space>`
++ 剪贴板记录：`option + c`
++ lock: `option + l`

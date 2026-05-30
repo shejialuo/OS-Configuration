@@ -156,18 +156,10 @@ brew install spotify
 
 ### 4.4 视频
 
-#### 4.4.1 播放器
-
 安装mpv播放器。
 
 ```sh
 brew install mpv
-```
-
-#### 4.4.2 推流和录制
-
-```sh
-brew install obs
 ```
 
 ### 4.5 图书

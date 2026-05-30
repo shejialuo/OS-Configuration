@@ -6,7 +6,7 @@ This is my all OS configuration:
 + Windows
 + Android
 + Ios
-+ Macos (dual-boot, with asahi-linux)
++ Mbp (dual-boot, Macos and asahi-linux)
 
 You could see the [dotfiles](https://github.com/shejialuo/dotfiles) for more reference.
 
