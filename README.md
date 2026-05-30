@@ -2,13 +2,13 @@
 
 This is my all OS configuration:
 
-+ ArchLinux-i3
++ ArchLinux (use `hyprland`)
 + Windows
 + Android
 + Ios
-+ Macos
++ Macos (dual-boot, with asahi-linux)
 
-ArchLinux uses `i3wm`.
+You could see the [dotfiles](https://github.com/shejialuo/dotfiles) for more reference.
 
 ## ArchLinux
 
