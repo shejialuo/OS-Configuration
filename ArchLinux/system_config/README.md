@@ -190,7 +190,7 @@ InputMethod=qtvirtualkeyboard
 
 ### 2.3 系统主题设置
 
-安装GTK3主题管理器：`lxappearance-gtk3`。完全抛弃GTK2。
+安装GTK3主题管理器：`lxappearance-gtk3`。完全抛弃GTK2。同时，Wayland需要一些特殊处理，参考[GTK-3-settings-on-Wayland](https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland)。
 
 ```sh
 sudo pacman -S lxappearance-gtk3

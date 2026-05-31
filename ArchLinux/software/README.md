@@ -619,6 +619,14 @@ sudo pacman -S cronie
 sudo pacman -S zk
 ```
 
+### 7.9 Teleport
+
+需要使用这个工具连接某些服务器
+
+```sh
+curl https://cdn.teleport.dev/install-connect.sh
+```
+
 ## 8. 远程开发
 
 在外也想用主机进行开发。使用[frp](https://github.com/fatedier/frp)进行内网穿透。
