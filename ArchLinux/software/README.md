@@ -627,6 +627,12 @@ sudo pacman -S zk
 curl https://cdn.teleport.dev/install-connect.sh
 ```
 
+### 7.10 Microsoft todo cli
+
+```sh
+pipx install tod0
+```
+
 ## 8. 远程开发
 
 在外也想用主机进行开发。使用[frp](https://github.com/fatedier/frp)进行内网穿透。
